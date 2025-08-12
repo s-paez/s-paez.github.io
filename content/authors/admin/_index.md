@@ -116,6 +116,10 @@ awards:
     awarder: Chegg.org and Varkey Foundations
     summary: |
       In recognition of exceptional achievements in the classroom and beyond.
+  - title: 'FEST - Full undergrad scholarship'
+    date: '2019-01-19'
+    awarder: Secretaría de Educación de Bogotá.
+    
 ---
 
 ## About Me
