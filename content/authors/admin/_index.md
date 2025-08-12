@@ -107,6 +107,7 @@ awards:
       Full scholarship to pursue a Master's degree in Astrophysics at the Instituto de Astronomía of the Universidad Nacional Autónoma de México.  
   - title: Best Natural Science Education Program score in the Saber Pro test
     date: '2023-09-26'
+    awarder: Universidad de La Sabana, Education Faculty
     summary: |
       Due to the high results obtained in the 2022 Saber Pro State Examination of Quality of Higher Education, which demonstrates a high degree of development of the competencies required by the Colombian state for him to practice his profession as a Bachelor of Natural Sciences.
   - title: 'Top 50 Finalist Global Student Prize 2023'
