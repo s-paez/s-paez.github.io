@@ -52,7 +52,7 @@ education:
     institution: Instituto de Astronomía, Universidad Nacional Autónoma de México
     date_start: 2024-08-05
     date_end: 
-  - area: BA Natural Sciences Educatio
+  - area: BA Natural Sciences Education
     institution: Universidad de La Sabana
     date_start: 2019-01-19
     date_end: 2024-03-05
