@@ -105,23 +105,16 @@ languages:
 #   Only `title`, `awarder`, and `date` are required.
 #   Begin multi-line `summary` with YAML's `|` or `|2-` multi-line prefix and indent 2 spaces below.
 awards:
-  - title: Neural Networks and Deep Learning
-    url: https://www.coursera.org/learn/neural-networks-deep-learning
-    date: '2023-11-25'
-    awarder: Coursera
-    icon: coursera
+  - title: National Postgraduate Scholarship (Master's Degree)
+    url: https://secihti.mx/becas_posgrados/becas-nacionales/
+    date: '2024-08-05'
+    awarder: SECIHTI
     summary: |
-      I studied the foundational concept of neural networks and deep learning. By the end, I was familiar with the significant technological trends driving the rise of deep learning; build, train, and apply fully connected deep neural networks; implement efficient (vectorized) neural networks; identify key parameters in a neural network’s architecture; and apply deep learning to your own applications.
-  - title: Blockchain Fundamentals
-    url: https://www.edx.org/professional-certificate/uc-berkeleyx-blockchain-fundamentals
-    date: '2023-07-01'
-    awarder: edX
-    icon: edx
+      Full scholarship to pursue a Master's degree in Astrophysics at the Instituto de Astronomía of the Universidad Nacional Autónoma de México.  
+  - title: Best Natural Science Education Program score in the Saber Pro test
+    date: '2023-09-26'
     summary: |
-      Learned:
-      - Synthesize your own blockchain solutions
-      - Gain an in-depth understanding of the specific mechanics of Bitcoin
-      - Understand Bitcoin’s real-life applications and learn how to attack and destroy Bitcoin, Ethereum, smart contracts and Dapps, and alternatives to Bitcoin’s Proof-of-Work consensus algorithm
+      Due to the high results obtained in the 2022 Saber Pro State Examination of Quality of Higher Education, which demonstrates a high degree of development of the competencies required by the Colombian state for him to practice his profession as a Bachelor of Natural Sciences.
   - title: 'Top 50 Finalist Global Student Prize 2023'
     url: https://globalteacherprize.org/pages/2023-finalists-globalstudentprize
     date: '2023-07-17'
