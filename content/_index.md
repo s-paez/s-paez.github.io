@@ -32,14 +32,10 @@ sections:
           parallax: true
   - block: markdown
     content:
-      title: '📚 My Research'
+      title: '📚 My work'
       subtitle: ''
       text: |-
-        Use this area to speak to your mission. I'm a research scientist in the Moonshot team at DeepMind. I blog about machine learning, deep learning, and moonshots.
-
-        I apply a range of qualitative and quantitative methods to comprehensively investigate the role of science and technology in the economy.
-        
-        Please reach out to collaborate 😃
+        I am currently involved in developing a data reduction pipeline for the [OPTICAM instrument](https://www.astrossp.unam.mx/es/usuarios/instrumentos/imagendirecta/opticam) mounted on the [2.1m Telescope](https://www.astrossp.unam.mx/es/usuarios/telescopios/tel2m) at the Observatorio Astronómico Nacional San Pedro Mártir (OAN-SPM). This pipeline will perform the reduction of simultaneous multiband time series photometry of transiting exoplanets.
     design:
       columns: '1'
   - block: collection
