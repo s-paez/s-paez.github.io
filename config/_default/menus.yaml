@@ -11,5 +11,5 @@ main:
     url: experience/
     weight: 20
   - name: Blog
-    url: blog/
+    url: /post/
     weight: 30
