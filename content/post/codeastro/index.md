@@ -13,8 +13,6 @@ image:
   caption: 'Group photo Code/Astro 2025'
   focal_point: "Center"
   preview_only: false
-show_date: false
-reading_time: false
 ---
 
 > **Summary:** From **August 4 to 8, 2025**, I participated in **Code/Astro 2025** at **Northwestern University**, a workshop focused on best practices in software engineering for astrophysical applications.
