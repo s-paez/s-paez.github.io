@@ -69,15 +69,6 @@ skills:
       - name: AstroImageJ
       - name: Latex
       - name: Git/Github
-  - name: Hobbies
-    color: '#eeac02'
-    color_border: '#f0bf23'
-    items:
-      - name: Reading
-        description: ''
-        icon: person-simple-walk
-      - name: Movies
-        description: ''
 
 languages:
   - name: English
@@ -90,7 +81,7 @@ languages:
 #   Only `title`, `awarder`, and `date` are required.
 #   Begin multi-line `summary` with YAML's `|` or `|2-` multi-line prefix and indent 2 spaces below.
 awards:
-  - title: National Postgraduate Scholarship (Master's Degree)
+  - title: National Graduate Scholarship (Master's Degree)
     url: https://secihti.mx/becas_posgrados/becas-nacionales/
     date: '2024-08-05'
     awarder: SECIHTI
