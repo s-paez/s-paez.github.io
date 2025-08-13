@@ -30,6 +30,8 @@ My goal was to bring these practices directly into the **data reduction pipeline
 - 🧪 Improve **testing** (unit/integration) and **CI**.  
 - ⚖️ Adopt principles of **equity and inclusion** in technical collaboration.  
 
+It's easy to apply to Code/Astro. Some programming experience and familiarity with Python or another high-level programming language are required. The workshop is offered in-person and remotely. The application procedure consists of filling out a form explaining your interest in participating. All the details can be found on the official (_Code/Astro website_)[https://semaphorep.github.io/codeastro/].
+
 ---
 
 ## Workshop
