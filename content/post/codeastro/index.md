@@ -5,9 +5,9 @@ date: 2025-08-13
 authors:
   - admin
 tags:
-  - Hugo
-  - Hugo Blox
-  - Markdown
+  - Code
+  - Workshop
+  - USA
 image:
   caption: 'Image credit: [**Unsplash**](https://unsplash.com)'
 ---
