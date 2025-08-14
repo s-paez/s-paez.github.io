@@ -87,7 +87,7 @@ awards:
     awarder: SECIHTI
     summary: |
       Full scholarship to pursue a Master's degree in Astrophysics at the Instituto de Astronomía of the Universidad Nacional Autónoma de México.  
-  - title: Best Natural Science Education Program score in the Saber Pro test
+  - title: Best Natural Sciences Education Program score in the Saber Pro test
     date: '2023-09-26'
     awarder: Universidad de La Sabana, Education Faculty
     summary: |
