@@ -75,7 +75,7 @@ The workshop combined theory in the mornings with hands-on practice in the after
 - Pandas
 - Matplotlib
 - Parallel programming 
-- Astropy** and Astroplan
+- Astropy and Astroplan
 - Profiling tools
 
 During the week, I collaborated with two colleagues on a short group project: we packaged, documented, and published a Python library.  
@@ -83,3 +83,5 @@ During the week, I collaborated with two colleagues on a short group project: we
 ---
 
 ## Conclusions
+
+Attending Code/Astro was completely meaningful to me, both in terms of what I learned and in terms of the amazing people I met, the places I visited, and my new perspective on astronomy. I think all current and future generations of astronomers should receive training in software development because code is used so extensively in our work.
