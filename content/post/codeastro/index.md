@@ -40,14 +40,14 @@ Specifically, I aimed:
 - To professionally integrate Git/GitHub (branches, pull requests, and reviews).
 - To package a Python project and make it installable.
 - To create clear, automated documentation.
-- To learn open-source coding practices.
+- To learn open-source programming practices.
 
 When I submitted my application, I made sure to clearly explain those specific reasons to demonstrate that I had a tangible reason to attend the event.
 
 Applying to Code/Astro is easy. Some programming experience and familiarity with Python or another high-level programming language are required. The workshop is offered in person and remotely. The application process involves filling out a form explaining your interest in participating. All the details can be found on the official website.
 
 I would also like to highlight that all the workshop materials are publicly available at any time. If you would like to start learning these things on your own, you can do so by visiting the:
-- Official [Code/Astro website](https://semaphorep.github.io/codeastro/)
+- [Official Code/Astro website](https://semaphorep.github.io/codeastro/)
 - [Code/Astro Github repository](https://github.com/semaphoreP/codeastro)
 - [Code/Astro Youtube Playlist](https://www.youtube.com/playlist?list=PLb1880Rn0qkK7zTWcqGaXNbKZbxkpvUuH)
 
