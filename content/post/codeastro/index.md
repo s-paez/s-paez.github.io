@@ -9,13 +9,17 @@ tags:
   - Workshop
   - USA
 image:
-  filename: "feature.jpg"
+  filename: "CodeAstro-logo.png"
   caption: 'Group photo Code/Astro 2025'
   focal_point: "Center"
-  preview_only: false
+  preview_only: True
 ---
 
 > **Summary:** From August 4 to 8, 2025, I participated in Code/Astro 2025 at [Center for Interdisciplinary Exploration and Research in Astrophysics (CIERA)](https://ciera.northwestern.edu/) at Northwestern University, a workshop focused on best practices in software engineering for astrophysical applications.
+
+<div align="center">
+  <img src="CodeAstro-0.jpg" alt="Texto alternativo">
+</div>
 
 ## Introduction
 
@@ -26,7 +30,9 @@ That is the reason I was interested in participating in Code/Astro, a workshop d
 I would now like to share my experience at Code/Astro. I will discuss my experience applying, participating, and what I learned at this important event.
 
 ## Application
-
+<div align="center">
+  <img src="CodeAstro-1.jpg" alt="Texto alternativo">
+</div>
 From the beginning of my master's program, my tutor and I realized that I needed to improve my coding skills because my master's project's main goal was to release a pipeline tool for reducing time series photometry data of transiting exoplanets.
 
 Specifically, I aimed:
@@ -48,7 +54,12 @@ I would also like to highlight that all the workshop materials are publicly avai
 
 ---
 
+
 ## The Workshop
+
+<div align="center">
+  <img src="CodeAstro-2.jpg" alt="Texto alternativo">
+</div>
 
 The workshop combined theory in the mornings with hands-on practice in the afternoons. I attended all optional sessions to make the most of the experience.
 
@@ -71,9 +82,4 @@ During the week, I collaborated with two colleagues on a short group project: we
 
 ---
 
-**Key takeaways (and what I will apply immediately):**
-- A clear process for writing, testing, and publishing scientific code  
-- Focus on maintainability (structure, typing, linting, CI)  
-- Reproducible documentation (docstrings, tutorials, examples)  
-- Commitment to open-source and community standards  
-- Best practices to integrate into my master’s data reduction pipeline  
+## Conclusions
