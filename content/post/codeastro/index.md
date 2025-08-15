@@ -29,12 +29,12 @@ I would now like to share my experience at Code/Astro. I will discuss my experie
 
 From the beginning of my master's program, my tutor and I realized that I needed to improve my coding skills because my master's project's main goal was to release a pipeline tool for reducing time series photometry data of transiting exoplanets.
 
-Specifically, I aimed to:
+Specifically, I aimed:
 
-- Professionally integrating Git/GitHub (branches, pull requests, and reviews).
-- Packaging a Python project and make it installable.
-- Creating clear, automated documentation.
-- Learning open-source coding practices.
+- To professionally integrate Git/GitHub (branches, pull requests, and reviews).
+- To package a Python project and make it installable.
+- To create clear, automated documentation.
+- To learn open-source coding practices.
 
 When I submitted my application, I made sure to clearly explain those specific reasons to demonstrate that I had a tangible reason to attend the event.
 
