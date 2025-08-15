@@ -5,8 +5,8 @@ date: 2025-08-13
 authors:
   - admin
 tags:
-  - Python
   - Workshop
+  - Python
   - USA
 image:
   filename: "CodeAstro-logo.png"
