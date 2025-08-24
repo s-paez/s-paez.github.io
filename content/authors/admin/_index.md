@@ -106,4 +106,4 @@ awards:
 
 ## About Me
 
-Hello! I am a Colombian student pursuing a Master's degree in Astrophysics at the Instituto de Astronomía of the Universidad Nacional Autónoma de México (UNAM). I am working with Prof. Yilen Gómez Maqueo Chew's research group on analyzing the light curves of transiting exoplanets.
+Hello! I am a Colombian student pursuing a Master's degree in Astrophysics at the Instituto de Astronomía of the Universidad Nacional Autónoma de México (UNAM). I work with Prof. Yilen Gómez Maqueo Chew's research group on analyzing the light curves of transiting exoplanets.
