@@ -11,11 +11,11 @@ design:
 sections:
   - block: collection
     content:
-      title: Selected Projects
-      text: I enjoy making things. Here are a selection of projects that I have worked on over the years.
+      title: Some stories about my academic journey
+      text: In the past, I would appreciate to know more details on Astronomy careers, that is why I am glad to share some stories and experiences I have lived in my career.
       filters:
         folders:
-          - project
+          - post
     design:
       view: article-grid
       fill_image: false
