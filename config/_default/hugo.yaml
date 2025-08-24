@@ -7,6 +7,8 @@
 title: Santiago Paez
 # Website URL
 baseURL: 'hhttps://s-paez.github.io/'
+canonifyURLs: true
+
 
 ############################
 ## LANGUAGE
