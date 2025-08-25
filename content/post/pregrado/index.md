@@ -8,15 +8,21 @@ tags:
   - Pregrado
   - Educación
   - Colombia
-# image:
-#   filename: "image0.jpg"
-#   caption: 'Santiago'
-#   focal_point: "Center"
-#   preview_only: True
+image:
+  filename: "pregrado0.jpg"
+  caption: 'Santiago con su título'
+  focal_point: "Center"
+  preview_only: True
+# <div align="center">
+#   <img src="CodeAstro-0.jpg" alt="Code/Astro Logo">
+# </div>
 ---
 
-# Admisión en La Sabana y como pagarla
+## Admisión en La Sabana y cómo pagarla
 
+<div align="center">
+  <img src="pregrado1.jpg" alt="Campus UniSabana">
+</div>
 Durante mi último año de bachillerato, ya había revisado qué tenía que hacer para poder ser astrónomo. El plan A era estudiar la carrera de Física en la Universidad Nacional de Colombia (la Nacho) y luego hacer un posgrado en Astronomía. Sin embargo, este plan se frustró cuando no obtuve ni 600 puntos en el examen de admisión, que ni me alcanzaban para entrar a ninguna carrera. El plan B era estudiar una carrera de ingeniería en la Universidad Distrital Francisco José de Caldas (la Distri) y luego aprovechar la base de matemáticas y física para hacer un posgrado en astronomía. El proceso de admisión en la Universidad Distrital se basaba en la puntuación obtenida en el ICFES, un examen nacional que todos los estudiantes colombianos presentamos cuando estamos a punto de terminar el bachillerato y que puede resultar decisivo para quienes venimos de entornos menos favorecidos. Sobre todo a la hora de obtener becas de estudio o lograr la admisión en muchas universidades.
 
 Mientras realizaba el proceso de admisión en La Distri, nos invitaron a un taller en la Universidad de La Sabana (La Sabana) para conocer el campus y la nueva carrera de Licenciatura en Ciencias Naturales (LCN). Para contextualizar, la Universidad de La Sabana es una universidad privada ubicada a 7 km al norte de Bogotá, en el municipio de Chía. Usme, donde vivía, está en el extremo suroriental de la ciudad. Hasta entonces, solo sabía que era una de las universidades más caras. En el taller conocimos el campus y detalles específicos sobre la LCN, como el plan de estudios, el perfil de los estudiantes y de los egresados, así como las oportunidades de financiación.
@@ -29,7 +35,7 @@ Me admitieron en la Universidad de La Sabana poco después de iniciar el proceso
 
 Tras varios días de incertidumbre a finales de diciembre de 2018, se publicaron los resultados de la SED y mi nombre aparecía en la lista de beneficiarios. El programa se llama Fondo de Educación Superior para Todos (FEST). Ese fue uno de los momentos más importantes de mi vida: me convertí en el primer miembro de mi familia en recibir una especie de beca para estudiar en la universidad y, probablemente, sería el primero en terminarla. Por supuesto, el hecho de que la ayuda fuese un crédito condonable suponía una gran presión: si no terminaba la carrera, tendría que devolver todo lo que hubiesen invertido en ella, con intereses y seguramente me habría tomado años pagar todo el crédito.
 
-# La Licenciatura en Ciencias Naturales
+## La Licenciatura en Ciencias Naturales
 
 Es imposible contar con detalle cómo viví los diez semestres que duró mi carrera y, mucho menos, intentar hacer un relato cronológico de los distintos momentos. Como cualquier persona en cinco años, empecé siendo uno y salí convertido en otro: crecí en términos profesionales y personales, conocí a personas increíbles y hice amigos que recordaré siempre. También aprendí sobre el mundo, viajé, conocí lugares, pueblos, parques naturales, reservas y colegios, y de cada lugar me llevé algo para mi vida. Estudiar en La Sabana me abrió la mente de una forma que nunca habría anticipado, eliminé prejuicios y descubrí una realidad que no habría visto ni experimentado en otro lugar.
 
@@ -50,7 +56,7 @@ Durante mi carrera, me formé como profesor de ciencias naturales, estudié peda
 
 Durante mi carrera también afiancé mi pasión por la astronomía y siempre tuve claro que graduarme era 1un pequeño paso para alcanzar mi objetivo de ser astrónomo. Seguí aprendiendo, leyendo y convenciéndome de que la astronomía era lo que quería para mi vida.
 
-# Top 50 en el Global Student Prize
+## Top 50 en el Global Student Prize
 
 Uno de los momentos que más marcó mi etapa en La Sabana fue cuando resulté finalista del Global Student Prize 2023. Sin duda, fue una experiencia que me marcó profundamente y que espero describir con más detalle en otra entrada del blog. A grandes rasgos, ser finalista y recibir tanta atención mediática fue algo para lo que nunca pude estar preparado. Aunque, afortunadamente, como la mayoría de las noticias, tuvo su momento álgido y todo volvió rápidamente a la normalidad.
 
