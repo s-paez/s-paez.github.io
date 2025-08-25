@@ -75,7 +75,7 @@ Siempre he escuchado a personas de muchas profesiones decir que la suya es de la
 
 Por eso, en cada entrevista, cada nota, cada vídeo, he intentado dejar claro lo importante que es la figura del docente, cómo los países que más apuestan por la educación son los que más se desarrollan y cómo donde ser profesor es motivo de orgullo y admiración es donde más se prospera.
 
-Nunca me gustó que me llamaran uno de los "mejores estudiantes del mundo" o "el mejor estudiante de Colombia", ya que fui el único colombiano nominado ese año (cosa que no es cierta, porque una estudiante colombiana de doctorado en Francia también fue nominada, solo que su nominación apareció por ese país). Porque simplemente no lo soy, ni lo fui. No hay un criterio definido para ganar ese título y, por supuesto, no lo son los aspectos que evalúan los seleccionadores del premio.
+Nunca me gustó que me llamaran uno de los "mejores estudiantes del mundo" o "el mejor estudiante de Colombia", ya que fui el único colombiano nominado ese año (cosa que no es cierta, porque una estudiante colombiana de doctorado en Francia también fue nominada, solo que su nominación apareció por ese país). Porque simplemente no lo soy, ni lo fui. No hay criterios definidos para ganar ese título y, por supuesto, no son los que evalúan los seleccionadores del premio.
 
 # El final de mi licenciatura
 
