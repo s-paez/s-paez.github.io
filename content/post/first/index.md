@@ -10,7 +10,7 @@ image:
   filename: "image0.jpg"
   caption: 'Santiago'
   focal_point: "Center"
-  preview_only: True
+  preview_only: False
 ---
 
 Hace algunos años, cuando empecé a considerar la astronomía como mi proyecto profesional, busqué toda la información que pude sobre la vida de un astrónomo. Busqué en internet a muchas personas que sabía que se dedicaban a la astronomía, revisé sus perfiles, qué habían hecho, qué habían publicado, qué habían vivido, etc., y mi sensación en general es que no encontraba personas que compartieran tantos detalles como yo quería. Entonces, me propuse que si algún día me dedicaba a la astronomía, compartiría tantos detalles como pudiera sobre cómo la vida me había llevado a ser un astrónomo.
