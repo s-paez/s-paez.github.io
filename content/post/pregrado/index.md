@@ -9,7 +9,7 @@ tags:
   - Educación
   - Colombia
 image:
-  filename: "pregrado0.jpg"
+  filename: "pregrado5.jpg"
   caption: 'Santiago con su título'
   focal_point: "Center"
   preview_only: True
@@ -37,10 +37,13 @@ Tras varios días de incertidumbre a finales de diciembre de 2018, se publicaron
 
 ## La Licenciatura en Ciencias Naturales
 
+<div align="center">
+  <img src="pregrado2.jpg" alt="Campus UniSabana">
+</div>
+
 Es imposible contar con detalle cómo viví los diez semestres que duró mi carrera y, mucho menos, intentar hacer un relato cronológico de los distintos momentos. Como cualquier persona en cinco años, empecé siendo uno y salí convertido en otro: crecí en términos profesionales y personales, conocí a personas increíbles y hice amigos que recordaré siempre. También aprendí sobre el mundo, viajé, conocí lugares, pueblos, parques naturales, reservas y colegios, y de cada lugar me llevé algo para mi vida. Estudiar en La Sabana me abrió la mente de una forma que nunca habría anticipado, eliminé prejuicios y descubrí una realidad que no habría visto ni experimentado en otro lugar.
 
 Si consultas la versión de mi CV en esta página, podrás ver con cierto detalle todo lo que hice entre enero de 2019 y marzo de 2024, que son las fechas que abarcan mis estudios de licenciatura. Hice prácticas pedagógicas en diferentes lugares, como colegios, museos, alcaldías y el planetario. También fui tutor de estudiantes becarios, dirigí un grupo de investigación y trabajé para la universidad, y participé en muchos eventos académicos. No pretendo contar aquí cada cosa que hice durante la carrera, sino dar una visión general de mi experiencia.
-
 
 Creo que lo que más marcó mi etapa como estudiante fue la dedicación que le puse en la universidad. Siempre tuve claro que se trataba de una oportunidad única que no podía dejar escapar. Nunca fui a clase y me fui directamente a casa, sino que pasaba más de doce horas diarias en el campus (verán que es un hábito que nunca he dejado). Durante los dos primeros semestres, lo hacía más por practicidad. Vivía en La Fiscala, en Usme, y para llegar a clase a las 7 a. m., tenía que salir de mi casa a las 4 a. m. Todos los días tomaba el alimentador, un Transmilenio, desde el Portal Usme hasta el Portal Norte, y luego un autobús que iba para Chía y me dejaba frente a la universidad. De regreso, el proceso era el mismo; me regresaba alrededor de las 7 p. m. y llegaba a mi casa alrededor de las 10 p. m., si tenía suerte.
 
@@ -58,6 +61,10 @@ Durante mi carrera también afiancé mi pasión por la astronomía y siempre tuv
 
 ## Top 50 en el Global Student Prize
 
+<div align="center">
+  <img src="pregrado3.jpg" alt="Campus UniSabana">
+</div>
+
 Uno de los momentos que más marcó mi etapa en La Sabana fue cuando resulté finalista del Global Student Prize 2023. Sin duda, fue una experiencia que me marcó profundamente y que espero describir con más detalle en otra entrada del blog. A grandes rasgos, ser finalista y recibir tanta atención mediática fue algo para lo que nunca pude estar preparado. Aunque, afortunadamente, como la mayoría de las noticias, tuvo su momento álgido y todo volvió rápidamente a la normalidad.
 
 El Global Student Prize es una iniciativa de las fundaciones Varkey y Chegg.org que busca reconocer a estudiantes de todos los niveles que, en su opinión, han tenido un impacto en sus comunidades y han contribuido a generar cambios en ellas. Mis profesores y amigos, que conocían el premio, me animaron a presentar mi candidatura, aunque reconozco que no puse todo mi empeño en ello. De hecho, alguien llegó a comentar que otra persona que había preparado mejor su solicitud seguramente tendría más posibilidades de ser seleccionada, a pesar de tener menos cosas que mostrar.
@@ -68,7 +75,13 @@ Siempre he escuchado a personas de muchas profesiones decir que la suya es de la
 
 Por eso, en cada entrevista, cada nota, cada vídeo, he intentado dejar claro lo importante que es la figura del docente, cómo los países que más apuestan por la educación son los que más se desarrollan y cómo donde ser profesor es motivo de orgullo y admiración es donde más se prospera.
 
+Nunca me gustó que me llamaran uno de los "mejores estudiantes del mundo" o "el mejor estudiante de Colombia", ya que fui el único colombiano nominado ese año (cosa que no es cierta, porque una estudiante colombiana de doctorado en Francia también fue nominada, solo que su nominación apareció por ese país). Porque simplemente no lo soy, ni lo fui. No hay un criterio definido para ganar ese título y, por supuesto, no lo son los aspectos que evalúan los seleccionadores del premio.
+
 # El final de mi licenciatura
+
+<div align="center">
+  <img src="pregrado0.jpg" alt="Campus UniSabana">
+</div>
 
 Un día, durante mi ultimo semestre en una ceremonia de reconocimiento por haber obtenido el mejor puntaje del examen Saber Pro de la Licenciatura en Ciencias Naturales (que de hecho compartí con otro compañero porque obtuvimos el mismo puntaje) una persona me dijo: "este definitivamente fue tu año". Eso me puso a pensar durante toda la ceremonia. Durante el ultimo año estuve bastante ocupado y no había tenido la oportunidad de hacer el ejercicio de reflexión sobre lo que había conseguido hasta entonces: había tenido un trabajo en educación muy bien pago por primera vez, había conocido el mar, había volado en avión por primera vez, había salido del país, había usado un telescopio histórico con un espejo principal de 1 metro de diámetro para tomar datos de exoplanetas, había sido seleccionado en los 50 finalistas del Global Student Prize y ahora estaba recibiendo un reconocimiento por mi resultado en el Saber Pro y en pocos meses me graduaría como Licenciado en Ciencias Naturales. Creo que de alguna esa persona sí tenía razón y el 2023 fue "mi año" como ella dijo. 
 
