@@ -17,7 +17,7 @@ image:
 #   <img src="CodeAstro-0.jpg" alt="Code/Astro Logo">
 # </div>
 ---
-> En esta entrada del blog, cuento de manera general cómo fue mi carrera en la Universidad de La Sabana, cuento lo que más me marco y cómo me formé como profe de ciencias naturales, una profesión que respeto y admiro mucho. Cuento desde como fue que terminé estudiando una licenciatura en una universidad privada, hasta como preparé mi paso a un posgrado en astrofísica durante la carrera. 
+> En esta entrada del blog, cuento de manera general cómo fue mi carrera en la Universidad de La Sabana, cuento lo que más me marcó y cómo me formé como profe de ciencias naturales, una profesión que respeto y admiro mucho. Cuento desde cómo fue que terminé estudiando una licenciatura en una universidad privada, hasta algunos detalles de cómo preparé mi transición a un posgrado en astrofísica durante la carrera. 
 
 
 ## Admisión en La Sabana y cómo pagarla
