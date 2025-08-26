@@ -12,11 +12,6 @@ image:
   focal_point: "Center"
   preview_only: False
 ---
-
-Hace algunos años, cuando empecé a considerar la astronomía como mi proyecto profesional, busqué toda la información que pude sobre la vida de los astrónomos. Busqué en internet a muchas personas que sabía que se dedicaban a la astronomía, revisé sus perfiles, qué habían hecho, qué habían publicado, qué habían vivido, etc., y mi sensación en general es que no encontraba personas que compartieran tantos detalles como yo quería. Entonces, me propuse que si algún día me dedicaba a la astronomía, compartiría tantos detalles como pudiera sobre cómo la vida me había llevado a ser un astrónomo.
-
-Este blog es la materialización de ese propósito de compartir mi experiencia. No para mostrarme como un modelo a seguir o porque crea que lo he hecho excelente, sino porque tal vez alguien, como yo mismo hace algunos años, solo quiere saber más sobre algo que le gusta. 
-
 ## Mi trayectoria resumida
 
 Nací en [Chaparral](https://es.wikipedia.org/wiki/Chaparral_(Tolima)), un municipio del departamento del Tolima (Colombia), a los pies de la cordillera Central de los Andes. Viví casi toda mi vida en el barrio El Rocío, donde también estudié hasta tercero de primaria. Después de vivir un par de meses en Bogotá, volví a la zona rural de Chaparral para terminar la primaria en la escuela de la vereda Chontaduro, en el corregimiento de Calarma. Me promovieron de tercero a quinto grado solo porque no había certeza de que al año siguiente hubiera profesora en la escuela, ya que solo éramos seis estudiantes en total.
