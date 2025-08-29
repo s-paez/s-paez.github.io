@@ -1,7 +1,7 @@
 ---
 title: Primer post
 summary: La razón de este blog es compartir algunas experiencias, historias e ideas personales y académicas.
-date: 2025-08-01
+date: 2025-08-29
 authors:
   - admin
 tags:
