@@ -15,11 +15,11 @@ sections:
       username: admin
       text: ""
       # Show a call-to-action button under your biography? (optional)
-      buttons:
-        text: Download CV-EN
-        url: uploads/resume_en.pdf
-        text: Descargar CV-ES
-        url: uploads/resume_es.pdf  
+      # buttons:
+      #   text: Download CV-EN
+      #   url: uploads/resume_en.pdf
+      #   text: Descargar CV-ES
+      #   url: uploads/resume_es.pdf  
     design:
       css_class: dark
       background:
@@ -32,6 +32,15 @@ sections:
           size: cover
           position: center
           parallax: false
+  - block: cta-button-list
+    content:
+      buttons:
+        - text: "Download CV-EN"
+          url: "uploads/resume_en.pdf"
+          icon: academicons/cv
+        - text: "Descargar CV-ES"
+          url: "uploads/resume_es.pdf"
+          icon: academicons/cv
   - block: markdown
     content:
       title: '📚 My work'
