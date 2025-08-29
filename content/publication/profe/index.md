@@ -34,9 +34,9 @@ tags:
 
 featured: false
 
-# links:
-# - name: ""
-#   url: ""
+links:
+- name: "Interactive light curves"
+  url: 'https://s-paez.github.io/opticam_lc/'
 url_pdf: 
 url_code: 'https://github.com/s-paez/profe'
 url_dataset: 
@@ -45,7 +45,6 @@ url_project:
 url_slides: 
 url_source: 
 url_video: 
-url_plots: 'https://s-paez.github.io/opticam_lc/'
 
 # Featured image
 # To use, add an image named `featured.jpg/png` to your page's folder. 
