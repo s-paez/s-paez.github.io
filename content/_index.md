@@ -35,10 +35,10 @@ sections:
   - block: cta-button-list
     content:
       buttons:
-        - text: "Download CV-EN"
+        - text: "Download my CV in English "
           url: "uploads/resume_en.pdf"
           icon:
-        - text: "Descargar CV-ES"
+        - text: "Descarga mi CV en Español"
           url: "uploads/resume_es.pdf"
           icon: 
   - block: markdown
