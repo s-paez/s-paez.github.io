@@ -46,7 +46,7 @@ sections:
       title: '📚 My work'
       subtitle: ''
       text: |-
-        I am currently working in the development of a data reduction pipeline for the [OPTICAM instrument](https://www.astrossp.unam.mx/es/usuarios/instrumentos/imagendirecta/opticam) mounted on the [2.1m Telescope](https://www.astrossp.unam.mx/es/usuarios/telescopios/tel2m) at the Observatorio Astronómico Nacional San Pedro Mártir (OAN-SPM). This pipeline will perform the reduction of simultaneous multiband photometry of transiting exoplanets.
+        I am currently working in the development of [PROFE](https://github.com/s-paez/profe) a data reduction pipeline for the [OPTICAM instrument](https://www.astrossp.unam.mx/es/usuarios/instrumentos/imagendirecta/opticam) mounted on the [2.1m Telescope](https://www.astrossp.unam.mx/es/usuarios/telescopios/tel2m) at the Observatorio Astronómico Nacional San Pedro Mártir (OAN-SPM). PROFE performs the necessary preprocessing of OPTICAM data before the standard reduction of simultaneous multiband photometry of transiting exoplanets. I also analyze light curves from multiple confirmed and candidate transiting exoplanets. 
     design:
       columns: '1'
   # - block: collection
