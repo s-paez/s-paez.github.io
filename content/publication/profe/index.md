@@ -1,9 +1,9 @@
 ---
-title: "Data Reduction for OPTICAM and PROFE pipeline"
+title: "Data reduction method for OPTICAM multiband time series of transiting exoplanets"
 authors:
 - admin
-- Yilen Gómez Maqueo Chew
-- Leslie Hebb
+- Y. Gómez Maqueo Chew
+- L. H. Hebb
 author_notes:
 - "Equal contribution"
 - "Equal contribution"
@@ -20,7 +20,7 @@ publishDate: "2025-08-01T00:00:00Z"
 publication_types: ["article-journal"]
 
 # Publication name and optional abbreviated publication name.
-publication: "*Montly Notices of Royal Astronomy Society, 1*(1)"
+publication: "*Montly Notices of Royal Astronomy Society, 0*(00)"
 publication_short: "MNRAS"
 
 abstract: We present a methodology for acquiring and reducing transiting exoplanet light curves obtained with San Pedro Mártir (SPM) 2.1m+OPTICAM, based on ~180h of observations acquired between 2023 and 2025. The OPTICAM sCMOS detectors generate significant hot pixels at exposures ≥ 10s, affecting both science and calibration frames. These hot pixels are not removed by standard dark subtraction because they vary unpredictably from frame to frame. We evaluate six pre-processing methods applied to science and calibration images using the transit of a TESS planet candidate observed in the g'r'i' filters. A median filter with a 3x3-pixel window minimizes the effect of hot pixels without affecting stellar signals. This proposed method best reduces dispersion and red noise in the light curves when stellar peak counts are close to the dark current level. The improvement is less significant when the stellar peak is several thousand counts above the dark current level. We fit a multiband transit model to the light curves, measuring photometric precision, correlated noise, and retrieved planetary parameters. Although we analyze the same dataset, we find that fitted parameters depend on the preprocessing method used. Posterior comparisons show that the median filter preprocessing best describes the data. We caution against combining light curves from different reductions, as it could introduce unquantifiable systematic errors; for example, the derived impact parameter varies by up to ~5.6σ. Finally, we introduce PROFE, a reduction pipeline that implements our proposed method, which incorporates AstroImageJ and Python scripts.
@@ -29,7 +29,9 @@ abstract: We present a methodology for acquiring and reducing transiting exoplan
 summary: We propose a preprocessing with a 3x3-pixel window median filter for the OPTICAM data of transiting exoplanet and introduce PROFE, a pipeline that implementa that preprocessing among other needed corrections and outputs.
 
 tags:
-- Source Themes
+- Article
+- Transits
+
 featured: false
 
 # links:
@@ -38,16 +40,16 @@ featured: false
 url_pdf: 
 url_code: 'https://github.com/s-paez/profe'
 url_dataset: 'https://s-paez.github.io/opticam_lc/'
-url_poster: ''
-url_project: ''
-url_slides: ''
-url_source: ''
-url_video: ''
+url_poster: 'Algo'
+url_project: 'Algo'
+url_slides: 'Algo'
+url_source: 'Algo'
+url_video: 'Algo'
 
 # Featured image
 # To use, add an image named `featured.jpg/png` to your page's folder. 
 image:
-  caption: 'Image credit: [**Unsplash**](https://unsplash.com/photos/jdD8gXaTZsc)'
+  caption: 'Paez et al. (2025)'
   focal_point: ""
   preview_only: false
 
@@ -65,13 +67,3 @@ projects: []
 #   Otherwise, set `slides: ""`.
 slides: example
 ---
-
-{{% callout note %}}
-Click the *Cite* button above to demo the feature to enable visitors to import publication metadata into their reference management software.
-{{% /callout %}}
-
-{{% callout note %}}
-Create your slides in Markdown - click the *Slides* button to check out the example.
-{{% /callout %}}
-
-Add the publication's **full text** or **supplementary notes** here. You can use rich formatting such as including [code, math, and images](https://docs.hugoblox.com/content/writing-markdown-latex/).
