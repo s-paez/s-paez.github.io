@@ -1,13 +1,13 @@
 ---
 # Display name
-title: Santiago Paez Avendaño
+title: Santiago Paez
 
 # Name pronunciation (optional)
 name_pronunciation: ''
 
 # Full name (for SEO)
 first_name: Santiago
-last_name: Paez Avendaño
+last_name: Paez
 
 # Status emoji
 status:
