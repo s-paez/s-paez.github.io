@@ -1,7 +1,7 @@
 ---
 title: "Data reduction method for OPTICAM multiband time series of transiting exoplanets"
 authors:
-- admin
+- spaez
 - Y. Gómez Maqueo Chew
 - L. H. Hebb
 author_notes:
