@@ -32,13 +32,15 @@ sections:
           size: cover
           position: center
           parallax: false
-  - block: buttons
+  - block: cta-button-list
     content:
       buttons:
         - text: "Download CV-EN"
           url: "uploads/resume_en.pdf"
+          icon:
         - text: "Descargar CV-ES"
           url: "uploads/resume_es.pdf"
+          icon: 
   - block: markdown
     content:
       title: '📚 My work'
