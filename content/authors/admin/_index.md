@@ -33,14 +33,14 @@ profiles:
   - icon: at-symbol
     url: 'mailto:spaez@astro.unam.mx'
     label: E-mail Me
-  - icon: brands/instagram
-    url: https://www.instagram.com/santiago_paav
   - icon: brands/github
     url: https://github.com/s-paez
   - icon: brands/linkedin
     url: https://www.linkedin.com/in/santiagopaav
   - icon: academicons/orcid
     url: https://orcid.org/0000-0001-6381-7120
+  - icon: brands/instagram
+    url: https://www.instagram.com/santiago_paav
 
 interests:
   - Transiting Exoplanets
