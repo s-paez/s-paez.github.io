@@ -16,8 +16,8 @@ sections:
       text: ""
       # Show a call-to-action button under your biography? (optional)
       buttons:
-      text: Descarga mi CV
-      url: uploads/resume_es.pdf
+        text: Descarga mi CV
+        url: uploads/resume_es.pdf
       #   text: Descargar CV-ES
       #   url: uploads/resume_es.pdf  
     design:
