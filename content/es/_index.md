@@ -18,8 +18,6 @@ sections:
       button:
         text: Descarga mi CV
         url: uploads/resume_es.pdf
-      #   text: Descargar CV-ES
-      #   url: uploads/resume_es.pdf  
     design:
       css_class: blue
       background:
