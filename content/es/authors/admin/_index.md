@@ -81,7 +81,7 @@ skills:
   - name: Librerías de Python
     items:
       - name: Astropy
-        icon: python
+        icon: custom/py
       - name: Pandas
       - name: Numpy
       - name: Matplotlib
