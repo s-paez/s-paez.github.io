@@ -24,6 +24,7 @@ languages:
     languageName: Español
     weight: 2
     contentDir: "content/es"
+    
 hasCJKLanguage: false
 defaultContentLanguageInSubdir: false
 removePathAccents: true
