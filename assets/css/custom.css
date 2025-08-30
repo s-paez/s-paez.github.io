@@ -1,0 +1,10 @@
+/* Quitar mayúsculas forzadas en títulos y textos de habilidades */
+.section.skills h1,
+.section.skills h2,
+.section.skills h3,
+.section.skills .heading,
+.section.skills .skill-item h3,
+.section.skills li span,
+.section.skills .uppercase {
+  text-transform: none !important;
+}
