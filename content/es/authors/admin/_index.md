@@ -66,7 +66,7 @@ skills:
   - name: Software
     items:
       - name: Python
-        icon: custom/py
+        icon: brands/py
       - name: AstroImageJ
         # icon: "custom/aij"
       - name: Latex
@@ -81,7 +81,7 @@ skills:
   - name: Librerías de Python
     items:
       - name: Astropy
-        icon: custom/py
+        icon: brands/py
       - name: Pandas
       - name: Numpy
       - name: Matplotlib
