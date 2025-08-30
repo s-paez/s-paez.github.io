@@ -25,3 +25,30 @@
 #section-resume-skills * {
   text-transform: none !important;
 }
+
+/* Pone icono y texto en la misma línea dentro de cada skill */
+#section-resume-skills .skills-content{
+  display: flex;           /* fila por defecto */
+  align-items: center;     /* centra verticalmente */
+  gap: .5rem;              /* espacio entre icono y texto */
+}
+
+/* Asegura que el icono no “salte” de línea ni flote */
+#section-resume-skills .skills-icon{
+  display: inline-flex;
+  align-items: center;
+  position: static !important;
+  float: none !important;
+}
+
+/* Tamaño consistente del SVG (ajústalo a gusto) */
+#section-resume-skills .skills-icon svg{
+  width: 1em;
+  height: 1em;
+}
+
+/* Por si alguna utilidad del tema forzaba bloque o uppercase */
+#section-resume-skills .skills-name{
+  display: inline-block;
+  text-transform: none !important;
+}
