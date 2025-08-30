@@ -1,6 +1,6 @@
 ---
-title: Primer post
-summary: La razón de este blog es compartir algunas experiencias, historias e ideas personales y académicas.
+title: Firs post
+summary: The reason for this blog is to share some personal and academic experiences, stories and ideas.
 date: 2025-08-29
 authors:
   - admin
@@ -8,32 +8,30 @@ tags:
   - Blog
 image:
   filename: "image0.jpg"
-  caption: 'En mi primer viaje al OAN-SPM'
+  caption: 'My first trip to OAN-SPM'
   focal_point: "Center"
   preview_only: False
 ---
-## Mi trayectoria resumida
+## My career in brief
 
-Nací en [Chaparral](https://es.wikipedia.org/wiki/Chaparral_(Tolima)), un municipio del departamento del Tolima (Colombia), a los pies de la cordillera Central de los Andes. Viví casi toda mi vida en el barrio El Rocío, donde también estudié hasta tercero de primaria. Después de vivir un par de meses en Bogotá, volví a la zona rural de Chaparral para terminar la primaria en la escuela de la vereda Chontaduro, en el corregimiento de Calarma. Me promovieron de tercero a quinto grado solo porque no había certeza de que al año siguiente hubiera profesora en la escuela, ya que solo éramos seis estudiantes en total.
+I was born in [Chaparral](https://es.wikipedia.org/wiki/Chaparral_(Tolima)), a municipality in the department of Tolima (Colombia), at the foot of the Central Andes mountain range. I lived almost all my life in the El Rocío neighborhood, where I also studied up to third grade. After living in Bogotá for a couple of months, I returned to the rural area of Chaparral to finish elementary school in the village of Chontaduro, in the village of Calarma. I was promoted from third to fifth grade only because there was no certainty that the following year there would be a teacher in the school, since there were only six students in total.
 
-Después de terminar la primaria, estudié grados sexto y séptimo en el Colegio Manuel Murillo Toro, en la zona urbana del municipio. Cuando terminé séptimo, me mudé de nuevo a Bogotá para terminar el bachillerato en el colegio Fabio Lozano Simonelli (Falosi), en el barrio La Fiscala de la localidad de Usme. Antes había estudiado un año en el colegio Arnulfo Briceño Contreras, en Villavicencio.
+After finishing elementary school, I studied sixth and seventh grades at the Manuel Murillo Toro School, in the urban area of the municipality. When I finished seventh grade, I moved back to Bogotá to finish high school at the Fabio Lozano Simonelli (Falosi) school, in the La Fiscala neighborhood of Usme. Before that, I had studied for a year at the Arnulfo Briceño Contreras school in Villavicencio.
 
-Fue en el Falosi donde conocí la astronomía por primera vez, gracias a un curso breve para profesores que tomé en el Planetario de Bogotá. Hasta entonces, aunque nunca había sido un mal estudiante, tampoco había destacado por mis resultados académicos. Mis notas no eran malas, pero tampoco las mejores. Creo que era porque nada me había llamado completamente la atención ni lo disfrutaba de alguna manera especial.
-
+It was at Falosi that I first learned about astronomy, thanks to a short course for teachers that I took at the Planetarium in Bogotá. Until then, although I had never been a bad student, I had not stood out for my academic results either. My grades were not bad, but not the best either. I think it was because nothing had completely caught my attention or I enjoyed it in any special way.
 Después de hacer el curso en el planetario, me involucré de lleno en el club de astronomía del colegio y, al poco tiempo, supe que quería dedicarme a la astronomía. Participé en las Olimpiadas Colombianas de Astronomía y Astrofísica y, aunque solo pasé a la segunda ronda clasificatoria, esa experiencia me sirvió para aprender por mi cuenta y confirmar que realmente disfrutaba de la astronomía.
 
-Me gradué como bachiller en noviembre de 2018 y, gracias a la ayuda del Fondo de Educación Superior para Todos (FEST) de la Secretaría de Educación Distrital (SED), pude financiar mi carrera de Licenciatura en Ciencias Naturales en la Universidad de La Sabana. Ahí me formé como profesor de ciencias naturales, con énfasis en física, en la Facultad de Educación. Aunque gran parte de mis estudios se centraron en la enseñanza de las ciencias naturales, nunca dejé de lado la astronomía. Participé en un grupo de investigación en enseñanza de la astronomía con el que realizamos muchas actividades de educación científica y divulgación de la astronomía en la provincia de Sabana Centro, la región de mayor influencia de la Universidad de La Sabana.
+I graduated as a high school graduate in November 2018 and, thanks to the help of the Higher Education for All Fund (FEST) of the District Education Secretariat (SED), I was able to finance my Bachelor's degree in Natural Sciences at the University of La Sabana. There I was trained as a natural sciences teacher, with an emphasis on physics, in the Faculty of Education. Although most of my studies were focused on teaching natural sciences, I never left astronomy aside. I participated in a research group in astronomy teaching with which we carried out many activities in science education and astronomy outreach in the province of Sabana Centro, the region of greatest influence of the University of La Sabana.
 
-Durante la carrera, también aprendí más sobre astronomía y sobre las habilidades que necesitaría para ser aceptado en un programa de posgrado. Por esos años conocí el campo de los exoplanetas, porque mis mentores más cercanos trabajan en astrobiología y ciencias planetarias. Aprendí sobre qué son, cómo se detectan, cómo se estudian y cuáles son algunas de las preguntas que aún están sin respuesta. Para cuando terminé la carrera, ya tenía claro que quería ser astrónomo y dedicarme al estudio de los exoplanetas.
+During undergrad, I also learned more about astronomy and the skills I would need to be accepted into a graduate program. Around those years I learned about the field of exoplanets, because my closest mentors work in astrobiology and planetary sciences. I learned about what they are, how they are detected, how they are studied, and what are some of the questions that are still unanswered. By the time I finished my degree, it was clear to me that I wanted to be an astronomer and dedicate myself to the study of exoplanets.
 
-Gracias a dos escuelas de verano que descubrí por casualidad en grupos de astronomía de Facebook, conocí el Instituto de Astronomía de la Universidad Nacional Autónoma de México (UNAM). Después de presentarme dos veces a la Escuela de Astronomía Observacional para Estudiantes Latinoamericanos (ESAOBELA), fui aceptado y tuve la oportunidad de viajar a México por primera vez en 2023. Durante la ESAOBELA, me informé sobre el programa de posgrado en astrofísica que ofrece la UNAM y sobre el programa de Becas Nacionales de Posgrado que ofrece la Secretaría de Ciencia, Humanidades, Tecnología e Innovación (SECIHTI, antes CONACYT), del que pueden ser beneficiarios estudiantes extranjeros.
+Thanks to two summer schools that I discovered by chance in Facebook astronomy groups, I got to know the Instituto de Astronomía of the Universidad Nacional Autónoma de México (UNAM). After applying twice to the School of Observational Astronomy for Latin American Students (ESAOBELA), I was accepted and had the opportunity to travel to Mexico for the first time in 2023. During ESAOBELA, I learned about the graduate program in astrophysics offered by UNAM and about the National Graduate Scholarship program offered by the Secretariat of Science, Humanities, Technology and Innovation (SECIHTI, formerly CONACYT), which is open to foreign students.
 
-Entonces decidí que sería el Instituto de Astronomía de la UNAM, donde quería hacer la maestría en astrofísica y porque podía aplicar con una carrera de educación en ciencias. Solo tenía que aprobar el proceso de admisión. Y así fue, cuando terminé la Licenciatura en Ciencias Naturales, mientras esperaba el título y hacía una pasantía para condonar mi crédito educativo, me inscribí al proceso de admisión a la maestría e hice los cursos propedéuticos (de manera virtual) para ser aceptado.
+Then I decided that it would be the Institute of Astronomy at UNAM, where I wanted to do my master's degree in astrophysics and because I could apply with a degree in science education. I just had to pass the admission process. And so it was, when I finished my Bachelor's degree in Natural Sciences, while I was waiting for my degree and doing an internship to forgive my educational credit, I enrolled in the admission process for the Master's degree and took the propaedeutic courses (virtually) to be accepted.
 
-Pasar por el proceso de admisión fue toda una experiencia que espero contar en detalle en una entrada aparte del blog. Después de dos meses, fui admitido a la Maestría en Astrofísica del Instituto de Astronomía de la UNAM con una beca completa para los dos años que dura el programa.
+Going through the admission process was quite an experience that I hope to recount in detail in a separate blog post. After two months, I was admitted to the Master's program in Astrophysics at the Institute of Astronomy of the UNAM with a full scholarship for the two years of the program.
 
-Cuando recibí la notificación de admisión, contacté de inmediato con personas que ya había identificado que trabajan en el campo de los exoplanetas. Tras varios correos electrónicos y una reunión virtual, la Dra. Yilen Gómez Maqueo Chew, investigadora del Instituto de Astronomía, me aceptó para trabajar en su grupo. 
+When I received the notification of admission, I immediately contacted people I had already identified who work in the field of exoplanets. After several emails and a virtual meeting, Dr. Yilen Gómez Maqueo Chew, a researcher at the Instituto de Astronomía, accepted me to work in her group.
 
-Actualmente vivo en Ciudad de México, donde estoy cursando mi tercer semestre de maestría en Astrofísica en la sede de Ciudad Universitaria del Instituto de Astronomía de la UNAM. Estoy trabajando en el análisis de curvas de luz de exoplanetas en tránsito.
-
+I am currently living in Mexico City, where I am in my third semester of my master's degree in Astrophysics at the Ciudad Universitaria branch of the Institute of Astronomy of UNAM. I am working on the analysis of light curves of transiting exoplanets.
 
