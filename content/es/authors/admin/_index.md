@@ -65,18 +65,18 @@ education:
 skills:
   - name: Software
     items:
-      - icon: "custom/py"
-        name: Python
+      - name: Python
+        icon: "custom/py"
       - name: AstroImageJ
-        icon: aij
+        icon: "custom/aij"
       - name: Latex
-        icon: tex
+        icon: "custom/tex"
       - name: Git/Github
         icon: brands/github
       - name: Topcat
-        icon: topcat
+        icon: "custom/topcat"
       - name: VS Code
-        icon: vscode
+        icon: "custom/vscode"
 
   - name: Librerías de Python
     items:
