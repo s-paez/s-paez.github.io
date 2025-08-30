@@ -66,7 +66,7 @@ skills:
   - name: Software
     items:
       - name: Python
-        icon: python
+        icon: assets/media/icons/python.svg
       - name: AstroImageJ
         icon: aij
       - name: Latex
