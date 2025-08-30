@@ -63,12 +63,24 @@ education:
 # Skills
 # Add your own SVG icons to `assets/media/icons/`
 skills:
-  - name: Habilidades técnicas
+  - name: Software
     items:
       - name: Python
+        icon: python
       - name: AstroImageJ
       - name: Latex
       - name: Git/Github
+      - name: Topcat
+      - name: VS Code
+
+  - name: Librerías de Python
+    items:
+      - name: Astropy
+      - name: Pandas
+      - name: Numpy
+      - name: Matplotlib
+      - name: Scipy
+      - name: Multiprocessing
 
 languages:
   - name: Inglés
