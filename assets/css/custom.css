@@ -1,0 +1,22 @@
+/* Quita el uppercase en los títulos/listas de Skills */
+.section.skills h1,
+.section.skills h2,
+.section.skills h3,
+.section.skills h4,
+.section.skills .heading,
+.section.skills .skill-item h3,
+.section.skills .skills li span,
+.section.skills .skill-name {
+  text-transform: none !important;
+}
+
+/* (Opcional) Alineación de icono inline si lo usas en texto */
+.skill-icon-inline{
+  display:inline-block;
+  width:1em;
+  height:1em;
+  vertical-align:-0.15em;
+  margin:0 .35em 0 .2em;
+  position:static !important;
+  float:none !important;
+}
