@@ -16,8 +16,8 @@ sections:
       text: ""
       # Show a call-to-action button under your biography? (optional)
       # buttons:
-      #   text: Download CV-EN
-      #   url: uploads/resume_en.pdf
+      text: Descarga mi CV
+      url: uploads/resume_es.pdf
       #   text: Descargar CV-ES
       #   url: uploads/resume_es.pdf  
     design:
@@ -32,15 +32,15 @@ sections:
           size: cover
           position: center
           parallax: false
-  - block: cta-button-list
-    content:
-      buttons:
-        - text: "Download my CV in English "
-          url: "uploads/resume_en.pdf"
-          icon:
-        - text: "Descarga mi CV en Español"
-          url: "uploads/resume_es.pdf"
-          icon: 
+  # - block: cta-button-list
+  #   content:
+  #     buttons:
+  #       - text: "Download my CV in English "
+  #         url: "uploads/resume_en.pdf"
+  #         icon:
+  #       - text: "Descarga mi CV en Español"
+  #         url: "uploads/resume_es.pdf"
+  #         icon: 
   - block: markdown
     content:
       title: 'Mi trabajo'

@@ -104,6 +104,6 @@ awards:
     
 ---
 
-## About Me
+## Sobre mí
 
 Hola! Soy un estudiante colombiano cursando Maestría en Astrofísica en el Instituto de Astronomía de la Universidad Nacional Autónoma de México (UNAM). Trabajo en el grupo de investigación de la Dra. Yilen Gómez Maqueo Chew en el análisis de curvas de luz de exoplanetas en tránsito.
