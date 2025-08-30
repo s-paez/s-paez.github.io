@@ -4,9 +4,9 @@
 # This file is formatted using YAML syntax - learn more at https://learnxinyminutes.com/docs/yaml/
 
 # Website name
-title: Santiago Paez
+title: 'Santiago Paez - MSc. Astrophysics student'
 # Website URL
-baseURL: 'hhttps://s-paez.github.io/'
+baseURL: 'https://s-paez.github.io/'
 canonifyURLs: true
 
 
@@ -15,6 +15,13 @@ canonifyURLs: true
 ############################
 
 defaultContentLanguage: en
+languages:
+  en:
+    languageName: English
+    weight: 1
+  es:
+    languageName: Español
+    weight: 2
 hasCJKLanguage: false
 defaultContentLanguageInSubdir: false
 removePathAccents: true
