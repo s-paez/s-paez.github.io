@@ -1,7 +1,22 @@
 <footer class="py-6 text-center text-sm text-gray-500">
   <p>
-    © 2025 Santiago Paez. This page is licensed under CC BY NC ND 4.0
+    © {{ now.Format "2006" }} Santiago Paez ·
+    <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" rel="noopener" class="underline">CC BY‑NC‑ND 4.0</a>
   </p>
+  <p class="mt-2">
+    <a href="{{ "uploads/resume_en.pdf" | relURL }}" class="underline">CV (EN)</a>
+    ·
+    <a href="{{ "uploads/resume_es.pdf" | relURL }}" class="underline">CV (ES)</a>
+  </p>
+  {{ $alts := .AllTranslations }}
+  {{ if gt (len $alts) 1 }}
+  <p class="mt-2">
+    {{ range $i, $p := $alts }}
+      {{ if $i }} · {{ end }}
+      <a class="underline" hreflang="{{ $p.Site.Language.Lang }}" href="{{ $p.RelPermalink }}">{{ $p.Site.Language.LanguageName }}</a>
+    {{ end }}
+  </p>
+  {{ end }}
   <p class="mt-2">
     Powered by <a href="https://hugoblox.com/?utm_campaign=poweredby" target="_blank" rel="noopener" class="underline">Hugo Blox Builder</a>
   </p>

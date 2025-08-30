@@ -7,11 +7,15 @@ en:
   languageCode: en-us
   # Uncomment for multi-lingual sites, and move English content into `en` sub-folder.
   contentDir: content/en
+  params:
+    description: "Personal website of Santiago Paez Avendaño — MSc student in Astrophysics. Research in exoplanets."
 
 # Uncomment the lines below to configure your website in a second language.
 es:
   languageCode: es
   contentDir: content/es
+  params:
+    description: "Sitio personal de Santiago Paez Avendaño — Est. de Maestría en Astrofísica. Investigación en exoplanetas."
   # title: Chinese website title...
   #  params:
   #    description: Site description in Chinese...

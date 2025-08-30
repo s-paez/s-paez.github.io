@@ -1,5 +1,5 @@
 ---
-title: 'Projects'
+title: 'Proyectos'
 date: 2024-05-19
 type: landing
 
@@ -15,7 +15,7 @@ sections:
       text: In the past, I would appreciate to know more details on Astronomy careers, that is why I am glad to share some stories and experiences I have lived in my career.
       filters:
         folders:
-          - post
+          - blog
     design:
       view: article-grid
       fill_image: false

@@ -8,7 +8,7 @@ main:
     url: /
     weight: 10
   - name: Experiencia
-    url: experience/
+    url: experiencia/
     weight: 20
   - name: Publicaciones
     url: publication/

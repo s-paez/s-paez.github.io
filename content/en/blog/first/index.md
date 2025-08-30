@@ -1,5 +1,5 @@
 ---
-title: Firs post
+title: First post
 summary: The reason for this blog is to share some personal and academic experiences, stories and ideas.
 date: 2025-08-29
 authors:
@@ -34,4 +34,3 @@ Going through the admission process was quite an experience that I hope to recou
 When I received the notification of admission, I immediately contacted people I had already identified who work in the field of exoplanets. After several emails and a virtual meeting, Dr. Yilen Gómez Maqueo Chew, a researcher at the Instituto de Astronomía, accepted me to work in her group.
 
 I am currently living in Mexico City, where I am in my third semester of my master's degree in Astrophysics at the Ciudad Universitaria branch of the Institute of Astronomy of UNAM. I am working on the analysis of light curves of transiting exoplanets.
-
