@@ -64,7 +64,7 @@ education:
 # Add your own SVG icons to `assets/media/icons/`
 skills:
     items:
-      - name: <img class="skill-icon-inline" src="/media/icons/custom/py.svg" alt="Python" /> Python
+      - name: <img class="skill-icon-inline" src="assets/media/icons/custom/py.svg" alt="Python" /> Python
         icon: custom/py
       - name: AstroImageJ
         icon: "custom/aij"
