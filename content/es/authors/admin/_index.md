@@ -83,10 +83,15 @@ skills:
       - name: Astropy
         icon: custom/py
       - name: Pandas
+        icon: custom/pandas
       - name: Numpy
+        icon: custom/numpy
       - name: Matplotlib
+        icon: custom/matplotlib
       - name: Scipy
+        icon: custom/scipy
       - name: Multiprocessing
+        icon: custom/multi
 
 languages:
   - name: Inglés
