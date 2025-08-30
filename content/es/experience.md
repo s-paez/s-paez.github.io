@@ -20,16 +20,16 @@ sections:
       is_education_first: true
   - block: resume-skills
     content:
-      title: Skills
+      title: Habilidades
       username: admin
     design:
       show_skill_percentage: false
   - block: resume-awards
     content:
-      title: Awards, Recognitions and Scholarships
+      title: Reconocimientos y Becas
       username: admin
   - block: resume-languages
     content:
-      title: Languages
+      title: Idiomas
       username: admin
 ---
