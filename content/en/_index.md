@@ -15,7 +15,7 @@ sections:
       username: admin
       text: ""
       # Show a call-to-action button under your biography? (optional)
-      buttons:
+      button:
         text: Download my CV
         url: uploads/resume_en.pdf
       #   text: Descargar CV-ES
