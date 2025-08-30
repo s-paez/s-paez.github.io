@@ -9,17 +9,17 @@ name_pronunciation: ''
 first_name: Santiago
 last_name: Paez Avendaño
 
-# # Status emoji
-# status:
-#   icon: 
+# Status emoji
+status:
+  icon: 
 
-# # Is this the primary user of the site?
-# superuser: True
+# Is this the primary user of the site?
+superuser: True
 
-# # Highlight the author in author lists? (true/false)
-# highlight_name: true
+# Highlight the author in author lists? (true/false)
+highlight_name: true
 
-# Role/position/tagline
+# # Role/position/tagline
 # role: Estudiante de Maestría en Astrofísica
 
 # # Organizations/Affiliations to display in Biography blox
@@ -125,8 +125,8 @@ last_name: Paez Avendaño
 #     date: '2019-01-19'
 #     awarder: Secretaría de Educación de Bogotá.
     
-# ---
+---
 
-# ## Sobre mí
+<!-- # ## Sobre mí
 
-# Hola! Soy un estudiante colombiano cursando Maestría en Astrofísica en el Instituto de Astronomía de la Universidad Nacional Autónoma de México (UNAM). Trabajo en el grupo de investigación de la Dra. Yilen Gómez Maqueo Chew en el análisis de curvas de luz de exoplanetas en tránsito.
+# Hola! Soy un estudiante colombiano cursando Maestría en Astrofísica en el Instituto de Astronomía de la Universidad Nacional Autónoma de México (UNAM). Trabajo en el grupo de investigación de la Dra. Yilen Gómez Maqueo Chew en el análisis de curvas de luz de exoplanetas en tránsito. -->

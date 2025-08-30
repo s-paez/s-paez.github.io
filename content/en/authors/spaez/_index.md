@@ -9,15 +9,15 @@ name_pronunciation: ''
 first_name: Santiago
 last_name: Paez Avendaño
 
-# # Status emoji
-# status:
-#   icon: 
+# Status emoji
+status:
+  icon: 
 
-# # Is this the primary user of the site?
-# superuser: true
+# Is this the primary user of the site?
+superuser: true
 
-# # Highlight the author in author lists? (true/false)
-# highlight_name: true
+# Highlight the author in author lists? (true/false)
+highlight_name: true
 
 # # Role/position/tagline
 # role: Master's student in Astrophysics
@@ -125,8 +125,8 @@ last_name: Paez Avendaño
 #     date: '2019-01-19'
 #     awarder: Secretaría de Educación de Bogotá.
     
-# ---
+---
 
-# ## About Me
+<!-- # ## About Me
 
-# Hello! I am a Colombian student pursuing a Master's degree in Astrophysics at the Instituto de Astronomía of the Universidad Nacional Autónoma de México (UNAM). I work with Prof. Yilen Gómez Maqueo Chew's research group on analyzing the light curves of transiting exoplanets.
+# Hello! I am a Colombian student pursuing a Master's degree in Astrophysics at the Instituto de Astronomía of the Universidad Nacional Autónoma de México (UNAM). I work with Prof. Yilen Gómez Maqueo Chew's research group on analyzing the light curves of transiting exoplanets. -->
