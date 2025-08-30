@@ -1,6 +1,6 @@
 ---
-title: 'Experience'
-date: 2023-10-24
+title: 'Experiencia'
+date: 2025-08-30
 type: landing
 
 design:
