@@ -65,8 +65,8 @@ education:
 skills:
   - name: Software
     items:
-      - name: Python
-        icon: "custom/py"
+      - icon: "custom/py"
+        name: Python
       - name: AstroImageJ
         icon: aij
       - name: Latex
