@@ -64,18 +64,18 @@ education:
 # Add your own SVG icons to `assets/media/icons/`
 skills:
     items:
-      - name: {{<img class="skill-icon-inline" src="assets/media/icons/custom/py.svg" alt="Python" /> Python}}
-        icon: custom/py
+      - name: Python
+        # icon: custom/py
       - name: AstroImageJ
-        icon: "custom/aij"
+        # icon: "custom/aij"
       - name: Latex
-        icon: "custom/tex"
+        # icon: "custom/tex"
       - name: Git/Github
-        icon: brands/github
+        # icon: brands/github
       - name: Topcat
-        icon: "custom/topcat"
+        # icon: "custom/topcat"
       - name: VS Code
-        icon: "custom/vscode"
+        # icon: "custom/vscode"
 
       - name: Librerías de Python
         items:
