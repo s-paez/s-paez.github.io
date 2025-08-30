@@ -20,7 +20,7 @@ superuser: true
 highlight_name: true
 
 # Role/position/tagline
-role: Master's student in Astrophysics
+role: Estudiante de Maestría en Astrofísica
 
 # Organizations/Affiliations to display in Biography blox
 organizations:
@@ -43,27 +43,27 @@ profiles:
     url: https://www.instagram.com/santiago_paav
 
 interests:
-  - Transiting Exoplanets
-  - Multiband photometry
-  - Data reduction techniques
+  - Exoplanetas en tránsito
+  - Fotometría multibanda
+  - Técnicas de reducción de datos
 
 education:
-  - area: M.Sc. in Astrophysics
+  - area: M.Sc. en Astrofísica
     institution: Instituto de Astronomía, Universidad Nacional Autónoma de México
     date_start: 2024-08-05
     date_end: 
-  - area: BA Natural Sciences Education
+  - area: Licenciatura en Ciencias Naturales
     institution: Universidad de La Sabana
     date_start: 2019-01-19
     date_end: 2024-03-05
     summary: |
-      - GPA: 4.13/5.0
-      - Thesis: [_Exoplanet Hackathon: A challenge-based learning proposal for the development of scientific skills._](https://intellectum.unisabana.edu.co/handle/10818/60905)
+      - Promedio general: 4.13/5.0
+      - Trabajo de grado: [_Hackatón de Exoplanetas: Una propuesta de aprendizaje basado en retos para el desarrollo de habilidades científicas._](https://intellectum.unisabana.edu.co/handle/10818/60905)
 
 # Skills
 # Add your own SVG icons to `assets/media/icons/`
 skills:
-  - name: Technical Skills
+  - name: Habilidades técnicas
     items:
       - name: Python
       - name: AstroImageJ
@@ -81,24 +81,24 @@ languages:
 #   Only `title`, `awarder`, and `date` are required.
 #   Begin multi-line `summary` with YAML's `|` or `|2-` multi-line prefix and indent 2 spaces below.
 awards:
-  - title: National Graduate Scholarship (Master's Degree)
+  - title: Beca Nacional de Posgrado (Maestría)
     url: https://secihti.mx/becas_posgrados/becas-nacionales/
     date: '2024-08-05'
     awarder: SECIHTI
     summary: |
-      Full scholarship to pursue a Master's degree in Astrophysics at the Instituto de Astronomía of the Universidad Nacional Autónoma de México.  
-  - title: Best Natural Sciences Education Program score in the Saber Pro test
+      Beca completa para estudiar la Maestría en Astrofísica en el Instituto de la Astronomía de la Universidad Nacional Autónoma de México.
+  - title: Mejor puntaje de la Licenciatura en Ciencias Naturales en el examen ICFES Saber Pro en el 2022
     date: '2023-09-26'
-    awarder: Universidad de La Sabana, Education Faculty
+    awarder: Universidad de La Sabana, Facultad de Educación
     summary: |
-      Due to the high results obtained in the 2022 Saber Pro State Examination of Quality of Higher Education, which demonstrates a high degree of development of the competencies required by the Colombian state for him to practice his profession as a Bachelor of Natural Sciences.
-  - title: 'Top 50 Finalist Global Student Prize 2023'
+      Debido a los altos resultados obtenidos en el examen ICFES Saber Pro que califica la calidad de la educación superior, lo que demuestra alto grado de desarrollo de las competencias requeridas por el estado colombiano para ejercer la profesión de Licenciado en Ciencias Naturales. 
+  - title: 'Finalista Top 50 del Global Student Prize 2023'
     url: https://globalteacherprize.org/pages/2023-finalists-globalstudentprize
     date: '2023-07-17'
-    awarder: Chegg.org and Varkey Foundations
+    awarder: Fundaciones Chegg.org y Varkey
     summary: |
-      In recognition of exceptional achievements in the classroom and beyond.
-  - title: 'FEST - Full undergrad scholarship'
+      En reconocimiento por logros excepcionales en el aula y más allá.
+  - title: 'FEST - Beca completa de pregrado'
     date: '2019-01-19'
     awarder: Secretaría de Educación de Bogotá.
     
@@ -106,4 +106,4 @@ awards:
 
 ## About Me
 
-Hello! I am a Colombian student pursuing a Master's degree in Astrophysics at the Instituto de Astronomía of the Universidad Nacional Autónoma de México (UNAM). I work with Prof. Yilen Gómez Maqueo Chew's research group on analyzing the light curves of transiting exoplanets.
+Hola! Soy un estudiante colombiano cursando Maestría en Astrofísica en el Instituto de Astronomía de la Universidad Nacional Autónoma de México (UNAM). Trabajo en el grupo de investigación de la Dra. Yilen Gómez Maqueo Chew en el análisis de curvas de luz de exoplanetas en tránsito.
