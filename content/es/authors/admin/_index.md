@@ -71,9 +71,9 @@ skills:
       - name: Git/Github
 
 languages:
-  - name: English
+  - name: Inglés
     percent: 80
-  - name: Spanish
+  - name: Español
     percent: 100
 
 # Awards.
