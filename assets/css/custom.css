@@ -8,3 +8,20 @@
 .section.skills .uppercase {
   text-transform: none !important;
 }
+
+/* Desactivar mayúsculas forzadas en el bloque de Skills */
+#section-resume-skills .skills-name {
+  text-transform: none !important;
+  letter-spacing: normal !important; /* por si el tema aplica tracking amplio */
+}
+
+/* Por si hubiera alguna clase utilitaria .uppercase en la sección */
+#section-resume-skills .uppercase {
+  text-transform: none !important;
+}
+
+/* Fallback agresivo: quita text-transform en toda la sección */
+#section-resume-skills, 
+#section-resume-skills * {
+  text-transform: none !important;
+}
