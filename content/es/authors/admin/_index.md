@@ -63,9 +63,8 @@ education:
 # Skills
 # Add your own SVG icons to `assets/media/icons/`
 skills:
-  - name: Software
     items:
-      - name: Python
+      - name: <img class="skill-icon-inline" src="/media/icons/custom/py.svg" alt="Python" /> Python
         icon: custom/py
       - name: AstroImageJ
         icon: "custom/aij"
@@ -78,14 +77,14 @@ skills:
       - name: VS Code
         icon: "custom/vscode"
 
-  - name: Librerías de Python
-    items:
-      - name: Astropy
-      - name: Pandas
-      - name: Numpy
-      - name: Matplotlib
-      - name: Scipy
-      - name: Multiprocessing
+      - name: Librerías de Python
+        items:
+          - name: Astropy
+          - name: Pandas
+          - name: Numpy
+          - name: Matplotlib
+          - name: Scipy
+          - name: Multiprocessing
 
 languages:
   - name: Inglés
