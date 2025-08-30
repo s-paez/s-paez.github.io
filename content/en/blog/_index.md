@@ -2,6 +2,6 @@
 title: Blog
 view: article-grid
 ---
-Hace algunos años, cuando empecé a considerar la astronomía como mi proyecto profesional, busqué toda la información que pude sobre la vida de los astrónomos. Busqué en internet a muchas personas que sabía que se dedicaban a la astronomía, revisé sus perfiles, qué habían hecho, qué habían publicado, qué habían vivido, etc., y mi sensación en general es que no encontraba personas que compartieran tantos detalles como yo quería. Entonces, me propuse que si algún día me dedicaba a la astronomía, compartiría tantos detalles como pudiera sobre cómo la vida me había llevado a ser un astrónomo.
+Some years ago, when I started to consider astronomy as my professional project, I looked for all the information I could about the life of astronomers. I searched the internet for many people who I knew were involved in astronomy, checked their profiles, what they had done, what they had published, what they had experienced, etc., and my feeling in general was that I could not find people who shared as many details as I wanted. So, I made up my mind that if I ever went into astronomy, I would share as many details as I could about how life had led me to become an astronomer.
 
-Este blog es la materialización de ese propósito de compartir mi experiencia. No para mostrarme como un modelo a seguir o porque crea que lo he hecho excelente, sino porque tal vez alguien, como yo mismo hace algunos años, solo quiere saber más sobre algo que le gusta. 
+This blog is the materialization of that purpose to share my experience. Not to show myself as a role model or because I think I have done excellent, but because maybe someone, like myself a few years ago, just wants to know more about something they like.
