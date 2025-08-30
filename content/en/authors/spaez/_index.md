@@ -9,15 +9,15 @@ name_pronunciation: ''
 first_name: Santiago
 last_name: Paez Avendaño
 
-# Status emoji
-status:
-  icon: 
+# # Status emoji
+# status:
+#   icon: 
 
-# Is this the primary user of the site?
-superuser: true
+# # Is this the primary user of the site?
+# superuser: true
 
-# Highlight the author in author lists? (true/false)
-highlight_name: true
+# # Highlight the author in author lists? (true/false)
+# highlight_name: true
 
 # # Role/position/tagline
 # role: Master's student in Astrophysics
