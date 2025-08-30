@@ -8,7 +8,7 @@ tags:
   - Blog
 image:
   filename: "image0.jpg"
-  caption: 'Yo en mi primer viaje al OAN-SPM'
+  caption: 'En mi primer viaje al OAN-SPM'
   focal_point: "Center"
   preview_only: False
 ---
