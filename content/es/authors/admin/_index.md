@@ -68,10 +68,15 @@ skills:
       - name: Python
         icon: python
       - name: AstroImageJ
+        icon: aij
       - name: Latex
+        icon: tex
       - name: Git/Github
+        icon: brands/github
       - name: Topcat
+        icon: topcat
       - name: VS Code
+        icon: vscode
 
   - name: Librerías de Python
     items:
