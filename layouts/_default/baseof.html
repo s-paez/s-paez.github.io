@@ -1,0 +1,14 @@
+{{ $iconPath := "assets/media/icons/custom" }}
+{{ range .Params.skills }}
+  <div class="skill-item">
+    <h3>{{ .name }}</h3>
+    <ul>
+      {{ range .items }}
+        <li>
+          <img src="{{ $iconPath }}{{ .icon }}" alt="{{ .name }} icon" />
+          <span>{{ .name }}</span>
+        </li>
+      {{ end }}
+    </ul>
+  </div>
+{{ end }}
