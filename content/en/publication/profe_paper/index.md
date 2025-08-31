@@ -30,7 +30,6 @@ summary: We propose a preprocessing with a 3x3-pixel window median filter for th
 
 tags:
 - Article
-- Transits
 
 featured: false
 
