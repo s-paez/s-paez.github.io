@@ -36,13 +36,13 @@ header:
     show_search: true
     show_theme_chooser: true
     logo:
-      text: "Santiago Paez"
+      text: "Santiago Paez Avendaño"
 
 # Site footer
 footer:
   attribution: false
   copyright:
-    notice: '© {year} Santiago Paez. This work is licensed under {license}'
+    notice: '© {year} Santiago Paez Avendaño. This work is licensed under {license}'
     license:
       enable: true
       allow_derivatives: false
