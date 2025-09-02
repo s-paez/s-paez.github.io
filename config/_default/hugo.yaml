@@ -65,4 +65,7 @@ markup:
 security:
   _merge: deep
 sitemap:
-  _merge: deep
+  filename: sitemap.xml
+  changeFreq: weekly
+  priority: 0.5
+  disable: false
