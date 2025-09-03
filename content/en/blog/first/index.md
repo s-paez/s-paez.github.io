@@ -1,9 +1,9 @@
 ---
-title: First post
-summary: The reason for this blog is to share some personal and academic experiences, stories and ideas.
+title: My journey
+summary: A summary of my academic career.
 date: 2025-08-29
 authors:
-  - spaez
+  - admin
 tags:
   - Blog
 image:

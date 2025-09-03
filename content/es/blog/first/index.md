@@ -1,6 +1,6 @@
 ---
-title: Primer post
-summary: La razón de este blog es compartir algunas experiencias, historias e ideas personales y académicas.
+title: Mi trayectoria
+summary: Un resumen de mi carrera académica.
 date: 2025-08-29
 authors:
   - admin
