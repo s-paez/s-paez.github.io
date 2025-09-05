@@ -54,7 +54,7 @@ education:
     date_end: 
   - area: Licenciatura en Ciencias Naturales
     institution: Universidad de La Sabana
-    institution_url: https://www.unisabana.edu.co
+    url: https://www.unisabana.edu.co
     date_start: 2019-01-19
     date_end: 2024-03-05
     summary: |
