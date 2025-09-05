@@ -27,21 +27,80 @@
       });
       if (Object.keys(linkMap).length === 0) return;
 
-      var scopeSelectors = ['.ul-edu .institution', 'p.institution'];
-      var targets = [];
-      scopeSelectors.forEach(function (sel) {
-        document.querySelectorAll(sel).forEach(function (el) { targets.push(el); });
-      });
-      // De-duplicate elements
-      targets = Array.from(new Set(targets));
+      var linkedCount = 0;
+      (function linkBySelectors() {
+        var scopeSelectors = ['.ul-edu .institution', 'p.institution'];
+        var targets = [];
+        scopeSelectors.forEach(function (sel) {
+          document.querySelectorAll(sel).forEach(function (el) { targets.push(el); });
+        });
+        // De-duplicate elements
+        targets = Array.from(new Set(targets));
+        targets.forEach(function (el) {
+          var text = (el.textContent || '').trim();
+          var url = linkMap[text];
+          if (!url) return;
+          if (el.querySelector('a')) return; // already linked
+          el.innerHTML = '<a class="underline" href="' + url + '" target="_blank" rel="noopener">' + text + '</a>';
+          linkedCount++;
+        });
+      })();
 
-      targets.forEach(function (el) {
-        var text = (el.textContent || '').trim();
-        var url = linkMap[text];
-        if (!url) return;
-        if (el.querySelector('a')) return; // already linked
-        el.innerHTML = '<a href="' + url + '" target="_blank" rel="noopener">' + text + '</a>';
-      });
+      if (linkedCount === 0) {
+        // Fallback A: scan simple text-only nodes in main content for exact matches
+        var container = document.querySelector('main') || document.body;
+        var candidates = container.querySelectorAll('p, li, span, div');
+        candidates.forEach(function (el) {
+          if (el.children && el.children.length) return; // contains nested elements
+          var text = (el.textContent || '').trim();
+          var url = linkMap[text];
+          if (!url) return;
+          // Avoid linking headings or already linked parents
+          if (/^H[1-6]$/.test(el.tagName)) return;
+          if (el.closest('a')) return;
+          el.innerHTML = '<a class="underline" href="' + url + '" target="_blank" rel="noopener">' + text + '</a>';
+          linkedCount++;
+        });
+      }
+
+      if (linkedCount === 0) {
+        // Fallback B: replace substrings in text nodes under <main>
+        var container = document.querySelector('main') || document.body;
+        var forbidden = {A:1, SCRIPT:1, STYLE:1, TITLE:1, NOSCRIPT:1, FOOTER:1, HEADER:1, NAV:1};
+        var names = Object.keys(linkMap).sort(function(a,b){return b.length - a.length;});
+        if (names.length) {
+          var walker = document.createTreeWalker(container, NodeFilter.SHOW_TEXT, null);
+          var nodes = [];
+          while (walker.nextNode()) nodes.push(walker.currentNode);
+          nodes.forEach(function (textNode) {
+            var parent = textNode.parentElement;
+            if (!parent || forbidden[parent.tagName]) return;
+            if (parent.closest('a')) return;
+            var value = textNode.nodeValue;
+            var replaced = false;
+            names.forEach(function(name){
+              if (replaced) return;
+              var idx = value.indexOf(name);
+              if (idx === -1) return;
+              var before = value.slice(0, idx);
+              var after = value.slice(idx + name.length);
+              var frag = document.createDocumentFragment();
+              if (before) frag.appendChild(document.createTextNode(before));
+              var a = document.createElement('a');
+              a.className = 'underline';
+              a.href = linkMap[name];
+              a.target = '_blank';
+              a.rel = 'noopener';
+              a.textContent = name;
+              frag.appendChild(a);
+              if (after) frag.appendChild(document.createTextNode(after));
+              parent.replaceChild(frag, textNode);
+              replaced = true;
+              linkedCount++;
+            });
+          });
+        }
+      }
     } catch (e) {
       // Silent fail to avoid impacting footer
       console && console.debug && console.debug('Edu link enhancer error:', e);
