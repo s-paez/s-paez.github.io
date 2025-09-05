@@ -48,12 +48,12 @@ interests:
   - Técnicas de reducción de datos
 
 education:
-  - area: M.Sc. en Astrofísica
+  - area: M.Sc. en Astrofísica (estudiante)
     institution: Instituto de Astronomía, Universidad Nacional Autónoma de México
     date_start: 2024-08-05
     date_end: 
   - area: Licenciatura en Ciencias Naturales
-    institution: Universidad de La Sabana
+    institution: [Universidad de La Sabana](https://www.unisabana.edu.co)
     date_start: 2019-01-19
     date_end: 2024-03-05
     summary: |
