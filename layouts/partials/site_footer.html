@@ -29,7 +29,7 @@
 
       var linkedCount = 0;
       (function linkBySelectors() {
-        var scopeSelectors = ['.ul-edu .institution', 'p.institution'];
+        var scopeSelectors = ['.ul-edu .institution', 'p.institution', 'p.text-sm'];
         var targets = [];
         scopeSelectors.forEach(function (sel) {
           document.querySelectorAll(sel).forEach(function (el) { targets.push(el); });
