@@ -21,7 +21,7 @@ education:
     date_start: 2024-08-05
     date_end: 
     summary: |
-      (Instituto de Astronomía, Universidad Nacional Autónoma de México)[https://astronomia.unam.mx/]
+      [Instituto de Astronomía, Universidad Nacional Autónoma de México](https://astronomia.unam.mx/)
   - area: BA Natural Sciences Education
     date_start: 2019-01-19
     date_end: 2024-03-05
