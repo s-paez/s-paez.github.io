@@ -54,11 +54,12 @@ education:
     date_start: 2024-08-05
     date_end: 
   - area: Licenciatura en Ciencias Naturales
-    institution: Universidad de La Sabana
+    # institution: Universidad de La Sabana
     url: https://www.unisabana.edu.co
     date_start: 2019-01-19
     date_end: 2024-03-05
     summary: |
+      [Universidad de La Sabana](https://www.unisabana.edu.co) 
       - Promedio general: 4.13/5.0
       - Trabajo de grado: [_Hackatón de Exoplanetas: Una propuesta de aprendizaje basado en retos para el desarrollo de habilidades científicas._](https://intellectum.unisabana.edu.co/handle/10818/60905)
 
