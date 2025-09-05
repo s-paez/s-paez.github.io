@@ -49,7 +49,7 @@ url_video:
 # Featured image
 # To use, add an image named `featured.jpg/png` to your page's folder. 
 image:
-  caption: 'Paez et al. (2025)'
+  caption: 'Image subframes and distributions of counts for different median filters preprocessing including 3x3-pixel window.'
   focal_point: ""
   preview_only: false
 

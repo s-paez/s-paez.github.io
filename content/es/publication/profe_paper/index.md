@@ -48,7 +48,7 @@ url_video:
 # Featured image
 # To use, add an image named `featured.jpg/png` to your page's folder. 
 image:
-  caption: 'Paez et al. (2025)'
+  caption: 'Recortes de imagen y distribuciones de cuentas para preprocesamientos con diferentes filtros por la mediana, incluida una ventana de 3x3 píxeles.'
   focal_point: ""
   preview_only: false
 
