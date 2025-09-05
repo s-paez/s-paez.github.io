@@ -1,0 +1,22 @@
+{{ with .Params.education }}
+<ul class="ul-edu">
+  {{ range . }}
+  <li>
+    <div class="description">
+      <p class="course">{{ .area }}</p>
+      {{ if .institution_url }}
+        <p class="institution"><a href="{{ .institution_url }}">{{ .institution }}</a></p>
+      {{ else }}
+        <p class="institution">{{ .institution }}</p>
+      {{ end }}
+      {{ if or .date_start .date_end }}
+        <p class="date">
+          {{ .date_start }}{{ if .date_end }} — {{ .date_end }}{{ end }}
+        </p>
+      {{ end }}
+      {{ with .summary }}{{ . | markdownify }}{{ end }}
+    </div>
+  </li>
+  {{ end }}
+</ul>
+{{ end }}

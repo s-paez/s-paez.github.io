@@ -48,7 +48,7 @@ interests:
   - Data reduction techniques
 
 education:
-  - area: M.Sc. in Astrophysics
+  - area: M.Sc. Student in Astrophysics
     institution: Instituto de Astronomía, Universidad Nacional Autónoma de México
     institution_url: https://astronomia.unam.mx/
     date_start: 2024-08-05

@@ -7,3 +7,44 @@
     Powered by <a href="https://hugoblox.com/?utm_campaign=poweredby" target="_blank" rel="noopener" class="underline">Hugo Blox Builder</a>
   </p>
 </footer>
+<script>
+  // Enhance Education institutions with links when available in profile data.
+  document.addEventListener('DOMContentLoaded', function () {
+    try {
+      // Injected from Hugo: current language's admin author page params
+      var eduData = [];
+      {{ $author := site.GetPage "authors/admin" }}
+      {{ with $author.Params.education }}
+        eduData = {{ . | jsonify }};
+      {{ end }}
+
+      if (!Array.isArray(eduData) || eduData.length === 0) return;
+      var linkMap = {};
+      eduData.forEach(function (e) {
+        if (e && e.institution && e.institution_url) {
+          linkMap[e.institution.trim()] = e.institution_url;
+        }
+      });
+      if (Object.keys(linkMap).length === 0) return;
+
+      var scopeSelectors = ['.ul-edu .institution', 'p.institution'];
+      var targets = [];
+      scopeSelectors.forEach(function (sel) {
+        document.querySelectorAll(sel).forEach(function (el) { targets.push(el); });
+      });
+      // De-duplicate elements
+      targets = Array.from(new Set(targets));
+
+      targets.forEach(function (el) {
+        var text = (el.textContent || '').trim();
+        var url = linkMap[text];
+        if (!url) return;
+        if (el.querySelector('a')) return; // already linked
+        el.innerHTML = '<a href="' + url + '" target="_blank" rel="noopener">' + text + '</a>';
+      });
+    } catch (e) {
+      // Silent fail to avoid impacting footer
+      console && console.debug && console.debug('Edu link enhancer error:', e);
+    }
+  });
+</script>
