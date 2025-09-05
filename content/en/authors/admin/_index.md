@@ -50,12 +50,12 @@ interests:
 education:
   - area: M.Sc. Student in Astrophysics
     institution: Instituto de Astronomía, Universidad Nacional Autónoma de México
-    institution_url: https://astronomia.unam.mx/
+    url: https://astronomia.unam.mx/
     date_start: 2024-08-05
     date_end: 
   - area: BA Natural Sciences Education
     institution: Universidad de La Sabana
-    institution_url: https://www.unisabana.edu.co
+    url: https://www.unisabana.edu.co
     date_start: 2019-01-19
     date_end: 2024-03-05
     summary: |
