@@ -50,6 +50,7 @@ interests:
 education:
   - area: M.Sc. en Astrofísica (estudiante)
     institution: Instituto de Astronomía, Universidad Nacional Autónoma de México
+    institution_url: https://astronomia.unam.mx/
     date_start: 2024-08-05
     date_end: 
   - area: Licenciatura en Ciencias Naturales
