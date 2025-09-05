@@ -48,6 +48,6 @@ Pasar por el proceso de admisión fue toda una experiencia que espero contar en 
 
 Cuando recibí la notificación de admisión, contacté de inmediato con personas que ya había identificado que trabajan en el campo de los exoplanetas. Tras varios correos electrónicos y una reunión virtual, la Dra. Yilen Gómez Maqueo Chew, investigadora del Instituto de Astronomía, me aceptó para trabajar en su grupo. 
 
-Actualmente vivo en Ciudad de México, donde estoy cursando mi tercer semestre de maestría en Astrofísica en la sede de Ciudad Universitaria del Instituto de Astronomía de la UNAM. Estoy trabajando en el análisis de curvas de luz de exoplanetas en tránsito.
+Actualmente vivo en Ciudad de México, donde estoy cursando mi tercer semestre de maestría en Astrofísica en la sede de Ciudad Universitaria del Instituto de Astronomía de la UNAM trabajando en el análisis de curvas de luz de exoplanetas en tránsito.
 
 
