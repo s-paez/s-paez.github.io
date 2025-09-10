@@ -1,7 +1,7 @@
 ---
 title: Mi formación como profe de ciencias naturales
 summary: Detalles de mi paso por la Facultad de Educación de la Universidad de La Sabana.
-date: 2025-08-15
+date: 2025-09-01
 authors:
   - admin
 tags:
