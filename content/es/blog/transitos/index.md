@@ -9,7 +9,7 @@ tags:
   - Simulador
   - Transitos
 image:
-  filename: 
+  filename: "simulator.png"
   caption: 
   focal_point: "Center"
   preview_only: True
