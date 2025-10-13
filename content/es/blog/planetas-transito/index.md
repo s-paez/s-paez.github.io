@@ -17,12 +17,12 @@ image:
 #   <img src="CodeAstro-0.jpg" alt="Code/Astro Logo">
 # </div>
 ---
-> En esta entrada cuento cómo viví mi pregrado en la Universidad de La Sabana: lo que más me marcó, lo que estuvo difícil y cómo este camino me llevó a convertirme en profe de ciencias naturales, un paso importante en mi formación hacia la astronomía.
+> En esta entrada hablo sobre mi tema principal de estudio, los exoplanetas en tránsito. Pongo a disposición un simulador científicamente realista que resuelve un modelo de tránsito para los parámetros dados y genera el modelo de curva de luz para dicho sistema.
 
 
 
 <iframe src="/simuladores/transito/transito.html"
         title="Simulador de tránsito planetario"
         loading="lazy"
-        style="width:200%;height:560px;border:0;border-radius:16px;">
+        style="width:150%;height:560px;border:0;border-radius:16px;">
 </iframe>
