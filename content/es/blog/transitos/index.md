@@ -24,5 +24,5 @@ image:
 <iframe src="/simuladores/transito/transito.html"
         title="Simulador de tránsito planetario"
         loading="lazy"
-        style="width:150%;height:560px;border:0;border-radius:16px;">
+        style="width:150%;height:1000px;border:0;border-radius:16px;">
 </iframe>
