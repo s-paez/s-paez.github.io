@@ -20,10 +20,9 @@ image:
 > En esta entrada cuento cómo viví mi pregrado en la Universidad de La Sabana: lo que más me marcó, lo que estuvo difícil y cómo este camino me llevó a convertirme en profe de ciencias naturales, un paso importante en mi formación hacia la astronomía.
 
 
-{{< rawhtml >}}
+
 <iframe src="/simuladores/transito/transito.html"
         title="Simulador de tránsito planetario"
         loading="lazy"
         style="width:100%;height:560px;border:0;border-radius:16px;">
 </iframe>
-{{< /rawhtml >}}
