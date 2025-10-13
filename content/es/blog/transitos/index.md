@@ -1,7 +1,7 @@
 ---
 title: Exoplanetas en tránsito
 summary: Qué son y qué podemos aprender a través de los tránsito de exoplanetas.
-date: 2025-10-13
+date: 2025-10-12
 authors:
   - admin
 tags:
@@ -18,6 +18,12 @@ image:
 # </div>
 ---
 > En esta entrada hablo sobre mi tema principal de estudio, los exoplanetas en tránsito. Pongo a disposición un simulador científicamente realista que resuelve un modelo de tránsito para los parámetros dados y genera el modelo de curva de luz para dicho sistema.
+
+<iframe src="/simuladores/transito/transito0.html"
+        title="Animación de un planeta transitante"
+        loading="lazy"
+        style="width:150%;height:1000px;border:0;border-radius:16px;">
+</iframe>
 
 # ¿Qué es un planeta transitante?
 
