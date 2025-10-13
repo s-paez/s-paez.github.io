@@ -7,7 +7,15 @@
 <title>Simulación de Tránsito Exoplanetario</title>
 <style>
   :root{
-    --bg:#0f1220; --panel:#161a2e; --accent:#7aa2ff; --text:#e8ecff; --muted:#a7b1d6; --grid:#2a3053;
+    --bg:#0f1220;
+    --panel:#161a2e;
+    --accent:#7aa2ff;
+    --accent2:#f9b857;
+    --ok:#59f2a7;
+    --text:#e8ecff;
+    --muted:#a7b1d6;
+    --grid:#2a3053;
+    --border:#1f2546;
   }
   *{box-sizing:border-box}
   body{
@@ -27,7 +35,7 @@
     .wrap{grid-template-columns: 1fr}
   }
   .card{
-    background:var(--panel); border:1px solid #1f2546; border-radius:18px; box-shadow:0 10px 30px rgba(0,0,0,.25);
+    background:var(--panel); border:1px solid var(--border); border-radius:18px; box-shadow:0 10px 30px rgba(0,0,0,.25);
   }
   .controls{padding:14px}
   .control{margin:12px 0 18px}
@@ -51,15 +59,15 @@
   .plotArea{padding:10px}
   .canvasWrap{
     position:relative; width:100%; aspect-ratio: 16/9; background:#0c1024; border-radius:14px; overflow:hidden;
-    border:1px solid #1f2546;
+    border:1px solid var(--border);
   }
   .plotArea .canvasWrap{margin-bottom:12px;}
   .plotArea .canvasWrap:last-of-type{margin-bottom:0;}
   .canvasWrap.starWrap{aspect-ratio:1/1;}
   canvas{display:block; width:100%; height:100%}
   .legend{
-    position:absolute; right:10px; top:10px; background:rgba(18,22,44,.65); border:1px solid #2a2f59;
-    padding:8px 10px; border-radius:10px; font-size:.85rem; color:var(--muted)
+    position:absolute; right:10px; top:10px; background:rgba(18,22,44,.65); border:1px solid rgba(42,48,83,.8);
+    padding:8px 10px; border-radius:10px; font-size:.85rem; color:var(--muted); backdrop-filter:blur(6px)
   }
   .badgenote{
     display:inline-block; padding:3px 8px; border-radius:999px; background:#2a2f59; color:#cfe2ff; font-size:.78rem; margin-left:6px
@@ -67,12 +75,14 @@
   .row{display:grid; grid-template-columns: 1fr 1fr; gap:12px}
   @media (max-width: 900px){ .row{grid-template-columns:1fr} }
   .footnote{
-    padding:10px 14px 16px; color:var(--muted); font-size:.85rem; border-top:1px solid #1f2546
+    padding:10px 14px 16px; color:var(--muted); font-size:.85rem; border-top:1px solid var(--border)
   }
   button.secondary{
-    background:transparent; color:#d6e2ff; border:1px solid #2b3160; border-radius:10px; padding:8px 12px; cursor:pointer
+    background:transparent; color:var(--text); border:1px solid rgba(122,162,255,.6);
+    border-radius:12px; padding:8px 14px; cursor:pointer;
+    transition:background .2s ease, border-color .2s ease;
   }
-  button.secondary:hover{background:#1b2146}
+  button.secondary:hover{background:rgba(27,33,70,.7); border-color:var(--accent);}
 </style>
 </head>
 <body>
