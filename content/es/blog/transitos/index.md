@@ -57,6 +57,7 @@ El simulador interactivo permite reproducir estos efectos y explorar distintos p
 # Simulador de exoplanetas transitantes
 Convenciones:
 * $R_\star$: Radio de la estrella
+* $R_p$: Radio del planeta
 * $R_\oplus$: Radios de la Tierra
 * $R_\odot$: Radios del Sol
 
