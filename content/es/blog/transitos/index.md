@@ -63,7 +63,7 @@ Convenciones:
 <iframe src="/simuladores/transito/transito.html"
         title="Simulador de tránsito planetario"
         loading="lazy"
-        style="width:150%;max-width:1500px;height:600px;border:0;border-radius:16px;margin:0 auto;display:block;">
+        style="width:150%;max-width:2200px;height:600px;border:0;border-radius:16px;margin:0 auto;display:block;">
 </iframe>
 
 El método del tránsito ha permitido confirmar miles de exoplanetas y seguirá siendo clave para identificar mundos potencialmente habitables. Te invito a experimentar con los simuladores, formular hipótesis y buscar resultados con observaciones reales.
