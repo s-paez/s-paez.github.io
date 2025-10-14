@@ -32,7 +32,7 @@ A light curve records the brightness of a star over time. When we plot those con
 
 # How do we detect these planets?
 
-The transit method demands continuous and precise observations. From the ground we depend on night time, weather, and the visibility of the target, so the light curves are often fragmented. Space missions such as [TESS](https://www.nasa.gov/tess/) and [Kepler](https://www.nasa.gov/mission_pages/kepler/overview/index.html) overcame those limitations by monitoring thousands of stars without interruption, making it possible to detect brightness drops of just a few tenths of a percent and to gather fully continuous time series.
+The transit method demands continuous and precise observations. From the ground we depend on night time, weather, and the visibility of the target, so the light curves are often fragmented. Space missions such as [TESS](https://www.nasa.gov/tess/) and [Kepler](https://science.nasa.gov/mission/kepler/) overcame those limitations by monitoring thousands of stars without interruption, making it possible to detect brightness drops of just a few tenths of a percent and to gather fully continuous time series.
 
 # What can we learn from a transit?
 
