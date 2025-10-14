@@ -115,6 +115,10 @@
         <input id="inc" type="range" min="80.0" max="90.0" step="0.1" value="89.0" />
       </div>
     </div>
+    <div class="control">
+      <label>Tiempo de tránsito t <output id="out-time">0.00</output></label>
+      <input id="timeCursor" type="range" min="0" max="1" step="0.001" value="0.5" />
+    </div>
     <div class="hstack">
       <button class="secondary" id="reset">Restablecer</button>
       <span class="hint">Consejo: ajusta <em>Rp</em>, <em>R★</em> o <em>i</em> para explorar diferentes tránsitos. <span id="note" class="badgenote" role="status" aria-live="polite"></span></span>
@@ -150,11 +154,13 @@
     outU2: document.getElementById('out-u2'),
     outRStar: document.getElementById('out-rstar'),
     outI:  document.getElementById('out-inc'),
+    outTime: document.getElementById('out-time'),
     note:  document.getElementById('note'),
     plot:  document.getElementById('plot'),
     star:  document.getElementById('starView'),
     impactInfo: document.getElementById('impactInfo'),
     reset: document.getElementById('reset'),
+    timeCursor: document.getElementById('timeCursor'),
   };
 
   // Anillos radiales del disco estelar (precomputados)
@@ -180,6 +186,42 @@
       ringArea[i] = Math.PI * (rOuter*rOuter - rInner*rInner);
       intensityProfile[i] = 0;
     }
+  }
+
+  function interpolateFlux(times, flux, target){
+    const n = times.length;
+    if (!n) return 1;
+    if (target <= times[0]) return flux[0];
+    if (target >= times[n-1]) return flux[n-1];
+    let lo = 0;
+    let hi = n - 1;
+    while (hi - lo > 1){
+      const mid = (lo + hi) >> 1;
+      if (times[mid] <= target){
+        lo = mid;
+      }else{
+        hi = mid;
+      }
+    }
+    const t0 = times[lo];
+    const t1 = times[hi];
+    if (!isFinite(t0) || !isFinite(t1) || Math.abs(t1 - t0) < 1e-12){
+      return flux[lo];
+    }
+    const frac = (target - t0)/(t1 - t0);
+    return flux[lo] + (flux[hi] - flux[lo]) * frac;
+  }
+
+  function evaluateCursor(res, alpha){
+    if (!res){
+      return {time:0, flux:1, x:0, y:0};
+    }
+    const clamped = Math.min(1, Math.max(0, isFinite(alpha) ? alpha : 0.5));
+    const spanT = res.tmax - res.tmin;
+    const time = res.tmin + clamped * (isFinite(spanT) ? spanT : 0);
+    const flux = interpolateFlux(res.times, res.flux, time);
+    const x = (res.halfSafe !== 0) ? (time / res.halfSafe) * (res.xspan || 0) : 0;
+    return {time, flux, x, y: res.b || 0};
   }
 
   // Actualiza el perfil radial de intensidades y normalizador para (u1,u2)
@@ -294,7 +336,20 @@
       const F = 1.0 - (occ / norm);
       flux[n] = F;
     }
-    return {times, flux, k, b, aRs, safeStar, safePlanet};
+    return {
+      times,
+      flux,
+      k,
+      b,
+      aRs,
+      safeStar,
+      safePlanet,
+      tmin,
+      tmax,
+      halfTransit,
+      halfSafe,
+      xspan,
+    };
   }
 
   const STAR_COLOR_STOPS = [
@@ -410,7 +465,7 @@
     return rounded.toFixed(decimals);
   }
 
-  function drawCurve(c, times, flux){
+  function drawCurve(c, times, flux, cursor){
     const ctx = resizeCanvas(c);
     const w = c.clientWidth, h = c.clientHeight;
     const ax = drawAxes(ctx, w, h);
@@ -460,6 +515,18 @@
     ctx.save(); ctx.translate(12, ax.padT+ax.innerH/2); ctx.rotate(-Math.PI/2);
     ctx.fillText("Flujo Normalizado", 0, 0); ctx.restore();
 
+    let cursorCoords = null;
+    if (cursor && isFinite(cursor.time)){
+      const cursorFlux = isFinite(cursor.flux) ? cursor.flux : 1;
+      const ratio = (cursor.time - xmin) / (xRange || 1);
+      const ratioClamped = Math.min(1.1, Math.max(-0.1, ratio));
+      const fluxRatio = (cursorFlux - ymin)/(yRange || 1);
+      const fluxClamped = Math.min(1.1, Math.max(-0.1, 1 - fluxRatio));
+      const cx = ax.padL + ratioClamped * ax.innerW;
+      const cy = ax.padT + fluxClamped * ax.innerH;
+      cursorCoords = {x: cx, y: cy};
+    }
+
     // curva
     ctx.strokeStyle = "#7aa2ff"; ctx.lineWidth = 2;
     ctx.beginPath();
@@ -469,10 +536,26 @@
       if (i===0) ctx.moveTo(x,y); else ctx.lineTo(x,y);
     }
     ctx.stroke();
+
+    if (cursorCoords){
+      ctx.strokeStyle = "#f9b857";
+      ctx.lineWidth = 1.5;
+      ctx.beginPath();
+      ctx.moveTo(cursorCoords.x, ax.padT);
+      ctx.lineTo(cursorCoords.x, h - ax.padB);
+      ctx.stroke();
+      ctx.fillStyle = "#f9b857";
+      ctx.beginPath();
+      ctx.arc(cursorCoords.x, cursorCoords.y, 4, 0, 2*Math.PI);
+      ctx.fill();
+    }
   }
 
   // ------- Vista del disco estelar y mapa de I(mu) -------
-  function drawStarView(c, k, u1, u2, rStar, incDeg){
+  function drawStarView(c, res, u1, u2, cursor){
+    if (!res){
+      return;
+    }
     const ctx = resizeCanvas(c);
     const cssW = c.clientWidth;
     const cssH = c.clientHeight;
@@ -496,12 +579,12 @@
     const scaleX = cssW / pixelW;
     const scaleY = cssH / pixelH;
 
-    const safeStar = Math.max(rStar, 0.05);
-    const aRs = ORBIT_A / safeStar;
-    const {b} = impactAndSpan(aRs, incDeg, k);
-    // centro planeta en t=0 (x=0, y=b)
-    const px = cx;
-    const py = cy + b*R;
+    const safeStar = Math.max(res.safeStar, 0.05);
+    const k = res.k;
+    const b = res.b;
+    const cursorX = cursor && isFinite(cursor.x) ? cursor.x : 0;
+    const px = cx + cursorX * R;
+    const py = cy + b * R;
 
     const baseColor = starColorFromRadius(safeStar);
 
@@ -556,14 +639,22 @@
     u2: parseFloat(els.u2.value),
     rStar: parseFloat(els.rStar.value),
     inc: parseFloat(els.inc.value),
+    timeAlpha: Math.min(1, Math.max(0, parseFloat(els.timeCursor.value || "0.5"))),
   };
+  let lastResult = null;
+  let needsRecompute = true;
 
-  function syncOutputs(){
+  function syncOutputs(cursor){
+    const cursorTime = cursor && isFinite(cursor.time) ? cursor.time.toFixed(3) : "…";
     els.outRPlanet.textContent = state.rPlanet.toFixed(2);
     els.outU1.textContent= state.u1.toFixed(2);
     els.outU2.textContent= state.u2.toFixed(2);
     els.outRStar.textContent = state.rStar.toFixed(2);
     els.outI.textContent = state.inc.toFixed(1);
+    els.outTime.textContent = cursorTime;
+    if (Math.abs(parseFloat(els.timeCursor.value) - state.timeAlpha) > 1e-4){
+      els.timeCursor.value = state.timeAlpha.toString();
+    }
   }
 
   let rafId = null;
@@ -573,31 +664,50 @@
   }
 
   function renderAll(){
-    syncOutputs();
-    // curva
-    const res = computeLightCurve(state.rPlanet, state.u1, state.u2, state.rStar, state.inc);
-    drawCurve(els.plot, res.times, res.flux);
-    // vistas auxiliares
-    drawStarView(els.star, res.k, state.u1, state.u2, state.rStar, state.inc);
+    if (needsRecompute || !lastResult){
+      lastResult = computeLightCurve(state.rPlanet, state.u1, state.u2, state.rStar, state.inc);
+      needsRecompute = false;
+    }
+    const res = lastResult;
+    if (!res){
+      return;
+    }
+    const cursor = evaluateCursor(res, state.timeAlpha);
+    syncOutputs(cursor);
+    drawCurve(els.plot, res.times, res.flux, cursor);
+    drawStarView(els.star, res, state.u1, state.u2, cursor);
   }
 
   // ------- Listeners -------
-  function bindSlider(el, key){
+  function bindParamSlider(el, key){
     el.addEventListener('input', ()=>{
-      state[key] = parseFloat(el.value);
+      const val = parseFloat(el.value);
+      if (isFinite(val)){
+        state[key] = val;
+      }
+      needsRecompute = true;
       requestRender();
     });
   }
-  bindSlider(els.rPlanet,'rPlanet');
-  bindSlider(els.u1,'u1');
-  bindSlider(els.u2,'u2');
-  bindSlider(els.rStar,'rStar');
-  bindSlider(els.inc,'inc');
+  bindParamSlider(els.rPlanet,'rPlanet');
+  bindParamSlider(els.u1,'u1');
+  bindParamSlider(els.u2,'u2');
+  bindParamSlider(els.rStar,'rStar');
+  bindParamSlider(els.inc,'inc');
+
+  els.timeCursor.addEventListener('input', ()=>{
+    const val = parseFloat(els.timeCursor.value);
+    state.timeAlpha = Math.min(1, Math.max(0, isFinite(val) ? val : 0.5));
+    requestRender();
+  });
 
   els.reset.addEventListener('click', ()=>{
     els.rPlanet.value="11.0"; els.u1.value="0.30"; els.u2.value="0.20";
     els.rStar.value="1.00"; els.inc.value="89.0";
+    els.timeCursor.value="0.5";
     state.rPlanet=11.0; state.u1=0.30; state.u2=0.20; state.rStar=1.00; state.inc=89.0;
+    state.timeAlpha=0.5;
+    needsRecompute = true;
     requestRender();
   });
 
