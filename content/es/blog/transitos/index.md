@@ -14,7 +14,7 @@ image:
   focal_point: "Center"
   preview_only: True
 ---
-> Esta entrada introduce el método del tránsito, explica por qué las curvas de luz son tan valiosas y ofrece recursos interactivos para experimentar con distintos escenarios planetarios.
+> En esta entrada cuento sobre el método del tránsito, por qué las curvas de luz son tan valiosas y dejo un recurso interactivo para experimentar con distintos escenarios planetarios.
 
 <iframe src="/simuladores/transito/transito0.html"
         title="Animación de un planeta transitante"
@@ -24,15 +24,15 @@ image:
 
 # ¿Qué es un planeta en tránsito?
 
-Hablamos de un planeta en tránsito cuando su órbita lo lleva a pasar por delante de su estrella desde nuestro punto de vista. Durante ese cruce bloquea una fracción diminuta de la luz estelar, lo que produce un descenso breve y periódico en el brillo observado. La forma y la repetición de ese cambio son la firma que nos permite inferir la presencia del planeta.
+Un planeta está en tránsito cuando su órbita lo lleva a pasar por delante de su estrella desde nuestro punto de vista. Durante ese cruce bloquea una fracción diminuta de la luz estelar, lo que produce un descenso breve y periódico en el brillo observado. La forma y la repetición de ese cambio son la firma que nos permite inferir la presencia del planeta.
 
 # ¿Qué es una curva de luz?
 
-La curva de luz es el registro del brillo de una estrella a lo largo del tiempo. Si graficamos esas mediciones consecutivas, los tránsitos aparecen como depresiones en forma de “U”. También puede verse una caída mucho más tenue cuando el planeta pasa detrás de la estrella: es el eclipse secundario, que revela la pequeña contribución del planeta que refleja la luz de su estrella.
+La curva de luz es el registro del brillo de una estrella a lo largo del tiempo. Si graficamos esas mediciones consecutivas, los tránsitos aparecen como disminuciones en forma de “U”. También puede verse una caída mucho más tenue cuando el planeta pasa detrás de la estrella: es el eclipse secundario, que revela la pequeña contribución del planeta que refleja la luz de su estrella.
 
 # ¿Cómo detectamos estos planetas?
 
-El método del tránsito requiere observaciones continuas y precisas. Desde la superficie terrestre dependemos de la noche, del clima y de la visibilidad del objeto, por lo que los registros suelen estar fragmentados. Las misiones espaciales como [TESS](https://www.nasa.gov/tess/) y [Kepler](https://www.nasa.gov/mission_pages/kepler/overview/index.html) superaron esas limitaciones al monitorear miles de estrellas desde el espacio sin interrupciones, lo que permitió detectar descensos de brillo de apenas unas décimas de un 1%.
+El método del tránsito requiere observaciones continuas y precisas. Desde la Tierra dependemos de la noche, del clima y de la visibilidad del objeto, por lo que los registros suelen estar fragmentados. Las misiones espaciales como [TESS](https://www.nasa.gov/tess/) y [Kepler](https://www.nasa.gov/mission_pages/kepler/overview/index.html) superaron esas limitaciones al monitorear miles de estrellas desde el espacio sin interrupciones, lo que permitió detectar descensos de brillo de apenas unas décimas de un 1% y datos temporales continuos.
 
 # ¿Qué podemos aprender de un tránsito?
 
