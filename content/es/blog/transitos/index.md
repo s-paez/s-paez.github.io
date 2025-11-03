@@ -24,28 +24,28 @@ image:
 
 # ¿Qué es un planeta en tránsito?
 
-Un planeta está en tránsito cuando su órbita lo lleva a pasar por delante de su estrella desde nuestro punto de vista. Durante ese cruce bloquea una fracción diminuta de la luz estelar, lo que produce un descenso breve y periódico en el brillo observado. La forma y la repetición de ese cambio son la firma que nos permite inferir la presencia del planeta.
+Un planeta está en tránsito cuando su órbita lo lleva a pasar por delante de su estrella desde nuestro punto de vista. Durante ese cruce bloquea una fracción diminuta de la luz, lo que produce un descenso breve y periódico en el brillo observado. La forma y la repetición de ese cambio son la firma que nos permite inferir la presencia del planeta.
 
-# ¿Qué es una curva de luz?
-
-La curva de luz es el registro del brillo de una estrella a lo largo del tiempo. Si graficamos esas mediciones consecutivas, los tránsitos aparecen como disminuciones en forma de “U”. También puede verse una caída mucho más tenue cuando el planeta pasa detrás de la estrella: es el eclipse secundario, que revela la pequeña contribución del planeta que refleja la luz de su estrella.
+La manera en como estudiamos planetas en tránsito es mediante curvas de luz. Una curva de luz es el registro del brillo de una estrella a lo largo del tiempo. Si graficamos esas mediciones consecutivas, los tránsitos aparecen como disminuciones en forma de “U”. También puede verse una caída mucho más tenue cuando el planeta pasa detrás de la estrella: es el eclipse secundario, que revela la pequeña contribución del planeta que refleja la luz de su estrella.
 
 # ¿Cómo detectamos estos planetas?
 
-El método del tránsito requiere observaciones continuas y precisas. Desde la Tierra dependemos de la noche, del clima y de la visibilidad del objeto, por lo que los registros suelen estar fragmentados. Las misiones espaciales como [TESS](https://www.nasa.gov/tess/) y [Kepler](https://www.nasa.gov/mission_pages/kepler/overview/index.html) superaron esas limitaciones al monitorear miles de estrellas desde el espacio sin interrupciones, lo que permitió detectar descensos de brillo de apenas unas décimas de un 1% y datos temporales continuos.
+El método del tránsito requiere observaciones continuas y precisas. Desde la Tierra dependemos de la noche, del clima y de la visibilidad del objeto, por lo que los registros suelen estar fragmentados. Las misiones espaciales como [TESS](https://www.nasa.gov/tess/) y [Kepler](https://www.nasa.gov/mission_pages/kepler/overview/index.html) superaron esas limitaciones al monitorear miles de estrellas desde el espacio, lo que permitió detectar descensos de brillo de apenas unas décimas de un 1% y obtener datos temporales continuos durante más tiempo.
 
 # ¿Qué podemos aprender de un tránsito?
 
-El análisis detallado de la curva de luz ofrece múltiples pistas sobre el sistema estrella-planeta:
+El análisis detallado de las curvas de luz ofrece múltiples pistas sobre el sistema estrella-planeta:
 
 - **Periodo orbital**: la distancia temporal entre tránsitos consecutivos indica cuánto tarda el planeta en completar una órbita.
 - **Tamaño relativo**: la profundidad del tránsito depende de la proporción entre el radio del planeta y el de la estrella.
-- **Distancia orbital**: combinando el periodo con las leyes de Kepler estimamos cuán lejos se encuentra el planeta de su estrella.
+- **Distancia orbital**: combinando el periodo con las leyes de Kepler tenemos una idea de cuán lejos se encuentra el planeta de su estrella.
 - **Temperatura estimada**: con la distancia y el brillo estelar podemos calcular la energía que recibe el planeta.
-- **Geometría de la órbita**: la forma del tránsito varía si el planeta cruza el centro del disco estelar o sólo roza el borde.
+- **Geometría de la órbita**: la forma del tránsito varía si el planeta cruza el centro del disco estelar o cruza más cerca del borde.
 - **Propiedades de la estrella**: las estrellas no brillan uniformemente; el oscurecimiento del borde (limb darkening) deja huellas en los perfiles de entrada y salida del tránsito.
 
-# Preguntas guía para el simulador
+# Simulador de planetas en tránsito
+
+El simulador interactivo a continuación incorpora el mismo modelo físico que usamos para determinar los parámetros planetarios y orbitales de un exoplaneta en tránsito, por lo que es físicamente inspirado. Tiene en cuenta el radio de la estrella, del planeta, la inclinación de su órbita y el perfil de brillo superficial de la estrella usando una ley cuadrática.
 
 El simulador interactivo permite reproducir estos efectos y explorar distintos parámetros. Algunas propuestas de análisis:
 
@@ -67,4 +67,4 @@ Convenciones:
         style="width:150%; height:1100px;border:0;border-radius:16px;margin:0 auto;display:block;">
 </iframe>
 
-El método del tránsito ha permitido confirmar miles de exoplanetas y seguirá siendo clave para identificar mundos potencialmente habitables. Te invito a experimentar con los simuladores, formular hipótesis y buscar resultados con observaciones reales.
+El método del tránsito ha permitido detectar miles de exoplanetas y seguirá siendo clave para identificar mundos potencialmente habitables. Te invito a experimentar con el simulador, formular hipótesis y buscar resultados con observaciones reales parecidas al simulador.
