@@ -22,7 +22,7 @@ Después de terminar la primaria, estudié grados sexto y séptimo en el Colegio
 
 Cuando terminé séptimo, me mudé de nuevo a Bogotá para terminar el bachillerato en el colegio Fabio Lozano Simonelli (Falosi), en el barrio La Fiscala de la localidad de Usme. Antes había estudiado un año en el colegio Arnulfo Briceño Contreras, en Villavicencio.
 
-Fue en el Falosi donde conocí la astronomía por primera vez, gracias a un curso breve para profesores que tomé en el Planetario de Bogotá. Hasta entonces, aunque nunca había sido un mal estudiante, tampoco había destacado por mis resultados académicos. Mis notas no eran malas, pero tampoco las mejores. Creo que era porque nada me había llamado completamente la atención ni lo disfrutaba de alguna manera especial.
+En el Falosi conocí la astronomía por primera vez, gracias a un curso breve para profesores que tomé en el Planetario de Bogotá. Hasta entonces, aunque nunca había sido un mal estudiante, tampoco había destacado por mis resultados académicos. Mis notas no eran malas, pero tampoco las mejores. Creo que era porque nada me había llamado completamente la atención ni lo disfrutaba de alguna manera especial.
 
 Después de hacer el curso en el planetario, me involucré de lleno en el club de astronomía del colegio y, al poco tiempo, supe que quería dedicarme a la astronomía. Participé en las Olimpiadas Colombianas de Astronomía y Astrofísica y, aunque solo pasé a la segunda ronda clasificatoria, esa experiencia me sirvió para aprender por mi cuenta y confirmar que realmente disfrutaba de la astronomía.
 
@@ -30,7 +30,7 @@ Me gradué como bachiller en noviembre de 2018 y, gracias a la ayuda del Fondo d
 
 Ahí me formé como profesor de ciencias naturales con énfasis en física, en la Facultad de Educación. Aunque gran parte de mis estudios se centraron en la enseñanza de las ciencias naturales, nunca dejé de lado la astronomía. 
 
-Participé en un grupo de investigación en enseñanza de la astronomía con el que realizamos muchas actividades de educación científica y divulgación de la astronomía en la provincia de Sabana Centro, la región de mayor influencia de la Universidad de La Sabana.
+Participé en un grupo de investigación en enseñanza de la astronomía con el que realizamos muchas actividades de educación científica y divulgación de la astronomía en la provincia de Sabana Centro, la región de mayor influencia de la Universidad de La Sabana y e Bogotá.
 
 Durante la carrera, también aprendí más sobre astronomía y sobre las habilidades que necesitaría para ser aceptado en un programa de posgrado. Por esos años conocí el campo de los exoplanetas, porque mis mentores más cercanos trabajan en astrobiología y ciencias planetarias. Aprendí sobre qué son, cómo se detectan, cómo se estudian y cuáles son algunas de las preguntas que aún están sin respuesta.
 
