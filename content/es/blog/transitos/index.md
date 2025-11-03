@@ -45,7 +45,7 @@ El análisis detallado de las curvas de luz ofrece múltiples pistas sobre el si
 
 # Simulador de planetas en tránsito
 
-El simulador interactivo a continuación incorpora el mismo modelo físico que usamos para determinar los parámetros planetarios y orbitales de un exoplaneta en tránsito, por lo que es físicamente inspirado. Tiene en cuenta el radio de la estrella, del planeta, la inclinación de su órbita y el perfil de brillo superficial de la estrella usando una ley cuadrática.
+El simulador interactivo a continuación incorpora el mismo modelo físico que usamos para determinar los parámetros planetarios y orbitales de un exoplaneta en tránsito, por lo que es físicamente inspirado. Tiene en cuenta el radio del planeta y la estrella, la inclinación de su órbita y el perfil de brillo superficial de la estrella usando una ley cuadrática.
 
 El simulador interactivo permite reproducir estos efectos y explorar distintos parámetros. Algunas propuestas de análisis:
 
