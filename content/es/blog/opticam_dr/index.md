@@ -59,7 +59,7 @@ Una vez se ha hecho la reducción de datos, usamos una técnica que se conoce co
 La precisión con la que se pueden medir las variaciones en el brillo de la estrella de interés depende de cuantas estrellas de comparación se usaron, el nivel de variación es estas, su nivel de brillo, entre otros factores relacionados al funcionamiento del telescopio, las cámaras y los detectores. Para dimensionar el reto, para estudiar exoplanetas necesitamos alcanzar precisiones que nos permitan medir variaciones del 1% o menos en el brillo de la estrella. 
 
 <div align="center">
-  <img src="figs/apertures.png" alt="Recorte Cam1" width=150%>
+  <img src="figs/apertures.png" alt="Recorte Cam1" width=100%>
   <br>
   <span style="font-size: 0.8em; color: #666;">
     Fig. 3: Imagen completa tomada con una de las cámaras de OPTICAM. Están señaladas las estrellas que se usaron para la fotometría: T1 (parte inferior derecha) es la estrella de interés. Las que están señaladas con C son las usadas de comparación. Las que están señaladas con T diferentes a T1, fueron descartadas.
@@ -85,8 +85,7 @@ Como mencioné antes, hay una forma de eliminar varios tipos de ruido tanto gene
 ## Filtros Gaussianos
 
 <div align="center">
-  <img src="figs/kernel_gau1.png" alt="Recorte Cam1" width=40%>
-  <img src="figs/kernel_gau3.png" alt="Recorte Cam1" width=40%>
+  <img src="figs/kernel_gau1.jpeg" alt="Recorte Cam1" width=80%>
   <br>
   <span style="font-size: 0.8em; color: #666;">
     Fig. 4: Filtros Gaussianos que probamos. A la izquierda el filtro más pequeño posible y a la derecha el segundo más pequeño posible.
@@ -155,7 +154,7 @@ La Figura a continuación presenta el impacto de cada filtro en las imágenes. E
 
 # NUESTRO APORTE
 
-Para este trabajo, quisimos ir más allá de solo encontrar una forma de eliminar los píxeles tibios en nuestras observaciones con OPTICAM y por eso desarrollar el software que implementa nuestra solución. No solo para que podamos ser más eficientes al procesas nuestros datos sino para que otras personas que usan este instrumento para observaciones de exoplanetas en tránsito puedan incorporarlo a sus flujos de trabajo. En ese sentido, ponemos a disposición un paquete de código en Python que implementa el filtro por la mediana de 3x3 píxeles. Lo llamamos PROFE (Pipeline de Reducción de Opticam para Fotometría de Exoplanetas). PROFE organiza y lleva un registro de todas las observaciones que tengamos con OPTICAM y organiza los datos por cada estrella observada y por cada fecha. También agrega marcas de tiempo necesarias para las curvas de luz y aplica el filtro por la mediana de 3x3 usando una cantidad núcleos del procesador de la computadora donde se usa, determinada por la persona usuaria. 
+Para este trabajo, quisimos ir más allá de solo encontrar una forma de eliminar los píxeles tibios en nuestras observaciones con OPTICAM y por eso desarrollar el software que implementa nuestra solución. No solo para que podamos ser más eficientes al procesas nuestros datos sino para que otras personas que usan este instrumento para observaciones de exoplanetas en tránsito puedan incorporarlo a sus flujos de trabajo. En ese sentido, ponemos a disposición un paquete de código en Python que implementa el filtro por la mediana de 3x3 píxeles. Lo llamamos PROFE (**P**ipeline de **R**educción de **O**pticam para **F**otometría de **E**xoplanetas). PROFE organiza y lleva un registro de todas las observaciones que tengamos con OPTICAM y organiza los datos por cada estrella observada y por cada fecha. También agrega marcas de tiempo necesarias para las curvas de luz y aplica el filtro por la mediana de 3x3 usando una cantidad núcleos del procesador de la computadora donde se usa, determinada por la persona usuaria. 
 
 Adicionalmente, una vez se ha hecho la reducción estándar con las imágenes filtradas y la fotometría en algún software como AstroImageJ, PROFE es capaz de tomar las curvas de luz y crear productos científicos y de diagnóstico como gráficas de curvas de luz, de masa de aire, de la trayectoria de la estrella en el cielo durante la observación, entro otros. Permitiendo, que quien use OPTICAM para tomar datos de exoplanetas transitantes pueda tener rápidamente productos científicos para compartir con colegas o con programas de seguimiento de exoplanetas como el TESS Follo-up Observing Program. 
 
