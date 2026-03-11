@@ -20,13 +20,13 @@ publishDate: "2025-09-10T00:00:00Z"
 publication_types: ["article-journal"]
 
 # Publication name and optional abbreviated publication name.
-publication: "Enviado a *RAS Techniques and Instruments* en Sep. 2025"
-publication_short: "Enviado a RASTI en Sep. 2025"
+publication: "Aceptado para publicación en *RAS Techniques and Instruments* en Marzo de 2026"
+publication_short: "Aceptado en RASTI en Marzo 2026"
 
-abstract: We present a methodology for acquiring and reducing transiting exoplanet light curves obtained with San Pedro Mártir (SPM) 2.1m+OPTICAM, based on ~180h of observations acquired between 2023 and 2025. The OPTICAM sCMOS detectors generate significant hot pixels at exposures ≥ 10s, affecting both science and calibration frames. These hot pixels are not removed by standard dark subtraction because they vary unpredictably from frame to frame. We evaluate six preprocessing methods applied to science and calibration images using the transit of a TESS planet candidate observed in the g'r'i' filters. A median filter with a 3x3-pixel window minimizes the effect of hot pixels without affecting stellar signals. This proposed method best reduces dispersion and red noise in the light curves when stellar peak counts are close to the dark current level. The improvement is less significant when the stellar peak is several thousand counts above the dark current level. We fit a multiband transit model to the light curves, measuring photometric precision, correlated noise, and retrieved planetary parameters. Although we analyze the same dataset, we find that fitted parameters depend on the preprocessing method used. Posterior comparisons show that the median filter preprocessing best describes the data. We caution against combining light curves from different reductions, as it could introduce unquantifiable systematic errors; for example, the derived impact parameter varies by up to ~5.6σ. Finally, we introduce PROFE, a reduction pipeline that implements our proposed method, which incorporates AstroImageJ and Python scripts.
+abstract: Presentamos una metodología para adquirir y reducir las curvas de luz de exoplanetas en tránsito obtenidas con el instrumento OPTICAM en el Observatorio Astronómico Nacional en la Sierra de San Pedro Mártir (OAN-SPM). Los detectores sCMOS de OPTICAM generan píxeles cálidos significativos en exposiciones ≥10 s, lo que afecta tanto a los fotogramas científicos como a los de calibración. Estos píxeles cálidos no se eliminan mediante la sustracción oscura estándar, ya que varían de forma impredecible de un fotograma a otro. Evaluamos seis métodos de preprocesamiento aplicados a imágenes científicas y de calibración utilizando el tránsito de TOI-7149 b observado en g' r' i'. Un filtro mediano con una ventana de 3x3 píxeles minimiza el efecto de los píxeles cálidos sin afectar a las señales estelares. Este filtro mediano reduce mejor la dispersión y el ruido rojo en las curvas de luz cuando los recuentos máximos estelares se acercan al nivel de corriente oscura. La mejora es menos significativa cuando el pico estelar está varios miles de recuentos por encima del nivel de corriente oscura. Ajustamos un modelo de tránsito multibanda a las curvas de luz, midiendo la precisión fotométrica, el ruido correlacionado y los parámetros planetarios recuperados. El modelo de tránsito ajustado a las curvas de luz con preprocesamiento utilizando un filtro mediano 3x3 alcanza la mayor evidencia Bayesiana. Por lo tanto, es nuestro método recomendado para corregir los píxeles cálidos. Por último, presentamos un proceso de reducción que combina módulos Python (PROFE) y AstroImageJ para implementar nuestro método propuesto para las observaciones de planetas en tránsito con OAN-SPM 2,1 m + OPTICAM.
 
 # Summary. An optional shortened abstract.
-summary: Proponemos un procesamiento con un filtro por la mediana con una ventana de 3x3 pixeles para los datos de OPTICAM para exoplanetas en tránsito. Presentamos PROFE, una pipeline que implementa ese preprocesamiento entre otras corecciones necesarias a los archivos FITS de OPTICAM..
+summary: Proponemos un procesamiento con un filtro por la mediana con una ventana de 3x3 pixeles para los datos de OPTICAM para exoplanetas en tránsito. Presentamos PROFE, una pipeline que implementa ese preprocesamiento entre otras corecciones necesarias a los archivos FITS de OPTICAM.
 
 tags:
 - Article
@@ -36,7 +36,7 @@ featured: false
 links:
 - name: "Curvas de luz interactivas"
   url: 'https://s-paez.github.io/opticam_lc/'
-url_pdf: 
+url_pdf: 'https://arxiv.org/pdf/2603.09922'
 url_code: 'https://github.com/s-paez/profe'
 url_dataset: 
 url_poster: 
@@ -48,7 +48,7 @@ url_video:
 # Featured image
 # To use, add an image named `featured.jpg/png` to your page's folder. 
 image:
-  caption: 'Recortes de imagen y distribuciones de cuentas para preprocesamientos con diferentes filtros por la mediana, incluida una ventana de 3x3 píxeles.'
+  caption: 'Recortes de imagen para diferentes preprocesamientos antes y despues de la calibración'
   focal_point: ""
   preview_only: false
 
