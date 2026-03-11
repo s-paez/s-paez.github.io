@@ -1,6 +1,6 @@
 ---
 title: Mi trayectoria
-summary: Un resumen de mi carrera académica.
+summary: Un resumen de mi carrera académica hasta ahora.
 date: 2025-08-29
 authors:
   - admin

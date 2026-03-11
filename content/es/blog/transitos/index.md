@@ -22,17 +22,17 @@ image:
         style="width:150%;height:1200px;border:0;border-radius:16px;margin:0 auto;display:block;">
 </iframe>
 
-# ¿Qué es un planeta en tránsito?
+## ¿Qué es un planeta en tránsito?
 
 Un planeta está en tránsito cuando su órbita lo lleva a pasar por delante de su estrella desde nuestro punto de vista. Durante ese cruce bloquea una fracción diminuta de la luz, lo que produce un descenso breve y periódico en el brillo observado. La forma y la repetición de ese cambio son la firma que nos permite inferir la presencia del planeta.
 
 La manera en como estudiamos planetas en tránsito es mediante curvas de luz. Una curva de luz es el registro del brillo de una estrella a lo largo del tiempo. Si graficamos esas mediciones consecutivas, los tránsitos aparecen como disminuciones en forma de “U”. También puede verse una caída mucho más tenue cuando el planeta pasa detrás de la estrella: es el eclipse secundario, que revela la pequeña contribución del planeta que refleja la luz de su estrella.
 
-# ¿Cómo detectamos estos planetas?
+## ¿Cómo detectamos estos planetas?
 
 El método del tránsito requiere observaciones continuas y precisas. Desde la Tierra dependemos de la noche, del clima y de la visibilidad del objeto, por lo que los registros suelen estar fragmentados. Las misiones espaciales como [TESS](https://www.nasa.gov/tess/) y [Kepler](https://www.nasa.gov/mission_pages/kepler/overview/index.html) superaron esas limitaciones al monitorear miles de estrellas desde el espacio, lo que permitió detectar descensos de brillo de apenas unas décimas de un 1% y obtener datos temporales continuos durante más tiempo.
 
-# ¿Qué podemos aprender de un tránsito?
+## ¿Qué podemos aprender de un tránsito?
 
 El análisis detallado de las curvas de luz ofrece múltiples pistas sobre el sistema estrella-planeta:
 
@@ -54,7 +54,6 @@ El simulador interactivo permite reproducir estos efectos y explorar distintos p
 3. Ajusta la inclinación a 90° y experimenta con los parámetros de oscurecimiento de borde ($u_1$ y $u_2$). ¿Qué ocurre con la visibilidad de los bordes del tránsito y qué dice eso sobre la atmósfera de la estrella?
 4. Cambia el tamaño de la estrella y presta atención al cambio de color en la visualización. Investiga cómo se relacionan temperatura y tonalidad estelar.
 
-# Simulador de exoplanetas transitantes
 Convenciones:
 * $R_\star$: Radio de la estrella
 * $R_p$: Radio del planeta

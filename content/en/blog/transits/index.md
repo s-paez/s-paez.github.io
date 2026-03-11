@@ -22,17 +22,17 @@ image:
         style="width:150%;height:1200px;border:0;border-radius:16px;margin:0 auto;display:block;">
 </iframe>
 
-# What is a transiting planet?
+## What is a transiting planet?
 
 A planet is said to be in transit when its orbit takes it in front of its star from our line of sight. During that crossing it blocks a tiny fraction of the starlight, producing a brief and periodic dip in the observed brightness. The shape and repetition of that change form the signature that lets us infer the presence of the planet.
 
 The way we study transiting exoplanet are light curves. A light curve records the brightness of a star over time. When we plot those consecutive measurements, the transits appear as U-shaped decreases. A much shallower drop can also be seen when the planet passes behind the star: that is the secondary eclipse, which reveals the small contribution of starlight reflected by the planet.
 
-# How do we detect these planets?
+## How do we detect these planets?
 
 The transit method demands continuous and precise observations. From the ground we depend on night time, weather, and the visibility of the target, so the light curves are often fragmented. Space missions such as [TESS](https://www.nasa.gov/tess/) and [Kepler](https://science.nasa.gov/mission/kepler/) overcame those limitations by monitoring thousands of stars without interruption, making it possible to detect brightness drops of just a few tenths of a percent and to gather fully continuous time series.
 
-# What can we learn from a transit?
+## What can we learn from a transit?
 
 A detailed analysis of the light curve offers multiple clues about the star-planet system:
 
@@ -43,7 +43,7 @@ A detailed analysis of the light curve offers multiple clues about the star-plan
 - **Orbital geometry**: the transit shape changes if the planet crosses the center of the stellar disk or just grazes the edge.
 - **Stellar properties**: stars are not uniformly bright; limb darkening leaves traces in the ingress and egress of the transit.
 
-# Guiding questions for the simulator
+## Guiding questions for the simulator
 
 The following interactive simulator incorporates the same physical model we use to calculate the planetary and orbital parameters of a transiting exoplanet, it is physically inspired. It takes into account the stellar and planetary radii, the orbit inclination and the brightness profiles of the star using a quadratic law. 
 
