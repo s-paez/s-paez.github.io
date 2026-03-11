@@ -1,6 +1,6 @@
 ---
 title: Reducción de datos para OPTICAM
-summary: Mi principal trabajo de maestría fue desarrollar e implementar un método de reducción de datos.
+summary: Mi principal trabajo de maestría fue desarrollar e implementar un método de reducción de datos de exoplanetas transitantes tomados con OPTICAM.
 date: 2026-03-11
 authors:
   - admin
