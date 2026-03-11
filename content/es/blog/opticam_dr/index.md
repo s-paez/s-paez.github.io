@@ -1,7 +1,7 @@
 ---
 title: Reducción de datos para OPTICAM
 summary: Mi principal trabajo de maestría fue desarrollar e implementar un método de reducción de datos.
-date: 2025-10-12
+date: 2026-03-11
 authors:
   - admin
 tags:
@@ -20,7 +20,7 @@ image:
 # OPTICAM
 
 <div align="center">
-  <img src="figs/OPTICAM.png" alt="Campus UniSabana" width=60%>
+  <img src="figs/OPTICAM.png" alt="Campus UniSabana" width=100%>
   <br>
   <span style="font-size: 0.8em; color: #666;">
     Fig. 1: Esquema óptico-mecánico de OPTICAM. A, B y C son las cámaras. D, E y F son espacios para filtros. G, H, I son lentes que reciben el haz de luz para dirigirlo a las cámaras. J y K con dicroicos que permiten dividir del haz de luz que viene del telescopio (líneas amarillas). Créditos: <a href="https://www.sciencedirect.com/science/article/pii/S1384107624000769?via%3Dihub">Castro et al. (2024)</a>
@@ -37,7 +37,7 @@ Desde el principio de mi maestría, comencé a trabajar con datos de este instru
 ## Píxeles tibios
 
 <div align="center">
-  <img src="figs/g_imagecutoff.jpg" alt="Recorte Cam1" width=60%>
+  <img src="figs/g_imagecutoff.jpg" alt="Recorte Cam1" width=100%>
   <br>
   <span style="font-size: 0.8em; color: #666;">
     Fig. 2: Recorte de 100x100 píxeles de una cámara de OPTICAM donde se evidencian los pixeles tibios con tonos más amarillos. Créditos: <a href="https://arxiv.org/abs/2603.09922">Páez et al. (2026)</a>
@@ -59,7 +59,7 @@ Una vez se ha hecho la reducción de datos, usamos una técnica que se conoce co
 La precisión con la que se pueden medir las variaciones en el brillo de la estrella de interés depende de cuantas estrellas de comparación se usaron, el nivel de variación es estas, su nivel de brillo, entre otros factores relacionados al funcionamiento del telescopio, las cámaras y los detectores. Para dimensionar el reto, para estudiar exoplanetas necesitamos alcanzar precisiones que nos permitan medir variaciones del 1% o menos en el brillo de la estrella. 
 
 <div align="center">
-  <img src="figs/apertures.png" alt="Recorte Cam1" width=60%>
+  <img src="figs/apertures.png" alt="Recorte Cam1" width=150%>
   <br>
   <span style="font-size: 0.8em; color: #666;">
     Fig. 3: Imagen completa tomada con una de las cámaras de OPTICAM. Están señaladas las estrellas que se usaron para la fotometría: T1 (parte inferior derecha) es la estrella de interés. Las que están señaladas con C son las usadas de comparación. Las que están señaladas con T diferentes a T1, fueron descartadas.
@@ -85,8 +85,8 @@ Como mencioné antes, hay una forma de eliminar varios tipos de ruido tanto gene
 ## Filtros Gaussianos
 
 <div align="center">
-  <img src="figs/kernel_gau1.png" alt="Recorte Cam1" width=45%>
-  <img src="figs/kernel_gau3.png" alt="Recorte Cam1" width=45%>
+  <img src="figs/kernel_gau1.png" alt="Recorte Cam1" width=40%>
+  <img src="figs/kernel_gau3.png" alt="Recorte Cam1" width=40%>
   <br>
   <span style="font-size: 0.8em; color: #666;">
     Fig. 4: Filtros Gaussianos que probamos. A la izquierda el filtro más pequeño posible y a la derecha el segundo más pequeño posible.
@@ -160,7 +160,7 @@ Para este trabajo, quisimos ir más allá de solo encontrar una forma de elimina
 Adicionalmente, una vez se ha hecho la reducción estándar con las imágenes filtradas y la fotometría en algún software como AstroImageJ, PROFE es capaz de tomar las curvas de luz y crear productos científicos y de diagnóstico como gráficas de curvas de luz, de masa de aire, de la trayectoria de la estrella en el cielo durante la observación, entro otros. Permitiendo, que quien use OPTICAM para tomar datos de exoplanetas transitantes pueda tener rápidamente productos científicos para compartir con colegas o con programas de seguimiento de exoplanetas como el TESS Follo-up Observing Program. 
 
 
-### Nota final:
+# Nota final:
 
 Mi objetivo con este corto escrito es que personas no especializadas en astronomía, exoplanetas, técnicas de reducción o que no lean en inglés puedan conocer de manera general mi trabajo de maestría que llevó a la publicación de mi primer artículo científico como primer autor en el campo de los exoplanetas. Sin embargo, he hecho muchas simplificaciones y evitado tecnicismos que son necesarios para comprender el detalle y trasfondo de este trabajo que realizamos con Yilen Gómez Maqueo Chew y Leslie Hebb. Por supuesto, invito a cualquier persona interesada en saber más o con dudas a contactarme y yo estaré encantado de responder. 
 
