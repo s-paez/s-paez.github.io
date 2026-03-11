@@ -161,6 +161,6 @@ Adicionalmente, una vez se ha hecho la reducción estándar con las imágenes fi
 
 # Nota final:
 
-Mi objetivo con este corto escrito es que personas no especializadas en astronomía, exoplanetas, técnicas de reducción o que no lean en inglés puedan conocer de manera general mi trabajo de maestría que llevó a la publicación de mi primer artículo científico como primer autor en el campo de los exoplanetas. Sin embargo, he hecho muchas simplificaciones y evitado tecnicismos que son necesarios para comprender el detalle y trasfondo de este trabajo que realizamos con Yilen Gómez Maqueo Chew y Leslie Hebb. Por supuesto, invito a cualquier persona interesada en saber más o con dudas a contactarme y yo estaré encantado de responder. 
+Mi objetivo con este corto escrito es que personas no especializadas en astronomía, exoplanetas, técnicas de reducción o que no lean en inglés puedan conocer de manera general mi trabajo de maestría que llevó a la publicación de mi primer artículo científico como primer autor en el campo de los exoplanetas. Sin embargo, he hecho muchas simplificaciones y evitado tecnicismos que son necesarios para comprender el detalle y trasfondo de este trabajo que realizamos con Yilen Gómez Maqueo Chew y Leslie Hebb. Por supuesto, invito a cualquier persona interesada en saber más o con dudas a contactarme. Estaré encantado de responder. 
 
 
