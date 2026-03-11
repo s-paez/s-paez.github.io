@@ -3,7 +3,7 @@ title: "Data reduction method for OPTICAM multiband time series of transiting ex
 authors:
 - spaez
 - Y. Gómez Maqueo Chew
-- L. H. Hebb
+- L. Hebb
 
 author_notes:
 - "Equal contribution"
@@ -37,7 +37,7 @@ featured: false
 links:
 - name: "Interactive light curves"
   url: 'https://s-paez.github.io/opticam_lc/'
-url_pdf: 
+url_pdf: 'https://arxiv.org/pdf/2603.09922'
 url_code: 'https://github.com/s-paez/profe'
 url_dataset: 
 url_poster: 
