@@ -1,6 +1,6 @@
 ---
 # Display name
-title: Santiago Pa2ez Avendaño
+title: Santiago Páez Avendaño
 
 # Name pronunciation (optional)
 name_pronunciation: ''
