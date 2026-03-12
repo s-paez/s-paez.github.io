@@ -114,7 +114,7 @@ Esta forma de corregir los píxeles tibios tiene varias ventajas, la primera es 
 
 ## Ejemplos
 
-A continuación, ilustro con una imagen de un perrito, cual es el efecto de aplicar estos dos tipos de filtros, y sus diferentes tamaños en una imagen. La imagen original a color, la convertí a una escala de grises para que cada pixel tenga un solo valor numérico que refleje cual es su nivel de brillo y luego cambié la escala de grises a una escala de dos colores que igualmente reflejan el nivel de brillo en cada píxel. A la imagen original, le agregué un 1% de pixeles brillantes distribuidos de manera aleatoria pero uniforme de manera que simulan los pixeles tibios en nuestras imágenes de OPTICAM. 
+A continuación, ilustro con una imagen de un perrito, cual es el efecto de aplicar estos dos tipos de filtros, y sus diferentes tamaños en una imagen. La imagen original a color, la convertí a una escala de grises para que cada pixel tenga un solo valor numérico que refleje cual es su nivel de brillo y luego cambié la escala de grises a una escala de colores que igualmente reflejan el nivel de brillo en cada píxel. A la imagen original, le agregué un 1% de pixeles brillantes distribuidos de manera aleatoria pero uniforme de manera que simulan los pixeles tibios en nuestras imágenes de OPTICAM. 
 
 <div align="center">
   <img src="figs/gau_ex1.jpeg" alt="Recorte Cam1" width=100%>
