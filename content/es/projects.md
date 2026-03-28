@@ -11,8 +11,8 @@ design:
 sections:
   - block: collection
     content:
-      title: Some stories about my academic journey
-      text: In the past, I would appreciate to know more details on Astronomy careers, that is why I am glad to share some stories and experiences I have lived in my career.
+      title: Historias de mi camino académico
+      text: En el pasado, hubiera agradecido conocer más detalles sobre carreras en Astronomía, por eso me alegra compartir algunas historias y experiencias que he vivido en mi carrera.
       filters:
         folders:
           - blog

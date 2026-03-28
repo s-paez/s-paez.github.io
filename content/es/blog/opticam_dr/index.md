@@ -20,7 +20,7 @@ image:
 # OPTICAM
 
 <div align="center">
-  <img src="figs/OPTICAM.png" alt="Campus UniSabana" width=100%>
+  <img src="figs/OPTICAM.jpg" alt="Campus UniSabana" width=100%>
   <br>
   <span style="font-size: 0.8em; color: #666;">
     Fig. 1: Esquema óptico-mecánico de OPTICAM. A, B y C son las cámaras. D, E y F son espacios para filtros. G, H, I son lentes que reciben el haz de luz para dirigirlo a las cámaras. J y K con dicroicos que permiten dividir del haz de luz que viene del telescopio (líneas amarillas). Créditos: <a href="https://www.sciencedirect.com/science/article/pii/S1384107624000769?via%3Dihub">Castro et al. (2024)</a>
@@ -59,7 +59,7 @@ Una vez se ha hecho la reducción de datos, usamos una técnica que se conoce co
 La precisión con la que se pueden medir las variaciones en el brillo de la estrella de interés depende del número de estrellas de comparación que se usaron, el nivel de variación es estas, el nivel de brillo y otros factores relacionados al funcionamiento del telescopio, las cámaras y los detectores. Para dimensionar el reto, para estudiar exoplanetas necesitamos alcanzar precisiones que nos permitan medir variaciones del 1% o menos en el brillo de la estrella. 
 
 <div align="center">
-  <img src="figs/apertures.png" alt="Recorte Cam1" width=100%>
+  <img src="figs/apertures.jpg" alt="Recorte Cam1" width=100%>
   <br>
   <span style="font-size: 0.8em; color: #666;">
     Fig. 3: Imagen completa tomada con una de las cámaras de OPTICAM. Están señaladas las estrellas que se usaron para la fotometría: T1 (parte inferior derecha) es la estrella de interés. Las que están señaladas con C son las usadas de comparación. Las que están señaladas con T diferentes a T1, fueron descartadas.
