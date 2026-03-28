@@ -44,7 +44,7 @@ sections:
       title: 'Mi trabajo'
       subtitle: ''
       text: |-
-        Mi trabajo se centra en la fotometría de tránsito multibanda desde tierra. Para mi máster, me centré en los datos obtenidos con [OPTICAM](https://www.astrossp.unam.mx/es/usuarios/instrumentos/imagendirecta/opticam), un sistema de imagen de tres bandas diseñado para su uso con el [Telescopio de 2.1 m](https://www.astrossp.unam.mx/es/usuarios/telescopios/tel2m) del Observatorio Astronómico Nacional en la Sierra de San Pedro Mártir (OAN-SPM). Mi investigación consistió en desarrollar un método de reducción de datos que permitiera realizar observaciones de seguimiento de candidatos a planetas y estudios multibanda de sistemas de exoplanetas en tránsito.
+        Mi trabajo se centra en la fotometría de tránsito multibanda desde tierra. Para mi maestría, me centré en los datos obtenidos con [OPTICAM](https://www.astrossp.unam.mx/es/usuarios/instrumentos/imagendirecta/opticam), un sistema de imagen de tres bandas diseñado para su uso con el [Telescopio de 2.1 m](https://www.astrossp.unam.mx/es/usuarios/telescopios/tel2m) del Observatorio Astronómico Nacional en la Sierra de San Pedro Mártir (OAN-SPM). Mi investigación consistió en desarrollar un método de reducción de datos que permitiera realizar observaciones de seguimiento de candidatos a planetas y estudios multibanda de sistemas de exoplanetas en tránsito.
 
     design:
       columns: '1'
