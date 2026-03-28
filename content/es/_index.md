@@ -44,7 +44,8 @@ sections:
       title: 'Mi trabajo'
       subtitle: ''
       text: |-
-        Actualmente estoy trabajando en el desarrollo de [PROFE](https://github.com/s-paez/profe), una pipeline de reducción para el [instrumento OPTICAM](https://www.astrossp.unam.mx/es/usuarios/instrumentos/imagendirecta/opticam) que se usa en el Telescopio de 2.1m en el Observatorio Astronómico Nacional de San Pedro Mártir (OAN-SPM). PROFE realiza el preprocesamiento necesario para los datos de OPTICAM antes de la reducción estándar de fotometría multibanda simultánea de exoplanetas en tránsito. También trabajo en el análisis de curvas de luz de múltiples planetas y candidatos a planetas en tránsito.
+        Mi trabajo se centra en la fotometría de tránsito multibanda desde tierra. Para mi máster, me centré en los datos obtenidos con [OPTICAM](https://www.astrossp.unam.mx/es/usuarios/instrumentos/imagendirecta/opticam), un sistema de imagen de tres bandas diseñado para su uso con el [Telescopio de 2.1 m](https://www.astrossp.unam.mx/es/usuarios/telescopios/tel2m) del Observatorio Astronómico Nacional en la Sierra de San Pedro Mártir (OAN-SPM). Mi investigación consistió en desarrollar un método de reducción de datos que permitiera realizar observaciones de seguimiento de candidatos a planetas y estudios multibanda de sistemas de exoplanetas en tránsito.
+
     design:
       columns: '1'
   # - block: collection
