@@ -1,6 +1,8 @@
 {{- printf "<?xml version=\"1.0\" encoding=\"utf-8\" standalone=\"yes\" ?>" | safeHTML }}
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-{{- range .Site.RegularPages -}}
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/TR/xhtml-namespace/">
+{{- range .Data.Pages -}}
+{{- if and (not .Params.private) (ne .Kind "404") }}
   <url>
     <loc>{{ .Permalink }}</loc>
     {{- with .Lastmod }}
@@ -12,6 +14,11 @@
     {{- if ge .Sitemap.Priority 0 }}
     <priority>{{ printf "%.1f" .Sitemap.Priority }}</priority>
     {{- end }}
+    {{- $pageLang := .Lang }}
+    {{- range .Translations }}
+    <xhtml:link rel="alternate" hreflang="{{ .Lang }}" href="{{ .Permalink }}" />
+    {{- end }}
   </url>
-{{- end -}}
+{{- end }}
+{{- end }}
 </urlset>

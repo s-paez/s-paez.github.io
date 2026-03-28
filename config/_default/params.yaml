@@ -16,7 +16,7 @@ marketing:
     site_type: Person
     local_business_type: ''
     org_name: 'Instituto de Astronomía, Universidad Nacional Autónoma de México'
-    description: "Personal website of Santiago Páez Avendaño - MSc. student in Astrophysics. Research in transiting exoplanets."
+    description: "Santiago Páez Avendaño — MSc student in Astrophysics at UNAM. Research on transiting exoplanets, multiband photometry and data reduction."
   analytics:
     google_analytics: 'G-9CF41VFPQC'
     baidu_tongji: ''
@@ -24,8 +24,7 @@ marketing:
     fathom: ''
     pirsch: ''
   verification:
-    google: ''
-    baidu: ''
+    google: 'google36b70e4bf7476d5a'
 
 # Site header
 header:

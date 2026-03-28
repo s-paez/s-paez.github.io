@@ -8,14 +8,14 @@ en:
   # Uncomment for multi-lingual sites, and move English content into `en` sub-folder.
   contentDir: content/en
   params:
-    description: "Personal website of Santiago Páez Avendaño — MSc student in Astrophysics. Research in transiting exoplanets."
+    description: "Santiago Páez Avendaño — MSc student in Astrophysics at UNAM. Research on transiting exoplanets, multiband photometry and data reduction with OPTICAM."
 
 # Uncomment the lines below to configure your website in a second language.
 es:
   languageCode: es
   contentDir: content/es
   params:
-    description: "Sitio personal de Santiago Páez Avendaño — Est. de Maestría en Astrofísica. Investigación en exoplanetas en tránsito."
+    description: "Santiago Páez Avendaño — Estudiante de Maestría en Astrofísica en la UNAM. Investigación en exoplanetas en tránsito, fotometría multibanda y reducción de datos con OPTICAM."
   # title: Chinese website title...
   #  params:
   #    description: Site description in Chinese...
