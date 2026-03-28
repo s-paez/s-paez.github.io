@@ -19,7 +19,7 @@ image:
 <iframe src="/simulators/transit/transit0.html"
         title="Transiting planet animation"
         loading="lazy"
-        style="width:150%;height:1200px;border:0;border-radius:16px;margin:0 auto;display:block;">
+        style="width:100%;max-width:100%;height:1200px;border:0;border-radius:16px;margin:0 auto;display:block;">
 </iframe>
 
 ## What is a transiting planet?
@@ -64,7 +64,7 @@ Conventions:
 <iframe src="/simulators/transit/transit.html"
         title="Planetary transit simulator"
         loading="lazy"
-        style="width:150%; height:1100px;border:0;border-radius:16px;margin:0 auto;display:block;">
+        style="width:100%;max-width:100%;height:1100px;border:0;border-radius:16px;margin:0 auto;display:block;">
 </iframe>
 
 The transit method has confirmed thousands of exoplanets and will remain essential to identify potentially habitable worlds. Dive into the simulators, form hypotheses, and look for patterns that you can contrast with real observations.

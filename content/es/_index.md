@@ -19,12 +19,12 @@ sections:
         text: Descarga mi CV
         url: uploads/resume_es.pdf
     design:
-      css_class: black
+      css_class: dark
       background:
         color: black
         image:
           # Add your image background to `assets/media/`.
-          filename: stacked-peaks.svg
+          filename: stacked-peaks.webp
           filters:
             brightness: 1.0
           size: cover

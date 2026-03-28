@@ -52,3 +52,53 @@
   display: inline-block;
   text-transform: none !important;
 }
+
+/* =====================================================
+   Hero / Biography section — contraste sobre fondo oscuro
+   ===================================================== */
+
+/* Forzar texto blanco en la sección hero con fondo oscuro */
+.dark .resume-biography .portrait-title,
+.dark .resume-biography .portrait-title h3,
+.dark .resume-biography .portrait-title div,
+.dark .resume-biography .portrait-title a {
+  color: #fff !important;
+}
+
+/* Iconos sociales en blanco */
+.dark .resume-biography .network-icon a {
+  color: rgba(255, 255, 255, 0.85) !important;
+}
+.dark .resume-biography .network-icon a:hover {
+  color: #fff !important;
+}
+
+/* Sombra sutil para legibilidad sobre cualquier imagen de fondo */
+.dark .resume-biography .portrait-title {
+  text-shadow: 0 1px 6px rgba(0, 0, 0, 0.6);
+}
+
+/* Texto de biografía, intereses y educación en blanco sobre fondo oscuro */
+.dark .resume-biography .bio-text,
+.dark .resume-biography .prose,
+.dark .resume-biography .section-subheading,
+.dark .resume-biography ul,
+.dark .resume-biography li,
+.dark .resume-biography .description,
+.dark .resume-biography .course,
+.dark .resume-biography .text-sm,
+.dark .resume-biography p {
+  color: rgba(255, 255, 255, 0.9) !important;
+}
+
+/* Botón de descarga de CV legible sobre fondo oscuro */
+.dark .resume-biography a[href*="resume"],
+.dark .resume-biography a[href*="uploads"] {
+  background-color: rgba(255, 255, 255, 0.12) !important;
+  border-color: rgba(255, 255, 255, 0.3) !important;
+  color: #fff !important;
+}
+.dark .resume-biography a[href*="resume"]:hover,
+.dark .resume-biography a[href*="uploads"]:hover {
+  background-color: rgba(255, 255, 255, 0.22) !important;
+}

@@ -19,7 +19,7 @@ image:
 <iframe src="/simuladores/transito/transito0.html"
         title="Animación de un planeta transitante"
         loading="lazy"
-        style="width:150%;height:1200px;border:0;border-radius:16px;margin:0 auto;display:block;">
+        style="width:100%;max-width:100%;height:1200px;border:0;border-radius:16px;margin:0 auto;display:block;">
 </iframe>
 
 ## ¿Qué es un planeta en tránsito?
@@ -63,7 +63,7 @@ Convenciones:
 <iframe src="/simuladores/transito/transito.html"
         title="Simulador de tránsito planetario"
         loading="lazy"
-        style="width:150%; height:1100px;border:0;border-radius:16px;margin:0 auto;display:block;">
+        style="width:100%;max-width:100%;height:1100px;border:0;border-radius:16px;margin:0 auto;display:block;">
 </iframe>
 
 El método del tránsito ha permitido detectar miles de exoplanetas y seguirá siendo clave para identificar mundos potencialmente habitables. Te invito a experimentar con el simulador, formular hipótesis y buscar resultados con observaciones reales parecidas al simulador.
