@@ -20,8 +20,8 @@ publishDate: "2026-03-11T00:00:00Z"
 publication_types: ["article-journal"]
 
 # Publication name and optional abbreviated publication name.
-publication: "Aceptado para publicación en *RAS Techniques and Instruments* en Marzo de 2026"
-publication_short: "Aceptado en RASTI"
+publication: "*RAS Techniques and Instruments*"
+publication_short: "RASTI"
 
 abstract: Presentamos una metodología para adquirir y reducir las curvas de luz de exoplanetas en tránsito obtenidas con el instrumento OPTICAM en el Observatorio Astronómico Nacional en la Sierra de San Pedro Mártir (OAN-SPM). Los detectores sCMOS de OPTICAM generan píxeles cálidos significativos en exposiciones ≥10 s, lo que afecta tanto a los fotogramas científicos como a los de calibración. Estos píxeles cálidos no se eliminan mediante la sustracción oscura estándar, ya que varían de forma impredecible de un fotograma a otro. Evaluamos seis métodos de preprocesamiento aplicados a imágenes científicas y de calibración utilizando el tránsito de TOI-7149 b observado en g' r' i'. Un filtro mediano con una ventana de 3x3 píxeles minimiza el efecto de los píxeles cálidos sin afectar a las señales estelares. Este filtro mediano reduce mejor la dispersión y el ruido rojo en las curvas de luz cuando los recuentos máximos estelares se acercan al nivel de corriente oscura. La mejora es menos significativa cuando el pico estelar está varios miles de recuentos por encima del nivel de corriente oscura. Ajustamos un modelo de tránsito multibanda a las curvas de luz, midiendo la precisión fotométrica, el ruido correlacionado y los parámetros planetarios recuperados. El modelo de tránsito ajustado a las curvas de luz con preprocesamiento utilizando un filtro mediano 3x3 alcanza la mayor evidencia Bayesiana. Por lo tanto, es nuestro método recomendado para corregir los píxeles cálidos. Por último, presentamos un proceso de reducción que combina módulos Python (PROFE) y AstroImageJ para implementar nuestro método propuesto para las observaciones de planetas en tránsito con OAN-SPM 2,1 m + OPTICAM.
 

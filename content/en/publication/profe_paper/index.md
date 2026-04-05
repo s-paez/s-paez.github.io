@@ -21,8 +21,8 @@ publishDate: "2026-03-10T00:00:00Z"
 publication_types: ["article-journal"]
 
 # Publication name and optional abbreviated publication name.
-publication: "Accepted for publication in *RAS Techniques and Instruments* on Mar. 2026"
-publication_short: "Accepted for publication in RASTI"
+publication: "*RAS Techniques and Instruments*"
+publication_short: "RASTI"
 
 abstract: We present a methodology for acquiring and reducing transiting exoplanet light curves obtained with the OPTICAM instrument in the Observatorio Astronómico Nacional en la Sierra de San Pedro Mártir (OAN-SPM). The OPTICAM sCMOS detectors generate significant warm pixels at exposures ≥10s, affecting both science and calibration frames. These warm pixels are not removed by standard dark subtraction because they vary unpredictably from frame to frame. We evaluate six pre-processing methods applied to science and calibration images using the transit of TOI-7149 b observed in g' r' i'. A median filter with a 3x3-pixel window minimizes the effect of warm pixels without affecting stellar signals. This median filter best reduces dispersion and red noise in the light curves when stellar peak counts are close to the dark current level. The improvement is less significant when the stellar peak is several thousand counts above the dark current level. We fit a multiband transit model to the light curves, measuring photometric precision, correlated noise, and retrieved planetary parameters. The transit model fitted to the light curves with pre-processing using a 3x3-median filter achieves the highest Bayesian evidence. Thus, it is our recommended method for correcting warm pixels. Finally, we present a reduction pipeline that combines Python modules (PROFE) and AstroImageJ to implement our proposed method for OAN-SPM 2.1m+OPTICAM transiting planet observations.
 
