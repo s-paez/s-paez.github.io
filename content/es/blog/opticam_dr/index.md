@@ -9,7 +9,7 @@ tags:
   - Artículo
   - Tránsitos
 image:
-  filename: "paper_title.jpeg"
+  filename: "paper_title.png"
   caption:
   focal_point: "Center"
   preview_only: True
@@ -44,7 +44,7 @@ Estudiamos su comportamiento y analizamos cómo cambian entre cada imagen en una
   <img src="figs/g_imagecutoff.jpg" alt="Recorte Cam1" width=100%>
   <br>
   <span style="font-size: 0.8em; color: #666;">
-    Fig. 2: Recorte de 100x100 píxeles de una cámara de las cámaras de OPTICAM donde se ven los pixeles tibios con tonos más amarillos y naranjas. Créditos: <a href="https://arxiv.org/abs/2603.09922">Páez et al. (2026)</a>
+    Fig. 2: Recorte de 100x100 píxeles de una cámara de las cámaras de OPTICAM donde se ven los pixeles tibios con tonos más amarillos y naranjas. Créditos: <a href="https://doi.org/10.1093/rasti/rzag021">Páez et al. (2026)</a>
   </span>
 </div>
 
@@ -148,7 +148,7 @@ La Figura a continuación presenta el impacto de cada filtro en las imágenes. E
   <img src="figs/results.jpg" alt="Recorte Cam1" width=100%>
   <br>
   <span style="font-size: 0.8em; color: #666;">
-    Fig. 8: Resultados que obtuvimos con los diferentes filtros para remover píxeles tibios.  Créditos: <a href="https://arxiv.org/abs/2603.09922">Páez et al. (2026)</a>
+    Fig. 8: Resultados que obtuvimos con los diferentes filtros para remover píxeles tibios.  Créditos: <a href="https://doi.org/10.1093/rasti/rzag021">Páez et al. (2026)</a>
   </span>
 </div>
 

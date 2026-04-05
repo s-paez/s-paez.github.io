@@ -9,7 +9,7 @@ tags:
   - Paper
   - Transits
 image:
-  filename: "paper_title.jpeg"
+  filename: "paper_title.png"
   caption:
   focal_point: "Center"
   preview_only: True
@@ -44,7 +44,7 @@ We studied their behavior and analyzed how they change between consecutive image
   <img src="figs/g_imagecutoff.jpg" alt="Camera 1 cutout" width=100%>
   <br>
   <span style="font-size: 0.8em; color: #666;">
-    Fig. 2: A 100×100 pixel cutout from one of OPTICAM's cameras showing warm pixels in more yellow and orange tones. Credits: <a href="https://arxiv.org/abs/2603.09922">Páez et al. (2026)</a>
+    Fig. 2: A 100×100 pixel cutout from one of OPTICAM's cameras showing warm pixels in more yellow and orange tones. Credits: <a href="https://doi.org/10.1093/rasti/rzag021">Páez et al. (2026)</a>
   </span>
 </div>
 
@@ -148,7 +148,7 @@ The figure below presents the impact of each filter on the images. The top-left 
   <img src="figs/results.jpg" alt="Results" width=100%>
   <br>
   <span style="font-size: 0.8em; color: #666;">
-    Fig. 8: Results obtained with the different filters to remove warm pixels. Credits: <a href="https://arxiv.org/abs/2603.09922">Páez et al. (2026)</a>
+    Fig. 8: Results obtained with the different filters to remove warm pixels. Credits: <a href="https://doi.org/10.1093/rasti/rzag021">Páez et al. (2026)</a>
   </span>
 </div>
 
