@@ -1,6 +1,6 @@
 ---
 # Display name
-title: S. Paez
+title: S. Páez
 
 # Name pronunciation (optional)
 name_pronunciation: ''
