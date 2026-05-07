@@ -37,7 +37,7 @@ featured: false
 links:
 - name: "Interactive light curves"
   url: 'https://s-paez.github.io/opticam_lc/'
-url_pdf: 'https://arxiv.org/pdf/2603.09922'
+url_pdf: 'https://academic.oup.com/rasti/article/doi/10.1093/rasti/rzag021/8516487'
 url_code: 'https://github.com/s-paez/profe'
 url_dataset: 
 url_poster: 
