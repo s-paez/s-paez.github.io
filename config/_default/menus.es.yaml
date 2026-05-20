@@ -10,6 +10,9 @@ main:
   - name: Experiencia
     url: experiencia/
     weight: 20
+  - name: Proyectos
+    url: projects/
+    weight: 25
   - name: Publicaciones
     url: publication/
     weight: 30  

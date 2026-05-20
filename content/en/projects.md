@@ -11,13 +11,13 @@ design:
 sections:
   - block: collection
     content:
-      title: Some stories about my academic journey
-      text: In the past, I would appreciate to know more details on Astronomy careers, that is why I am glad to share some stories and experiences I have lived in my career.
+      title: My Projects & Software
+      text: Development of scientific software tools, interactive web simulators, and educational resources focused on the study of transiting exoplanets and astronomy pedagogy.
       filters:
         folders:
-          - blog
+          - project
     design:
       view: article-grid
       fill_image: false
-      columns: 3
+      columns: 2
 ---

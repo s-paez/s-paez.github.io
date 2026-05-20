@@ -11,13 +11,13 @@ design:
 sections:
   - block: collection
     content:
-      title: Historias de mi camino académico
-      text: En el pasado, hubiera agradecido conocer más detalles sobre carreras en Astronomía, por eso me alegra compartir algunas historias y experiencias que he vivido en mi carrera.
+      title: Mis proyectos y desarrollos
+      text: Desarrollo de herramientas de software científico, simuladores interactivos y recursos educativos enfocados en el estudio de exoplanetas en tránsito y la enseñanza de la astronomía.
       filters:
         folders:
-          - blog
+          - project
     design:
       view: article-grid
       fill_image: false
-      columns: 3
+      columns: 2
 ---

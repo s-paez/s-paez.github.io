@@ -32,7 +32,7 @@ summary: We propose processing with a median filter with a 3x3 pixel window befo
 tags:
 - Article
 
-featured: false
+featured: true
 
 links:
 - name: "Interactive light curves"
