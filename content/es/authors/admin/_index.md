@@ -151,7 +151,7 @@ awards:
     awarder: Secretaría de Educación de Bogotá.
 
 observational:
-  - position: Co-I. Insights into stellar activity cycles: Spot crossing during transit
+  - position: "Co-I. Insights into stellar activity cycles: Spot crossing during transit"
     company_name: OPTICAM / OAN-SPM (Telescopio 2.1m)
     date_start: '2025-03-01'
     date_end: '2026-03-31'
