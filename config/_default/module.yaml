@@ -10,20 +10,20 @@ imports:
 
 # Install any Hugo Blox within the `hugo-blox/blox/` folder
 mounts:
+  - source: layouts/partials/blox
+    target: layouts/partials/blox/
+  - source: layouts/_partials/hbx/blocks
+    target: layouts/_partials/hbx/blocks/
+  - source: layouts
+    target: layouts
+  - source: assets
+    target: assets
   - source: hugo-blox/blox/community
     target: layouts/partials/blox/community/
     includeFiles: '**.html'
   - source: hugo-blox/blox/all-access
     target: layouts/partials/blox/
     includeFiles: '**.html'
-  - source: layouts/partials/blox
-    target: layouts/partials/blox/
-  - source: layouts/_partials/hbx/blocks
-    target: layouts/_partials/hbx/blocks/
   - source: hugo-blox/blox
     target: assets/dist/community/blox/
     includeFiles: '**.css'
-  - source: layouts
-    target: layouts
-  - source: assets
-    target: assets
