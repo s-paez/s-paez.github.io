@@ -16,6 +16,8 @@ mounts:
   - source: hugo-blox/blox/all-access
     target: layouts/partials/blox/
     includeFiles: '**.html'
+  - source: layouts/partials/blox
+    target: layouts/partials/blox/
   - source: hugo-blox/blox
     target: assets/dist/community/blox/
     includeFiles: '**.css'
