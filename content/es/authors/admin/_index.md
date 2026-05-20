@@ -149,6 +149,46 @@ awards:
   - title: 'FEST - Beca completa de pregrado'
     date: '2019-01-19'
     awarder: Secretaría de Educación de Bogotá.
+
+observational:
+  - position: Co-I. Insights into stellar activity cycles: Spot crossing during transit
+    company_name: OPTICAM / OAN-SPM (Telescopio 2.1m)
+    date_start: '2025-03-01'
+    date_end: '2026-03-31'
+    summary: |
+      - **Tiempo asignado**: 3 noches en Mar. 2025 y 3 noches en Mar. 2026.
+      - **Instrumento**: OPTICAM / Observatorio Astronómico Nacional en la Sierra de San Pedro Mártir (OAN-SPM) 2.1m.
+      - **Rol**: Adquisición y reducción de datos.
+  - position: Co-I. Mass Measurements of Two Gas Giant Planets around M-dwarf stars
+    company_name: WIYN / NEID
+    date_start: '2026-01-01'
+    date_end: '2026-06-30'
+    summary: |
+      - **Tiempo asignado**: Semestre 2026A (1.75 noches).
+      - **Instrumento**: WIYN / NEID.
+      - **Rol**: Preparación de la propuesta de observación y el ajuste de datos.
+  - position: Co-I. Multi-band Transit Follow-up of Giant Planet Candidates Around M-Dwarfs with OPTICAM
+    company_name: OPTICAM / OAN-SPM (Telescopio 2.1m)
+    date_start: '2025-02-01'
+    date_end: '2026-02-28'
+    summary: |
+      - **Tiempo asignado**: 6 noches en Feb. 2025 y 6 noches en Feb. 2026.
+      - **Instrumento**: OPTICAM / Observatorio Astronómico Nacional en la Sierra de San Pedro Mártir (OAN-SPM) 2.1m.
+      - **Rol**: Preparación de la propuesta y plan de observación, adquisición, reducción y ajuste de los datos.
+  - position: XV Escuela de Astronomía Observacional para Estudiantes Latinoamericanos (ESAOBELA)
+    company_name: Observatorio Astronómico Nacional de Tonantzintla (Puebla, México)
+    date_start: '2023-01-01'
+    date_end: '2023-02-28'
+    summary: |
+      - **Actividad**: 100 horas de observación astronómica con telescopios de 1 metro y 10 pulgadas.
+      - **Clases**: 51 horas de clases teóricas impartidas por investigadores del INAOE y del IA-UNAM.
+  - position: XXXI Verano Científico en el OAN-SPM
+    company_name: Observatorio Astronómico Nacional San Pedro Mártir (Baja California, México)
+    date_start: '2022-06-01'
+    date_end: '2022-06-30'
+    summary: |
+      - **Actividad**: Prácticas de observación remota con el telescopio de 84 cm del OAN-SPM.
+      - **Clases**: Sesiones teóricas intensivas sobre temas generales de astrofísica.
     
 ---
 

@@ -149,6 +149,46 @@ awards:
   - title: 'FEST - Full undergrad scholarship'
     date: '2019-01-19'
     awarder: Secretaría de Educación de Bogotá.
+
+observational:
+  - position: Co-I. Insights into stellar activity cycles: Spot crossing during transit
+    company_name: OPTICAM / OAN-SPM (2.1m Telescope)
+    date_start: '2025-03-01'
+    date_end: '2026-03-31'
+    summary: |
+      - **Time allocated**: 3 nights in Mar. 2025 and 3 nights in Mar. 2026.
+      - **Instrument**: OPTICAM / Observatorio Astronómico Nacional en la Sierra de San Pedro Mártir (OAN-SPM) 2.1m.
+      - **Role**: Data acquisition and data reduction.
+  - position: Co-I. Mass Measurements of Two Gas Giant Planets around M-dwarf stars
+    company_name: WIYN / NEID
+    date_start: '2026-01-01'
+    date_end: '2026-06-30'
+    summary: |
+      - **Time allocated**: 1.75 nights in semester 2026A.
+      - **Instrument**: WIYN / NEID.
+      - **Role**: Preparation of observing proposal and transit fitting.
+  - position: Co-I. Multi-band Transit Follow-up of Giant Planet Candidates Around M-Dwarfs with OPTICAM
+    company_name: OPTICAM / OAN-SPM (2.1m Telescope)
+    date_start: '2025-02-01'
+    date_end: '2026-02-28'
+    summary: |
+      - **Time allocated**: 6 nights in Feb. 2025 and 6 nights in Feb. 2026.
+      - **Instrument**: OPTICAM / Observatorio Astronómico Nacional en la Sierra de San Pedro Mártir (OAN-SPM) 2.1m.
+      - **Role**: Observing proposal preparation, observation plan design, data acquisition, data reduction, and transit fitting.
+  - position: XV ESAOBELA (Observational Astronomy School for Latin American Students)
+    company_name: Observatorio Astronómico Nacional de Tonantzintla (Puebla, Mexico)
+    date_start: '2023-01-01'
+    date_end: '2023-02-28'
+    summary: |
+      - **Activity**: 100 hours of astronomical observation using 1-meter and 10-inch telescopes.
+      - **Lectures**: 51 hours of theoretical instruction on various astrophysics topics.
+  - position: XXXI Scientific Summer at the OAN-SPM
+    company_name: Observatorio Astronómico Nacional San Pedro Mártir (Baja California, Mexico)
+    date_start: '2022-06-01'
+    date_end: '2022-06-30'
+    summary: |
+      - **Activity**: Remote observing sessions using the 84-cm telescope at the OAN-SPM.
+      - **Lectures**: Intense theoretical lectures on core astrophysical fields.
     
 ---
 

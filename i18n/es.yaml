@@ -118,6 +118,9 @@
 - id: present
   translation: Actualmente
 
+- id: observational
+  translation: Experiencia Observacional
+
 # Pages widget
 
 - id: more_pages
