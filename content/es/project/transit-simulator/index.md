@@ -19,14 +19,14 @@ links:
 
 El **Simulador de Tránsitos Planetarios** es una herramienta educativa e interactiva diseñada para modelar de forma precisa y físicamente inspirada las variaciones en el brillo de una estrella debido al paso de un exoplaneta frente a ella.
 
-### 📐 Fundamentos Científicos
+### Fundamentos Científicos
 
 A diferencia de las animaciones puramente visuales, este simulador incorpora las mismas ecuaciones físicas que los astrónomos usamos para ajustar y modelar curvas de luz reales:
 * **Geometría Orbital Tridimensional**: Calcula de forma dinámica el impacto de la inclinación orbital ($i$), el semi-eje mayor ($a$), y los tamaños relativos del planeta ($R_p$) y la estrella ($R_\star$).
 * **Oscurecimiento de Borde Cuadrático (Limb Darkening)**: Incorpora los parámetros estelares $u_1$ y $u_2$ para modelar cómo el brillo superficial de la estrella disminuye desde el centro hacia el borde debido a la estructura térmica y la opacidad de su atmósfera.
 * **Curvas de Luz Físicas**: Genera curvas en tiempo real que reflejan con precisión la duración del tránsito, los perfiles de ingreso/egreso curvados y la profundidad de tránsito resultante en partes por millón o porcentajes de flujo.
 
-### 🏫 Utilidad Educativa
+### Utilidad Educativa
 
 Esta herramienta fue concebida como un recurso de aprendizaje activo para estudiantes de astronomía y público en general. Permite experimentar con hipótesis interactivas, como:
 1. Comparar la diferencia extrema entre planetas del tamaño de la Tierra ($1 R_\oplus$) y Júpiter ($11 R_\oplus$) transitando estrellas de distintas magnitudes.

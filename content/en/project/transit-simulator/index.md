@@ -19,14 +19,14 @@ links:
 
 The **Exoplanet Transit Simulator** is an interactive, web-based educational tool designed to model stellar brightness variations (light curves) when an exoplanet transits across the stellar disk from our perspective.
 
-### 📐 Scientific Underpinnings
+### Scientific Underpinnings
 
 Unlike purely visual animations, this simulator is built on actual physical and astronomical equations that researchers use to model and fit real exoplanetary light curves:
 * **3D Orbital Geometry**: Dynamically models the geometric projection of the planet's orbit using variables like inclination ($i$), semi-major axis ($a$), and the relative radii of the planet ($R_p$) and star ($R_\star$).
 * **Quadratic Limb Darkening**: Incorporates the stellar coefficients $u_1$ and $u_2$ to simulate how the superficial brightness of a star fades from its center to its edges due to atmospheric depth and opacity.
 * **Realistic Light Curves**: Generates real-time, high-fidelity light curves showing precisely modeled transit durations, entry/exit profiles, and depth signatures.
 
-### 🏫 Educational Utility
+### Educational Utility
 
 This project serves as an active-learning tool for university astronomy courses and public science outreach. It allows users to experiment with core concepts by adjusting sliders:
 1. Observing the scaling difference between a Earth-sized planet ($1 R_\oplus$) and a Jupiter-sized planet ($11 R_\oplus$) transit.

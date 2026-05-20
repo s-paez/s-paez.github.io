@@ -19,7 +19,7 @@ links:
 
 El proyecto **Curvas de Luz Interactivas de OPTICAM** es un portal web de visualización científica diseñado para permitir a investigadores, colaboradores y aficionados explorar detalladamente las series temporales multibanda reducidas con la metodología *PROFE*.
 
-### 📊 Características de la Plataforma
+### Características de la Plataforma
 
 * **Exploración Multibanda Simultánea**: Muestra de forma sincronizada y dinámica las curvas de luz obtenidas de forma simultánea en tres filtros de OPTICAM ($g'$, $r'$, $i'$).
 * **Herramientas de Zoom e Inspección**: Permite realizar acercamientos en las zonas de ingreso, egreso y fondo de tránsito para inspeccionar la dispersión fotométrica y el comportamiento de los datos frente al ruido atmosférico o instrumental.

@@ -19,7 +19,7 @@ links:
 
 The **Interactive OPTICAM Light Curves** project is a web-based scientific data visualization portal. It is designed to allow researchers, collaborators, and the general public to explore in detail the high-cadence, triple-band time-series data processed using the *PROFE* reduction pipeline.
 
-### 📊 Platform Highlights
+### Platform Highlights
 
 * **Simultaneous Multiband Inspection**: Sychronously displays light curves acquired in the three distinct OPTICAM filters ($g'$, $r'$, $i'$), enabling immediate comparison of wavelength-dependent transit depths.
 * **Interactive Zoom and Panning**: Users can easily zoom in on transit ingress, egress, and flat-bottom phases to visually inspect photometric scatter and red noise.
