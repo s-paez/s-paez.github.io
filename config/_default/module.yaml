@@ -18,6 +18,8 @@ mounts:
     includeFiles: '**.html'
   - source: layouts/partials/blox
     target: layouts/partials/blox/
+  - source: layouts/_partials/hbx/blocks
+    target: layouts/_partials/hbx/blocks/
   - source: hugo-blox/blox
     target: assets/dist/community/blox/
     includeFiles: '**.css'
