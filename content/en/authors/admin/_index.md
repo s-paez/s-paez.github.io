@@ -62,6 +62,29 @@ education:
       - GPA: 4.13/5.0
       - Thesis: [_Exoplanet Hackathon: A challenge-based learning proposal for the development of scientific skills._](https://intellectum.unisabana.edu.co/handle/10818/60905)
 
+work:
+  - position: Intern - International Baccalaureate Team
+    company_name: Secretary of Education of Bogotá (SED)
+    date_start: '2024-03-13'
+    date_end: '2024-07-12'
+    summary: |
+      - Supported the management, administration, and pedagogical guidance for the implementation of the International Baccalaureate program in official public schools across Bogotá.
+      - Completed the internship as part of the requirements for the FEST scholarship program.
+  - position: Natural Sciences Teacher (Practicums & Tutoring)
+    company_name: Universidad de La Sabana / Bogotá Planetarium
+    date_start: '2019-01-19'
+    date_end: '2024-03-05'
+    summary: |
+      - Designed, planned, and implemented pedagogical sequences and educational strategies in physics and natural sciences for formal schools and science museums.
+      - Conducted academic tutoring, mentorship, and support sessions for undergraduate scholarship recipients.
+  - position: Outreach & Astronomy Club Coordinator
+    company_name: Astronomy Club / Universidad de La Sabana
+    date_start: '2019-01-19'
+    date_end: '2024-03-05'
+    summary: |
+      - Organized and facilitated interactive workshops, stargazing sessions, and public outreach talks in Bogotá and the Sabana Centro region.
+      - Co-led student astronomy clubs and research seeds focused on developing scientific skills through hands-on astronomy education.
+
 # Skills
 # Add your own SVG icons to `assets/media/icons/`
 skills:

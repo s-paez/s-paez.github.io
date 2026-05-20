@@ -62,6 +62,29 @@ education:
       - Promedio general: 4.13/5.0
       - Trabajo de grado: [_Hackatón de Exoplanetas: Una propuesta de aprendizaje basado en retos para el desarrollo de habilidades científicas._](https://intellectum.unisabana.edu.co/handle/10818/60905)
 
+work:
+  - position: Pasante del Equipo de Bachillerato Internacional
+    company_name: Secretaría de Educación Distrital de Bogotá
+    date_start: '2024-03-13'
+    date_end: '2024-07-12'
+    summary: |
+      - Apoyo en procesos de gestión y acompañamiento pedagógico para la implementación del programa de Bachillerato Internacional en colegios públicos oficiales de Bogotá.
+      - Pasantía de docencia y administración realizada en cumplimiento de los requisitos de condonación de la beca FEST.
+  - position: Profesor de Ciencias Naturales (Prácticas y Tutorías)
+    company_name: Universidad de La Sabana / Planetario de Bogotá
+    date_start: '2019-01-19'
+    date_end: '2024-03-05'
+    summary: |
+      - Diseño, planeación e implementación de secuencias didácticas y estrategias pedagógicas en física y ciencias naturales para centros escolares y museos de ciencia.
+      - Tutoría de acompañamiento académico y mentoría para estudiantes becados de pregrado.
+  - position: Coordinador de Divulgación y Semilleros de Astronomía
+    company_name: Semillero de Astronomía / Universidad de La Sabana
+    date_start: '2019-01-19'
+    date_end: '2024-03-05'
+    summary: |
+      - Planificación y ejecución de talleres prácticos, observaciones nocturnas y charlas de divulgación científica en Bogotá y la provincia de Sabana Centro.
+      - Co-liderazgo de grupos y semilleros estudiantiles dedicados al fomento de competencias científicas mediante la astronomía.
+
 # Skills
 # Add your own SVG icons to `assets/media/icons/`
 skills:

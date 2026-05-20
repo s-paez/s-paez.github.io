@@ -31,7 +31,7 @@ summary: Proponemos un procesamiento con un filtro por la mediana con una ventan
 tags:
 - Artículo
 
-featured: false
+featured: true
 
 links:
 - name: "Curvas de luz interactivas"
