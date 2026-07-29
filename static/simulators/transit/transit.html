@@ -198,6 +198,10 @@
           <label><span>Time phase t</span> <output id="out-time">0.000</output></label>
           <input id="timeCursor" type="range" min="0" max="1" step="0.001" value="0.5" />
         </div>
+        <div class="control">
+          <label><span>Displayed phase (%)</span> <output id="out-phaseWindow">30%</output></label>
+          <input id="phaseWindow" type="range" min="0.02" max="0.50" step="0.01" value="0.15" />
+        </div>
         <div style="margin-top:auto; padding-top:4px;">
           <button class="secondary" id="reset" style="width:100%;">Reset Parameters</button>
         </div>
@@ -263,6 +267,7 @@
     omega: document.getElementById('omega'),
     inc: document.getElementById('inc'),
     timeCursor: document.getElementById('timeCursor'),
+    phaseWindow: document.getElementById('phaseWindow'),
 
     outRPlanet: document.getElementById('out-rplanet'),
     outRStar: document.getElementById('out-rstar'),
@@ -274,6 +279,7 @@
     outOmega: document.getElementById('out-omega'),
     outInc: document.getElementById('out-inc'),
     outTime: document.getElementById('out-time'),
+    outPhaseWindow: document.getElementById('out-phaseWindow'),
 
     note: document.getElementById('note'),
     impactInfo: document.getElementById('impactInfo'),
@@ -433,7 +439,7 @@
   }
 
   // ------- Full Light Curve Compute -------
-  function computeLightCurve(rPlanetEarth, u1, u2, rStar, aRs, incDeg, e, omegaDeg){
+  function computeLightCurve(rPlanetEarth, u1, u2, rStar, aRs, incDeg, e, omegaDeg, requestedPhaseSpan){
     updateIntensity(u1, u2);
     const safeStar = Math.max(rStar, 0.05);
     const safePlanet = Math.max(rPlanetEarth, 0);
@@ -452,7 +458,7 @@
     els.note.textContent = statusMsgs.join(" · ");
     els.impactInfo.textContent = `b = ${b.toFixed(3)} | Rp/R★ = ${k.toFixed(4)} | Rp=${safePlanet.toFixed(1)}R⊕ | R★=${safeStar.toFixed(2)}R☉`;
 
-    const phaseSpan = 0.15;
+    const phaseSpan = Math.max(0.01, Math.min(0.50, requestedPhaseSpan || 0.15));
     const times = new Float32Array(NPTS);
     const flux = new Float32Array(NPTS);
 
@@ -796,6 +802,7 @@
     omega: parseFloat(els.omega.value),
     inc: parseFloat(els.inc.value),
     timeAlpha: parseFloat(els.timeCursor.value),
+    phaseSpan: parseFloat(els.phaseWindow.value),
   };
 
   let lastResult = null;
@@ -812,6 +819,7 @@
     els.outOmega.textContent = Math.round(state.omega).toString();
     els.outInc.textContent = state.inc.toFixed(1);
     els.outTime.textContent = state.timeAlpha.toFixed(3);
+    els.outPhaseWindow.textContent = Math.round(state.phaseSpan * 200) + "%";
   }
 
   let rafId = null;
@@ -823,7 +831,7 @@
   function renderAll(){
     if (needsRecompute || !lastResult){
       lastResult = computeLightCurve(
-        state.rPlanet, state.u1, state.u2, state.rStar, state.aRs, state.inc, state.ecc, state.omega
+        state.rPlanet, state.u1, state.u2, state.rStar, state.aRs, state.inc, state.ecc, state.omega, state.phaseSpan
       );
       needsRecompute = false;
     }
@@ -867,6 +875,7 @@
   bindSlider(els.ecc, 'ecc');
   bindSlider(els.omega, 'omega');
   bindSlider(els.inc, 'inc');
+  bindSlider(els.phaseWindow, 'phaseSpan');
 
   els.timeCursor.addEventListener('input', ()=>{
     state.timeAlpha = parseFloat(els.timeCursor.value);
@@ -884,6 +893,7 @@
     els.omega.value = "90"; state.omega = 90;
     els.inc.value = "89.0"; state.inc = 89.0;
     els.timeCursor.value = "0.5"; state.timeAlpha = 0.5;
+    els.phaseWindow.value = "0.15"; state.phaseSpan = 0.15;
 
     needsRecompute = true;
     requestRender();
