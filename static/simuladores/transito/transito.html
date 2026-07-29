@@ -4,179 +4,306 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Simulación de Tránsito Exoplanetario</title>
+<title>Simulador de Tránsito Exoplanetario</title>
 <style>
   :root{
-    --bg:#0f1220;
-    --panel:#161a2e;
+    --bg:#0b0e1a;
+    --panel:#14182b;
+    --panel-header:#1b203a;
     --accent:#7aa2ff;
+    --accent-hover:#98b7ff;
     --accent2:#f9b857;
     --ok:#59f2a7;
     --text:#e8ecff;
     --muted:#a7b1d6;
-    --grid:#2a3053;
-    --border:#1f2546;
+    --grid:#222847;
+    --border:#1e2442;
+    --border-highlight:#2e3766;
   }
   *{box-sizing:border-box}
   body{
     margin:0; font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif;
-    color:var(--text); background:linear-gradient(180deg,#0b0e1a 0%, #0f1220 60%, #0b0e1a 100%);
+    color:var(--text); background:linear-gradient(180deg,#070a14 0%, #0b0e1a 60%, #080b16 100%);
+    min-height:100vh;
   }
   header{
-    padding:16px 20px; position:sticky; top:0; z-index:10;
-    background:rgba(12,15,30,.75); backdrop-filter: blur(8px); border-bottom:1px solid #1e2341;
+    padding:14px 24px; position:sticky; top:0; z-index:100;
+    background:rgba(11,14,26,.85); backdrop-filter: blur(12px); border-bottom:1px solid var(--border);
+    display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px;
   }
-  header h1{margin:0; font-weight:650; font-size:1.05rem; letter-spacing:.2px}
+  header h1{margin:0; font-weight:700; font-size:1.15rem; letter-spacing:.3px; color:var(--text)}
+  .badge-tag{
+    font-size:0.75rem; background:rgba(122,162,255,0.15); color:var(--accent); border:1px solid rgba(122,162,255,0.3);
+    padding:3px 10px; border-radius:999px; font-weight:500;
+  }
   .wrap{
-    display:grid; gap:16px; padding:16px; max-width:1200px; margin:0 auto;
-    grid-template-columns: 360px 1fr;
-  }
-  @media (max-width: 900px){
-    .wrap{grid-template-columns: 1fr}
+    max-width:1400px; margin:0 auto; padding:16px; display:flex; flex-direction:column; gap:16px;
   }
   .card{
-    background:var(--panel); border:1px solid var(--border); border-radius:18px; box-shadow:0 10px 30px rgba(0,0,0,.25);
+    background:var(--panel); border:1px solid var(--border); border-radius:16px; box-shadow:0 8px 24px rgba(0,0,0,.35);
+    overflow:hidden;
   }
-  .controls{padding:14px}
-  .control{margin:12px 0 18px}
+  .card-header{
+    padding:10px 16px; background:var(--panel-header); border-bottom:1px solid var(--border);
+    display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px;
+    font-size:0.9rem; font-weight:600; color:var(--text);
+  }
+  
+  /* Controles superiores */
+  .controls-card{padding:16px}
+  .controls-grid{
+    display:grid; grid-template-columns: repeat(auto-fit, minmax(290px, 1fr)); gap:16px;
+  }
+  .control-group{
+    background:rgba(15,19,36,0.6); border:1px solid var(--border); border-radius:12px; padding:14px;
+    display:flex; flex-direction:column; gap:10px;
+  }
+  .control-group-title{
+    font-size:0.82rem; text-transform:uppercase; letter-spacing:0.8px; color:var(--accent); font-weight:700;
+    margin-bottom:2px; display:flex; align-items:center; justify-content:space-between;
+  }
+  .control{display:flex; flex-direction:column; gap:4px}
   .control label{
-    display:flex; justify-content:space-between; font-size:.92rem; color:var(--muted); margin-bottom:6px
+    display:flex; justify-content:space-between; font-size:0.86rem; color:var(--muted); font-weight:500;
   }
   .control output{
-    font-variant-numeric: tabular-nums; color:var(--text); margin-left:8px; min-width:5ch; text-align:right
+    font-variant-numeric: tabular-nums; color:var(--accent2); font-weight:600; min-width:5ch; text-align:right;
   }
   input[type="range"]{
-    width:100%;
-    -webkit-appearance:none; height:4px; border-radius:999px; background:linear-gradient(90deg, var(--accent), #9de0ff);
-    outline:none
+    width:100%; -webkit-appearance:none; height:5px; border-radius:999px; background:#222847; outline:none;
+    margin:4px 0; cursor:pointer;
   }
   input[type="range"]::-webkit-slider-thumb{
-    -webkit-appearance:none; appearance:none; width:18px; height:18px; border-radius:50%;
-    background:#fff; border:2px solid var(--accent); box-shadow:0 2px 6px rgba(0,0,0,.4)
+    -webkit-appearance:none; appearance:none; width:16px; height:16px; border-radius:50%;
+    background:#fff; border:2px solid var(--accent); box-shadow:0 2px 6px rgba(0,0,0,.5);
+    transition:transform .15s ease, background-color .15s ease;
+  }
+  input[type="range"]::-webkit-slider-thumb:hover{
+    transform:scale(1.2); background:var(--accent);
+  }
+  
+  .actions-row{
+    display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px; margin-top:10px;
+    padding-top:12px; border-top:1px solid var(--border);
   }
   .hstack{display:flex; gap:10px; align-items:center; flex-wrap:wrap}
-  .hint{font-size:.85rem; color:var(--muted)}
-  .plotArea{padding:10px}
-  .canvasWrap{
-    position:relative; width:100%; aspect-ratio: 16/9; background:#0c1024; border-radius:14px; overflow:hidden;
-    border:1px solid var(--border);
-  }
-  .plotArea .canvasWrap{margin-bottom:12px;}
-  .plotArea .canvasWrap:last-of-type{margin-bottom:0;}
-  .canvasWrap.starWrap{aspect-ratio:1/1;}
-  canvas{display:block; width:100%; height:100%}
-  .legend{
-    position:absolute; right:10px; top:10px; background:rgba(18,22,44,.65); border:1px solid rgba(42,48,83,.8);
-    padding:8px 10px; border-radius:10px; font-size:.85rem; color:var(--muted); backdrop-filter:blur(6px)
-  }
+  .hint{font-size:0.82rem; color:var(--muted)}
   .badgenote{
-    display:inline-block; padding:3px 8px; border-radius:999px; background:#2a2f59; color:#cfe2ff; font-size:.78rem; margin-left:6px
-  }
-  .row{display:grid; grid-template-columns: 1fr 1fr; gap:12px}
-  @media (max-width: 900px){ .row{grid-template-columns:1fr} }
-  .footnote{
-    padding:10px 14px 16px; color:var(--muted); font-size:.85rem; border-top:1px solid var(--border)
+    display:inline-block; padding:3px 10px; border-radius:999px; background:#21274a; color:#cfe2ff; font-size:0.78rem;
   }
   button.secondary{
-    background:transparent; color:var(--text); border:1px solid rgba(122,162,255,.6);
-    border-radius:12px; padding:8px 14px; cursor:pointer;
-    transition:background .2s ease, border-color .2s ease;
+    background:rgba(122,162,255,0.1); color:var(--text); border:1px solid rgba(122,162,255,0.4);
+    border-radius:10px; padding:7px 14px; font-size:0.85rem; font-weight:600; cursor:pointer;
+    transition:all .2s ease;
   }
-  button.secondary:hover{background:rgba(27,33,70,.7); border-color:var(--accent);}
+  button.secondary:hover{background:rgba(122,162,255,0.25); border-color:var(--accent); transform:translateY(-1px);}
+
+  /* Cuadrícula inferior de visualización */
+  .visuals-grid{
+    display:grid; grid-template-columns: 1.1fr 0.9fr; gap:16px;
+  }
+  @media (max-width: 980px){
+    .visuals-grid{grid-template-columns: 1fr}
+  }
+
+  .canvasWrap{
+    position:relative; width:100%; background:#070a14; border-radius:0 0 16px 16px; overflow:hidden;
+  }
+  .plotWrap{aspect-ratio: 16/10; min-height:340px;}
+  .starWrap{aspect-ratio: 16/10; min-height:260px;}
+  .orbit3DWrap{aspect-ratio: 16/10; min-height:280px; cursor:grab;}
+  .orbit3DWrap:active{cursor:grabbing;}
+  canvas{display:block; width:100%; height:100%}
+
+  .tab-buttons{display:flex; gap:4px; background:rgba(0,0,0,0.2); padding:3px; border-radius:8px;}
+  .tab-btn{
+    background:transparent; border:none; color:var(--muted); font-size:0.78rem; font-weight:600;
+    padding:4px 10px; border-radius:6px; cursor:pointer; transition:all 0.15s ease;
+  }
+  .tab-btn.active{background:var(--accent); color:#0b0e1a;}
+
+  .overlay-hint{
+    position:absolute; bottom:8px; right:10px; background:rgba(11,14,26,0.75); border:1px solid rgba(46,55,102,0.6);
+    padding:4px 8px; border-radius:6px; font-size:0.75rem; color:var(--muted); pointer-events:none; backdrop-filter:blur(4px);
+  }
 </style>
 </head>
 <body>
-<header><h1>Simulador de exoplanetas en tránsito</h1></header>
+<header>
+  <h1>Simulador de Tránsitos Exoplanetarios</h1>
+  <span class="badge-tag">Modelo Físico &amp; Geometría Kepleriana 3D</span>
+</header>
 
 <div class="wrap">
-  <!-- Panel de controles -->
-  <section class="card controls" aria-label="Controles">
-    <div class="control">
-      <label>Radio planeta Rp (R⊕) <output id="out-rplanet">11.0</output></label>
-      <input id="rPlanet" type="range" min="0.50" max="25.0" step="0.1" value="11.0" />
-    </div>
-    <div class="row">
-      <div class="control">
-        <label>Oscurecimiento u₁ <output id="out-u1">0.30</output></label>
-        <input id="u1" type="range" min="0.00" max="1.00" step="0.01" value="0.30" />
+  <!-- Panel de controles en la parte superior -->
+  <section class="card controls-card" aria-label="Controles">
+    <div class="controls-grid">
+      
+      <!-- Grupo 1: Estrella y Planeta -->
+      <div class="control-group">
+        <div class="control-group-title">
+          <span>Estrella y Planeta</span>
+        </div>
+        <div class="control">
+          <label><span>Radio planeta Rₚ (R<sub>⊕</sub>)</span> <output id="out-rplanet">11.00</output></label>
+          <input id="rPlanet" type="range" min="0.50" max="25.0" step="0.1" value="11.0" />
+        </div>
+        <div class="control">
+          <label><span>Radio estelar R<sub>★</sub> (R<sub>☉</sub>)</span> <output id="out-rstar">1.00</output></label>
+          <input id="rStar" type="range" min="0.10" max="5.0" step="0.05" value="1.00" />
+        </div>
+        <div class="control">
+          <label><span>Oscurecimiento u₁</span> <output id="out-u1">0.30</output></label>
+          <input id="u1" type="range" min="0.00" max="1.00" step="0.01" value="0.30" />
+        </div>
+        <div class="control">
+          <label><span>Oscurecimiento u₂</span> <output id="out-u2">0.20</output></label>
+          <input id="u2" type="range" min="0.00" max="1.00" step="0.01" value="0.20" />
+        </div>
       </div>
-      <div class="control">
-        <label>Oscurecimiento u₂ <output id="out-u2">0.20</output></label>
-        <input id="u2" type="range" min="0.00" max="1.00" step="0.01" value="0.20" />
+
+      <!-- Grupo 2: Parámetros Orbitales Keplerianos -->
+      <div class="control-group">
+        <div class="control-group-title">
+          <span>Órbita Kepleriana</span>
+          <span style="font-size:0.75rem; color:var(--muted); font-weight:normal;">3.ª Ley de Kepler</span>
+        </div>
+        <div class="control">
+          <label><span>Semieje mayor a (R<sub>★</sub>)</span> <output id="out-aRs">10.0</output></label>
+          <input id="aRs" type="range" min="2.0" max="50.0" step="0.5" value="10.0" />
+        </div>
+        <div class="control">
+          <label><span>Periodo orbital P (días)</span> <output id="out-period">3.65</output></label>
+          <input id="period" type="range" min="0.5" max="100.0" step="0.1" value="3.65" />
+        </div>
+        <div class="control">
+          <label><span>Excentricidad e</span> <output id="out-ecc">0.00</output></label>
+          <input id="ecc" type="range" min="0.00" max="0.85" step="0.01" value="0.00" />
+        </div>
+        <div class="control">
+          <label><span>Arg. del periastro ω (°)</span> <output id="out-omega">90</output></label>
+          <input id="omega" type="range" min="0" max="360" step="1" value="90" />
+        </div>
       </div>
-    </div>
-    <div class="row">
-      <div class="control">
-        <label>Radio estelar R★ <output id="out-rstar">1.00</output></label>
-        <input id="rStar" type="range" min="0.01" max="5.0" step="0.05" value="1.00" />
+
+      <!-- Grupo 3: Orientación y Tiempo -->
+      <div class="control-group">
+        <div class="control-group-title">
+          <span>Geometría y Tiempo</span>
+        </div>
+        <div class="control">
+          <label><span>Inclinación i (°)</span> <output id="out-inc">89.0</output></label>
+          <input id="inc" type="range" min="70.0" max="90.0" step="0.1" value="89.0" />
+        </div>
+        <div class="control">
+          <label><span>Fase de tiempo t</span> <output id="out-time">0.000</output></label>
+          <input id="timeCursor" type="range" min="0" max="1" step="0.001" value="0.5" />
+        </div>
+        <div style="margin-top:auto; padding-top:4px;">
+          <button class="secondary" id="reset" style="width:100%;">Restablecer Parámetros</button>
+        </div>
       </div>
-      <div class="control">
-        <label>Inclinación i (°) <output id="out-inc">89.0</output></label>
-        <input id="inc" type="range" min="80.0" max="90.0" step="0.1" value="89.0" />
-      </div>
+
     </div>
-    <div class="control">
-      <label>Tiempo de tránsito t <output id="out-time">0.00</output></label>
-      <input id="timeCursor" type="range" min="0" max="1" step="0.001" value="0.5" />
-    </div>
-    <div class="hstack">
-      <button class="secondary" id="reset">Restablecer</button>
-      <span class="hint">Consejo: ajusta <em>Rp</em>, <em>R★</em> o <em>i</em> para explorar diferentes tránsitos. <span id="note" class="badgenote" role="status" aria-live="polite"></span></span>
+
+    <div class="actions-row">
+      <div class="hint" id="impactInfo">b = … | Rp/R★ = …</div>
+      <div><span id="note" class="badgenote" role="status" aria-live="polite"></span></div>
     </div>
   </section>
 
-  <!-- Visualización -->
-  <section class="card plotArea" aria-label="Visualización">
-    <div class="hstack starHeader" style="justify-content:space-between; padding:2px 4px 10px;">
-      <div class="hint">Vista de disco estelar en el centro del tránsito</div>
-      <div class="hint" id="impactInfo">b = …</div>
-    </div>
-    <div class="canvasWrap starWrap">
-      <canvas id="starView"></canvas>
-    </div>
-    <div class="canvasWrap" id="plotWrap">
-      <canvas id="plot"></canvas>
-    </div>
-  </section>
+  <!-- Cuadrícula de visualizaciones: Izquierda (Curva de luz) y Derecha (Disco estelar / Órbita 3D) -->
+  <div class="visuals-grid">
+    
+    <!-- Columna Izquierda: Curva de Luz -->
+    <section class="card" aria-label="Curva de Luz">
+      <div class="card-header">
+        <span>Curva de Luz de Tránsito (Flujo Normalizado)</span>
+        <span class="hint" id="depthInfo">Profundidad: -- ppm</span>
+      </div>
+      <div class="canvasWrap plotWrap">
+        <canvas id="plot"></canvas>
+      </div>
+    </section>
+
+    <!-- Columna Derecha: Disco Estelar (2D) y Órbita (3D) -->
+    <section class="card" aria-label="Visualizaciones Espaciales">
+      <div class="card-header">
+        <span id="rightPanelTitle">Disco Estelar y Tránsito 2D</span>
+        <div class="tab-buttons">
+          <button class="tab-btn active" id="tabStar">Disco Estelar</button>
+          <button class="tab-btn" id="tabOrbit">Órbita 3D</button>
+          <button class="tab-btn" id="tabBoth">Ambas</button>
+        </div>
+      </div>
+      
+      <div id="starContainer" class="canvasWrap starWrap">
+        <canvas id="starView"></canvas>
+      </div>
+      
+      <div id="orbitContainer" class="canvasWrap orbit3DWrap" style="display:none; border-top:1px solid var(--border)">
+        <canvas id="orbit3D"></canvas>
+        <div class="overlay-hint">Arrastra para rotar la vista 3D ↺</div>
+      </div>
+    </section>
+
+  </div>
 </div>
 
 <script>
 (function(){
-  // ------- Parámetros y elementos -------
+  // Elementos del DOM
   const els = {
     rPlanet: document.getElementById('rPlanet'),
-    u1:  document.getElementById('u1'),
-    u2:  document.getElementById('u2'),
     rStar: document.getElementById('rStar'),
+    u1: document.getElementById('u1'),
+    u2: document.getElementById('u2'),
+    aRs: document.getElementById('aRs'),
+    period: document.getElementById('period'),
+    ecc: document.getElementById('ecc'),
+    omega: document.getElementById('omega'),
     inc: document.getElementById('inc'),
+    timeCursor: document.getElementById('timeCursor'),
+
     outRPlanet: document.getElementById('out-rplanet'),
+    outRStar: document.getElementById('out-rstar'),
     outU1: document.getElementById('out-u1'),
     outU2: document.getElementById('out-u2'),
-    outRStar: document.getElementById('out-rstar'),
-    outI:  document.getElementById('out-inc'),
+    outARs: document.getElementById('out-aRs'),
+    outPeriod: document.getElementById('out-period'),
+    outEcc: document.getElementById('out-ecc'),
+    outOmega: document.getElementById('out-omega'),
+    outInc: document.getElementById('out-inc'),
     outTime: document.getElementById('out-time'),
-    note:  document.getElementById('note'),
-    plot:  document.getElementById('plot'),
-    star:  document.getElementById('starView'),
+
+    note: document.getElementById('note'),
     impactInfo: document.getElementById('impactInfo'),
+    depthInfo: document.getElementById('depthInfo'),
     reset: document.getElementById('reset'),
-    timeCursor: document.getElementById('timeCursor'),
+
+    plot: document.getElementById('plot'),
+    star: document.getElementById('starView'),
+    orbit3D: document.getElementById('orbit3D'),
+
+    starContainer: document.getElementById('starContainer'),
+    orbitContainer: document.getElementById('orbitContainer'),
+    rightPanelTitle: document.getElementById('rightPanelTitle'),
+
+    tabStar: document.getElementById('tabStar'),
+    tabOrbit: document.getElementById('tabOrbit'),
+    tabBoth: document.getElementById('tabBoth'),
   };
 
-  // Anillos radiales del disco estelar (precomputados)
-  const NPTS = 201;      // puntos de tiempo para la curva
-  const RADIAL_BINS = 2000; // precisión radial para integrar el flujo
-  const ORBIT_A = 10;      // semieje mayor fijo en radios estelares para R★=1
-  const EARTH_TO_SOLAR = 0.0091577; // Radio terrestre expresado en radios solares
-  const STAR_RADIUS_MIN = parseFloat(els.rStar.min) || 0.4;
-  const STAR_RADIUS_MAX = parseFloat(els.rStar.max) || 2.5;
+  const NPTS = 251;
+  const RADIAL_BINS = 1500;
+  const EARTH_TO_SOLAR = 0.0091577; // Radio terrestre en radios solares
+  const AU_TO_SOLAR = 215.032;      // 1 AU en radios solares
 
-  const ringRmid = new Float32Array(RADIAL_BINS);  // radio medio de cada anillo
-  const ringArea = new Float32Array(RADIAL_BINS);  // área de cada anillo
-  const intensityProfile = new Float32Array(RADIAL_BINS); // intensidad por anillo
-  let sumIdisk = 1; // normalizador
+  const ringRmid = new Float32Array(RADIAL_BINS);
+  const ringArea = new Float32Array(RADIAL_BINS);
+  const intensityProfile = new Float32Array(RADIAL_BINS);
+  let sumIdisk = 1;
 
-  // --------- Inicialización de anillos radiales ----------
   function initGrid(){
     const dr = 1 / RADIAL_BINS;
     for (let i=0; i<RADIAL_BINS; i++){
@@ -188,473 +315,526 @@
     }
   }
 
-  function interpolateFlux(times, flux, target){
-    const n = times.length;
-    if (!n) return 1;
-    if (target <= times[0]) return flux[0];
-    if (target >= times[n-1]) return flux[n-1];
-    let lo = 0;
-    let hi = n - 1;
-    while (hi - lo > 1){
-      const mid = (lo + hi) >> 1;
-      if (times[mid] <= target){
-        lo = mid;
-      }else{
-        hi = mid;
+  // ------- Colores estelares realistas por tipo espectral / T_eff -------
+  const STELLAR_COLOR_STOPS = [
+    { r: 0.10, rgb: [255, 110, 50] },  // Enana M fría (rojo-naranja)
+    { r: 0.40, rgb: [255, 140, 70] },  // Enana M tardía
+    { r: 0.70, rgb: [255, 178, 100] }, // Enana K (naranja)
+    { r: 1.00, rgb: [255, 215, 130] }, // Enana G (Sol: amarillo-naranja cálido)
+    { r: 1.40, rgb: [255, 242, 210] }, // Enana F (blanco-amarillento pálido)
+    { r: 2.00, rgb: [250, 250, 255] }, // Estrella A / Subgigante (blanco suave)
+    { r: 5.00, rgb: [242, 247, 255] }, // Gigante A (blanco puro brillante)
+  ];
+
+  function getStellarRGB(rStar){
+    const r = Math.min(5.0, Math.max(0.1, rStar));
+    if (r <= STELLAR_COLOR_STOPS[0].r) return STELLAR_COLOR_STOPS[0].rgb.slice();
+    if (r >= STELLAR_COLOR_STOPS[STELLAR_COLOR_STOPS.length-1].r){
+      return STELLAR_COLOR_STOPS[STELLAR_COLOR_STOPS.length-1].rgb.slice();
+    }
+    for (let i=0; i<STELLAR_COLOR_STOPS.length-1; i++){
+      const s1 = STELLAR_COLOR_STOPS[i];
+      const s2 = STELLAR_COLOR_STOPS[i+1];
+      if (r >= s1.r && r <= s2.r){
+        const frac = (r - s1.r)/(s2.r - s1.r);
+        return [
+          Math.round(s1.rgb[0] + (s2.rgb[0] - s1.rgb[0]) * frac),
+          Math.round(s1.rgb[1] + (s2.rgb[1] - s1.rgb[1]) * frac),
+          Math.round(s1.rgb[2] + (s2.rgb[2] - s1.rgb[2]) * frac),
+        ];
       }
     }
-    const t0 = times[lo];
-    const t1 = times[hi];
-    if (!isFinite(t0) || !isFinite(t1) || Math.abs(t1 - t0) < 1e-12){
-      return flux[lo];
-    }
-    const frac = (target - t0)/(t1 - t0);
-    return flux[lo] + (flux[hi] - flux[lo]) * frac;
+    return [255, 215, 130];
   }
 
-  function evaluateCursor(res, alpha){
-    if (!res){
-      return {time:0, flux:1, x:0, y:0};
-    }
-    const clamped = Math.min(1, Math.max(0, isFinite(alpha) ? alpha : 0.5));
-    const spanT = res.tmax - res.tmin;
-    const time = res.tmin + clamped * (isFinite(spanT) ? spanT : 0);
-    const flux = interpolateFlux(res.times, res.flux, time);
-    const x = (res.halfSafe !== 0) ? (time / res.halfSafe) * (res.xspan || 0) : 0;
-    return {time, flux, x, y: res.b || 0};
+  // ------- 3.ª Ley de Kepler entre P (días) y a/R★ -------
+  // P (días) = 365.25 * sqrt( (a_AU)^3 / (M★/M_sun) )
+  // a_AU = (aRs * rStar) / 215.032
+  function periodFromARs(aRs, rStar){
+    const aAU = (aRs * rStar) / AU_TO_SOLAR;
+    const mStar = Math.pow(rStar, 0.8); // Escalamiento masa-radio aproximado para secuencia principal
+    const pYears = Math.sqrt(Math.max(1e-6, Math.pow(aAU, 3) / Math.max(0.1, mStar)));
+    return Math.max(0.1, pYears * 365.25);
   }
 
-  // Actualiza el perfil radial de intensidades y normalizador para (u1,u2)
-  function updateIntensity(u1,u2){
-    let sumI=0;
-    for(let i=0;i<RADIAL_BINS;i++){
+  function aRsFromPeriod(periodDays, rStar){
+    const pYears = periodDays / 365.25;
+    const mStar = Math.pow(rStar, 0.8);
+    const aAU = Math.pow(pYears * pYears * mStar, 1/3);
+    const aRs = (aAU * AU_TO_SOLAR) / rStar;
+    return Math.min(50.0, Math.max(2.0, aRs));
+  }
+
+  // ------- Oscurecimiento de borde -------
+  function updateIntensity(u1, u2){
+    let sumI = 0;
+    for (let i=0; i<RADIAL_BINS; i++){
       const r = ringRmid[i];
-      const muVal = Math.sqrt(Math.max(0,1 - r*r));
+      const muVal = Math.sqrt(Math.max(0, 1 - r*r));
       const oneMinus = 1 - muVal;
-      const Ii = 1 - u1*oneMinus - u2*oneMinus*oneMinus;
-      const clipped = Math.max(Ii,0);
-      intensityProfile[i] = clipped;
-      sumI += clipped * ringArea[i];
+      const Ii = Math.max(0, 1 - u1*oneMinus - u2*oneMinus*oneMinus);
+      intensityProfile[i] = Ii;
+      sumI += Ii * ringArea[i];
     }
     sumIdisk = sumI;
   }
 
-  // Calcula b (impacto) y rango de x dentro del disco extendido
-  function impactAndSpan(aRs, incDeg, k){
-    const inc = incDeg * Math.PI/180;
-    const b = aRs * Math.cos(inc); // impacto en radios estelares
-    // Extensión máxima del tránsito sobre el eje x (cuando toca el borde)
-    const arg = (1 + k)**2 - b*b;
-    const xspan = (arg>0) ? Math.sqrt(arg) : 0;
-    return {b, xspan};
-  }
-
-  // Curva de luz: integra I sobre píxeles cubiertos por el planeta
   function occultedArcFraction(r, d, k){
     const EPS = 1e-7;
-    if (r <= EPS){
-      return d <= k ? 1 : 0;
-    }
+    if (r <= EPS) return d <= k ? 1 : 0;
     if (d >= r + k - EPS) return 0;
     if (d + k <= r + EPS) return 0;
     if (k >= d + r - EPS) return 1;
-    if (d <= Math.abs(r - k) + EPS){
-      return (k > r) ? 1 : 0;
-    }
+    if (d <= Math.abs(r - k) + EPS) return (k > r) ? 1 : 0;
     const cosTheta = (r*r + d*d - k*k) / (2 * r * d);
-    const clamped = Math.min(1, Math.max(-1, cosTheta));
-    const theta = Math.acos(clamped);
-    return theta / Math.PI;
+    return Math.acos(Math.min(1, Math.max(-1, cosTheta))) / Math.PI;
   }
 
   function computeOccultedIntensity(d, k){
     let occ = 0;
     for (let i=0; i<RADIAL_BINS; i++){
       const frac = occultedArcFraction(ringRmid[i], d, k);
-      if (frac <= 0) continue;
-      occ += intensityProfile[i] * ringArea[i] * frac;
+      if (frac > 0) occ += intensityProfile[i] * ringArea[i] * frac;
     }
     return occ;
   }
 
-  function computeLightCurve(rPlanetEarth, u1, u2, rStar, incDeg){
-    updateIntensity(u1,u2); // mapa I y normalizador
+  // ------- Resolución Ecuación de Kepler & Coordenadas 3D -------
+  function solveKepler(M, e){
+    let E = M;
+    for (let iter=0; iter<10; iter++){
+      const fE = E - e * Math.sin(E) - M;
+      const fE_prime = 1 - e * Math.cos(E);
+      const delta = fE / fE_prime;
+      E -= delta;
+      if (Math.abs(delta) < 1e-8) break;
+    }
+    return E;
+  }
+
+  // Retorna posición 3D (X_sky, Y_sky, Z_sky) en unidades de R★ para una fase o tiempo t
+  function getPositionAtPhase(phase, aRs, e, omegaDeg, incDeg){
+    const omega = omegaDeg * Math.PI / 180;
+    const inc = incDeg * Math.PI / 180;
+
+    // Anomalía verdadera en el centro del tránsito (f_mid + omega = pi/2 => f_mid = pi/2 - omega)
+    const fMid = Math.PI/2 - omega;
+    const tanEMid = Math.tan(fMid / 2) * Math.sqrt((1 - e) / (1 + e));
+    const EMid = 2 * Math.atan(tanEMid);
+    const MMid = EMid - e * Math.sin(EMid);
+
+    // Anomalía media actual
+    const M = MMid + 2 * Math.PI * phase;
+    const E = solveKepler(M, e);
+    const f = 2 * Math.atan2(Math.sqrt(1 + e) * Math.sin(E/2), Math.sqrt(1 - e) * Math.cos(E/2));
+
+    const r = (aRs * (1 - e*e)) / (1 + e * Math.cos(f));
+    const th = f + omega;
+
+    const xSky = r * Math.cos(th);
+    const ySky = r * Math.sin(th) * Math.cos(inc);
+    const zSky = r * Math.sin(th) * Math.sin(inc); // Z>0 hacia el observador
+
+    return { xSky, ySky, zSky, r, f };
+  }
+
+  // ------- Cálculo completo de curva de luz -------
+  function computeLightCurve(rPlanetEarth, u1, u2, rStar, aRs, incDeg, e, omegaDeg){
+    updateIntensity(u1, u2);
     const safeStar = Math.max(rStar, 0.05);
     const safePlanet = Math.max(rPlanetEarth, 0);
-    const k = (safePlanet > 0) ? (safePlanet * EARTH_TO_SOLAR) / safeStar : 0;
-    const aRs = ORBIT_A / safeStar;
-    const {b, xspan} = impactAndSpan(aRs, incDeg, k);
+    const k = (safePlanet * EARTH_TO_SOLAR) / safeStar;
 
-    const duration = safeStar;
+    // Parámetro de impacto b en tránsito central
+    const inc = incDeg * Math.PI / 180;
+    const omega = omegaDeg * Math.PI / 180;
+    const rTransit = (aRs * (1 - e*e)) / (1 + e * Math.sin(omega));
+    const b = rTransit * Math.cos(inc);
 
     const statusMsgs = [];
-    if (sumIdisk <= 0){
-      statusMsgs.push("Perfil de intensidad nulo (ajusta u₁/u₂)");
-    }
-    if (k <= 0){
-      statusMsgs.push("Planeta sin radio efectivo");
-    }
-    if (b >= 1 + k){
-      statusMsgs.push("Sin tránsito");
-    }
+    if (k <= 0) statusMsgs.push("Planeta sin radio");
+    if (b >= 1 + k) statusMsgs.push("Sin tránsito (b > 1 + k)");
+    else if (b > 1 - k && b < 1 + k) statusMsgs.push("Tránsito rozante");
+
     els.note.textContent = statusMsgs.join(" · ");
-    els.impactInfo.textContent = `b = ${b.toFixed(3)} | Rp=${safePlanet.toFixed(2)} R⊕ | R★=${safeStar.toFixed(2)}R☉`;
+    els.impactInfo.textContent = `b = ${b.toFixed(3)} | Rp/R★ = ${k.toFixed(4)} | Rp=${safePlanet.toFixed(1)}R⊕ | R★=${safeStar.toFixed(2)}R☉`;
 
-    // Definimos eje temporal t ∈ [-Tpad, +Tpad] en unidades de "duraciones de tránsito"
-    const halfTransit = 0.5 * duration;
-    const pad = Math.max(0.6, 0.8 * duration);
-    const tmin = -(halfTransit + pad), tmax = (halfTransit + pad);
+    // Ventana temporal de fase t ∈ [-0.15, +0.15] centrada en tránsito
+    const phaseSpan = 0.15;
     const times = new Float32Array(NPTS);
-    const flux  = new Float32Array(NPTS);
+    const flux = new Float32Array(NPTS);
 
-    // Precalculos para rapidez
-    const step = (tmax - tmin)/(NPTS-1);
-    const noTransit = (b >= 1 + k) || (xspan <= 0) || (sumIdisk <= 0) || (k <= 0);
     const norm = sumIdisk > 0 ? sumIdisk : 1;
-    const halfSafe = Math.max(halfTransit, 1e-4);
+    let minFlux = 1.0;
+
     for (let n=0; n<NPTS; n++){
-      const t = tmin + n*step;
-      times[n]=t;
+      const phase = -phaseSpan + (n / (NPTS - 1)) * (2 * phaseSpan);
+      times[n] = phase;
 
-      // x(t): lineal con xspan en |t|=±halfTransit
-      const x = (t/halfSafe) * xspan;
-      const cx = x;                // centro planeta x
-      const cy = b;                // centro planeta y
+      const pos = getPositionAtPhase(phase, aRs, e, omegaDeg, incDeg);
 
-      if (noTransit){
-        flux[n]=1.0; continue;
+      // Transita solo si Z > 0 (frente a la estrella)
+      if (pos.zSky <= 0 || k <= 0){
+        flux[n] = 1.0; continue;
       }
 
-      // Si no hay solapamiento instantáneo, deja flujo=1
-      const sep2 = cx*cx + cy*cy;
-      if (sep2 >= (1 + k)*(1 + k)){
-        flux[n]=1.0; continue;
+      const d = Math.sqrt(pos.xSky*pos.xSky + pos.ySky*pos.ySky);
+      if (d >= 1 + k){
+        flux[n] = 1.0; continue;
       }
 
-      const d = Math.sqrt(sep2);
       const occ = computeOccultedIntensity(d, k);
       const F = 1.0 - (occ / norm);
       flux[n] = F;
+      if (F < minFlux) minFlux = F;
     }
+
+    const depthPpm = Math.max(0, Math.round((1.0 - minFlux) * 1e6));
+    els.depthInfo.textContent = `Profundidad: ${(depthPpm / 10000).toFixed(3)}% (${depthPpm.toLocaleString()} ppm)`;
+
     return {
-      times,
-      flux,
-      k,
-      b,
-      aRs,
-      safeStar,
-      safePlanet,
-      tmin,
-      tmax,
-      halfTransit,
-      halfSafe,
-      xspan,
+      times, flux, k, b, aRs, safeStar, safePlanet, phaseSpan, minFlux
     };
   }
 
-  const STAR_COLOR_STOPS = [
-    {t:0.0, rgb:[255,110,80]},   // rojo intenso
-    {t:0.5, rgb:[255,214,170]},  // amarillento
-    {t:1.0, rgb:[140,190,255]},  // azulado
-  ];
-
-  function interpolateColor(t){
-    const clamped = Math.min(1, Math.max(0, t));
-    for (let i=0; i<STAR_COLOR_STOPS.length-1; i++){
-      const a = STAR_COLOR_STOPS[i];
-      const b = STAR_COLOR_STOPS[i+1];
-      if (clamped <= b.t){
-        const local = (clamped - a.t)/(b.t - a.t);
-        return [
-          a.rgb[0] + (b.rgb[0]-a.rgb[0])*local,
-          a.rgb[1] + (b.rgb[1]-a.rgb[1])*local,
-          a.rgb[2] + (b.rgb[2]-a.rgb[2])*local,
-        ];
-      }
-    }
-    const last = STAR_COLOR_STOPS[STAR_COLOR_STOPS.length-1];
-    return last.rgb.slice();
-  }
-
-  function starColorFromRadius(rStar){
-    const norm = (rStar - STAR_RADIUS_MIN)/(STAR_RADIUS_MAX - STAR_RADIUS_MIN || 1);
-    return interpolateColor(norm);
-  }
-
-  // ------- Dibujo de la curva en canvas -------
-  function resizeCanvas(c){
+  // ------- DIBUJO EN CANVAS (High-DPI) -------
+  function setupCanvas(c){
     const dpr = Math.min(window.devicePixelRatio||1, 2);
     const rect = c.parentElement.getBoundingClientRect();
-    c.width = Math.floor(rect.width * dpr);
-    c.height = Math.floor(rect.height * dpr);
+    const w = Math.floor(rect.width);
+    const h = Math.floor(rect.height);
+    if (c.width !== w * dpr || c.height !== h * dpr){
+      c.width = w * dpr;
+      c.height = h * dpr;
+    }
     const ctx = c.getContext('2d');
-    ctx.setTransform(dpr,0,0,dpr,0,0);
-    return ctx;
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    return { ctx, w, h };
   }
 
-  function drawAxes(ctx, w, h, opts){
-    const padL=50, padR=20, padT=20, padB=40;
+  // 1. Curva de luz
+  function drawCurve(c, res, timeAlpha){
+    const { ctx, w, h } = setupCanvas(c);
+    if (!res || !w || !h) return;
+
+    const padL=55, padR=20, padT=20, padB=38;
+    const innerW = w - padL - padR;
+    const innerH = h - padT - padB;
+
     ctx.clearRect(0,0,w,h);
+    ctx.fillStyle = "#070a14"; ctx.fillRect(0,0,w,h);
 
-    // fondo cuadriculado
-    ctx.fillStyle="#0b102b";
-    ctx.fillRect(0,0,w,h);
-    ctx.strokeStyle = "#1d2347";
-    ctx.lineWidth = 1;
-    for(let gx=padL; gx<w-padR; gx+=60){
-      ctx.beginPath(); ctx.moveTo(gx,padT); ctx.lineTo(gx,h-padB); ctx.stroke();
+    // Cuadrícula
+    ctx.strokeStyle = "#1a203c"; ctx.lineWidth = 1;
+    for (let gx=padL; gx<=w-padR; gx+=innerW/6){
+      ctx.beginPath(); ctx.moveTo(gx, padT); ctx.lineTo(gx, h-padB); ctx.stroke();
     }
-    for(let gy=padT; gy<h-padB; gy+=40){
-      ctx.beginPath(); ctx.moveTo(padL,gy); ctx.lineTo(w-padR,gy); ctx.stroke();
+    for (let gy=padT; gy<=h-padB; gy+=innerH/5){
+      ctx.beginPath(); ctx.moveTo(padL, gy); ctx.lineTo(w-padR, gy); ctx.stroke();
     }
 
-    // marco
-    ctx.strokeStyle="#2b3160"; ctx.lineWidth=1.2;
-    ctx.strokeRect(padL,padT,(w-padL-padR),(h-padT-padB));
+    ctx.strokeStyle = "#2b3460"; ctx.strokeRect(padL, padT, innerW, innerH);
 
-    return {padL, padR, padT, padB, innerW:(w-padL-padR), innerH:(h-padT-padB)};
-  }
-
-  function niceNumber(value, round){
-    if (value <= 0 || !isFinite(value)) return 0;
-    const exponent = Math.floor(Math.log10(value));
-    const fraction = value / Math.pow(10, exponent);
-    let nice;
-    if (round){
-      if (fraction < 1.5) nice = 1;
-      else if (fraction < 3) nice = 2;
-      else if (fraction < 7) nice = 5;
-      else nice = 10;
-    }else{
-      if (fraction <= 1) nice = 1;
-      else if (fraction <= 2) nice = 2;
-      else if (fraction <= 5) nice = 5;
-      else nice = 10;
-    }
-    return nice * Math.pow(10, exponent);
-  }
-
-  function generateTicks(min, max, count){
-    if (!isFinite(min) || !isFinite(max) || count <= 0) return [];
-    if (Math.abs(max - min) < 1e-9){
-      return [min];
-    }
-    const span = Math.max(Math.abs(max - min), 1e-9);
-    const step = niceNumber(span / Math.max(count - 1, 1), true);
-    if (step === 0) return [];
-    const start = Math.ceil(min / step) * step;
-    const ticks = [];
-    for(let v=start; v<=max + step*0.5; v+=step){
-      ticks.push(v);
-    }
-    return ticks;
-  }
-
-  function decimalsForStep(step){
-    if (!isFinite(step) || step === 0) return 0;
-    const log = -Math.log10(step);
-    return Math.max(0, Math.min(6, Math.ceil(log + 0.0000001)));
-  }
-
-  function formatTick(value, decimals){
-    const factor = Math.pow(10, decimals);
-    const rounded = Math.round(value * factor) / factor;
-    if (Math.abs(rounded) < 0.5 / factor){
-      return (0).toFixed(decimals);
-    }
-    return rounded.toFixed(decimals);
-  }
-
-  function drawCurve(c, times, flux, cursor){
-    const ctx = resizeCanvas(c);
-    const w = c.clientWidth, h = c.clientHeight;
-    const ax = drawAxes(ctx, w, h);
-    if (!times.length){
-      return;
-    }
+    const times = res.times;
+    const flux = res.flux;
     const xmin = times[0], xmax = times[times.length-1];
-    const xRange = Math.max(xmax - xmin, 1e-9);
-    let minF = Infinity, maxF = -Infinity;
-    for(let i=0;i<flux.length;i++){
-      const val = flux[i];
-      if (val < minF) minF = val;
-      if (val > maxF) maxF = val;
-    }
-    if (!isFinite(minF) || !isFinite(maxF)){
-      return;
-    }
-    const yPad = Math.max(0.0005, (maxF - minF) * 0.08);
-    const ymin = Math.min(minF - yPad, 0.995);
-    const ymax = Math.max(1.002, maxF + yPad);
-    const yRange = Math.max(ymax - ymin, 1e-6);
+    const xRange = xmax - xmin;
 
-    // ticks simples
-    ctx.fillStyle="#aab6ff"; ctx.font="12px ui-sans-serif, system-ui";
-    ctx.textAlign="center"; ctx.textBaseline="top";
-    const xTicks = generateTicks(xmin, xmax, 7);
-    const xStep = xTicks.length > 1 ? xTicks[1] - xTicks[0] : (xTicks[0] || 1);
-    const xDecimals = decimalsForStep(Math.abs(xStep));
-    for(const t of xTicks){
-      const x = ax.padL + (t - xmin)/xRange * ax.innerW;
-      ctx.fillText(formatTick(t, xDecimals), x, h-ax.padB+8);
-      ctx.strokeStyle="#222a55"; ctx.beginPath(); ctx.moveTo(x, ax.padT); ctx.lineTo(x, h-ax.padB); ctx.stroke();
+    let minF = res.minFlux;
+    const yPad = Math.max(0.0005, (1.0 - minF) * 0.15);
+    const ymin = Math.min(minF - yPad, 0.995);
+    const ymax = 1.002;
+    const yRange = ymax - ymin;
+
+    // Ejes y Ticks
+    ctx.fillStyle = "#aab6ff"; ctx.font = "11px system-ui";
+    ctx.textAlign = "center"; ctx.textBaseline = "top";
+    for (let i=0; i<=6; i++){
+      const val = xmin + (i/6)*xRange;
+      const x = padL + (i/6)*innerW;
+      ctx.fillText(val.toFixed(3), x, h - padB + 6);
     }
-    ctx.textAlign="right"; ctx.textBaseline="middle";
-    const yTicks = generateTicks(ymin, ymax, 6);
-    const yStep = yTicks.length > 1 ? yTicks[1] - yTicks[0] : (yTicks[0] || 1);
-    const yDecimals = decimalsForStep(Math.abs(yStep));
-    for(const yTick of yTicks){
-      const yy = ax.padT + (1 - (yTick - ymin)/yRange) * ax.innerH;
-      ctx.fillText(formatTick(yTick, yDecimals), ax.padL-6, yy);
-      ctx.strokeStyle = (Math.abs(yTick-1.0) < 1e-4) ? "#32408a" : "#222a55";
-      ctx.beginPath(); ctx.moveTo(ax.padL,yy); ctx.lineTo(w-ax.padR,yy); ctx.stroke();
+    ctx.textAlign = "right"; ctx.textBaseline = "middle";
+    for (let i=0; i<=5; i++){
+      const val = ymin + (i/5)*yRange;
+      const y = padT + (1 - i/5)*innerH;
+      ctx.fillText(val.toFixed(4), padL - 6, y);
     }
-    // etiquetas
-    ctx.fillStyle="#cfe2ff"; ctx.textAlign="center"; ctx.textBaseline="bottom";
-    ctx.fillText("Fase", ax.padL+ax.innerW/2, h-6);
-    ctx.save(); ctx.translate(12, ax.padT+ax.innerH/2); ctx.rotate(-Math.PI/2);
+
+    ctx.fillStyle = "#cfe2ff"; ctx.textAlign = "center"; ctx.textBaseline = "bottom";
+    ctx.fillText("Fase Orbital (t)", padL + innerW/2, h - 4);
+    ctx.save(); ctx.translate(14, padT + innerH/2); ctx.rotate(-Math.PI/2);
     ctx.fillText("Flujo Normalizado", 0, 0); ctx.restore();
 
-    let cursorCoords = null;
-    if (cursor && isFinite(cursor.time)){
-      const cursorFlux = isFinite(cursor.flux) ? cursor.flux : 1;
-      const ratio = (cursor.time - xmin) / (xRange || 1);
-      const ratioClamped = Math.min(1.1, Math.max(-0.1, ratio));
-      const fluxRatio = (cursorFlux - ymin)/(yRange || 1);
-      const fluxClamped = Math.min(1.1, Math.max(-0.1, 1 - fluxRatio));
-      const cx = ax.padL + ratioClamped * ax.innerW;
-      const cy = ax.padT + fluxClamped * ax.innerH;
-      cursorCoords = {x: cx, y: cy};
-    }
-
-    // curva
-    ctx.strokeStyle = "#7aa2ff"; ctx.lineWidth = 2;
-    ctx.beginPath();
-    for(let i=0;i<times.length;i++){
-      const x = ax.padL + (times[i]-xmin)/xRange*ax.innerW;
-      const y = ax.padT + (1 - (flux[i]-ymin)/yRange)*ax.innerH;
+    // Curva de luz
+    ctx.strokeStyle = "#7aa2ff"; ctx.lineWidth = 2.2; ctx.beginPath();
+    for (let i=0; i<times.length; i++){
+      const x = padL + ((times[i] - xmin)/xRange) * innerW;
+      const y = padT + (1 - (flux[i] - ymin)/yRange) * innerH;
       if (i===0) ctx.moveTo(x,y); else ctx.lineTo(x,y);
     }
     ctx.stroke();
 
-    if (cursorCoords){
-      ctx.strokeStyle = "#f9b857";
-      ctx.lineWidth = 1.5;
-      ctx.beginPath();
-      ctx.moveTo(cursorCoords.x, ax.padT);
-      ctx.lineTo(cursorCoords.x, h - ax.padB);
-      ctx.stroke();
-      ctx.fillStyle = "#f9b857";
-      ctx.beginPath();
-      ctx.arc(cursorCoords.x, cursorCoords.y, 4, 0, 2*Math.PI);
-      ctx.fill();
-    }
+    // Cursor de tiempo
+    const currentPhase = -res.phaseSpan + timeAlpha * (2 * res.phaseSpan);
+    const pos = getPositionAtPhase(currentPhase, res.aRs, state.ecc, state.omega, state.inc);
+    const currentFlux = (pos.zSky > 0 && Math.sqrt(pos.xSky*pos.xSky + pos.ySky*pos.ySky) < 1 + res.k)
+      ? 1.0 - (computeOccultedIntensity(Math.sqrt(pos.xSky*pos.xSky + pos.ySky*pos.ySky), res.k) / sumIdisk)
+      : 1.0;
+
+    const cx = padL + ((currentPhase - xmin)/xRange) * innerW;
+    const cy = padT + (1 - (currentFlux - ymin)/yRange) * innerH;
+
+    ctx.strokeStyle = "#f9b857"; ctx.lineWidth = 1.5;
+    ctx.beginPath(); ctx.moveTo(cx, padT); ctx.lineTo(cx, h - padB); ctx.stroke();
+    ctx.fillStyle = "#f9b857"; ctx.beginPath(); ctx.arc(cx, cy, 4.5, 0, 2*Math.PI); ctx.fill();
   }
 
-  // ------- Vista del disco estelar y mapa de I(mu) -------
-  function drawStarView(c, res, u1, u2, cursor){
-    if (!res){
-      return;
-    }
-    const ctx = resizeCanvas(c);
-    const cssW = c.clientWidth;
-    const cssH = c.clientHeight;
-    const pixelW = c.width;
-    const pixelH = c.height;
+  // 2. Disco Estelar 2D
+  function drawStarView(c, res, timeAlpha, u1, u2){
+    const { ctx, w, h } = setupCanvas(c);
+    if (!res || !w || !h) return;
 
-    if (!cssW || !cssH || !pixelW || !pixelH){
-      return;
-    }
+    ctx.clearRect(0,0,w,h);
+    ctx.fillStyle = "#070a14"; ctx.fillRect(0,0,w,h);
 
-    ctx.clearRect(0,0,cssW,cssH);
-    // fondo
-    ctx.fillStyle="#0b102b"; ctx.fillRect(0,0,cssW,cssH);
+    const cx = w/2, cy = h/2;
+    const R = Math.min(w,h) * 0.38;
 
-    // dibujar disco estelar con gradiente radial a partir de I(mu)
-    const cx = cssW/2, cy = cssH/2;
-    const R = Math.min(cssW,cssH)*0.42;
-
-    const img = ctx.createImageData(pixelW, pixelH);
-    const data = img.data;
-    const scaleX = cssW / pixelW;
-    const scaleY = cssH / pixelH;
-
-    const safeStar = Math.max(res.safeStar, 0.05);
+    const currentPhase = -res.phaseSpan + timeAlpha * (2 * res.phaseSpan);
+    const pos = getPositionAtPhase(currentPhase, res.aRs, state.ecc, state.omega, state.inc);
+    const px = cx + pos.xSky * R;
+    const py = cy + pos.ySky * R;
     const k = res.k;
-    const b = res.b;
-    const cursorX = cursor && isFinite(cursor.x) ? cursor.x : 0;
-    const px = cx + cursorX * R;
-    const py = cy + b * R;
 
-    const baseColor = starColorFromRadius(safeStar);
+    const rgb = getStellarRGB(res.safeStar);
 
-    // función intensidad
-    function Iof(xn,yn){
-      const r2 = xn*xn + yn*yn;
-      if (r2>1) return 0;
-      const mu = Math.sqrt(1-r2);
-      const oneMinus = 1 - mu;
-      let I = 1 - u1*oneMinus - u2*oneMinus*oneMinus;
-      return Math.max(I,0);
-    }
+    // Fondo y resplandor estelar
+    const glow = ctx.createRadialGradient(cx, cy, R*0.8, cx, cy, R*1.4);
+    glow.addColorStop(0, `rgba(${rgb[0]},${rgb[1]},${rgb[2]},0.3)`);
+    glow.addColorStop(1, 'rgba(0,0,0,0)');
+    ctx.fillStyle = glow; ctx.beginPath(); ctx.arc(cx,cy,R*1.4,0,2*Math.PI); ctx.fill();
 
-    for(let j=0;j<pixelH;j++){
+    // Renderizado por píxeles de oscurecimiento de borde
+    const pixelW = Math.floor(w * 0.7);
+    const pixelH = Math.floor(h * 0.7);
+    const offCanvas = document.createElement('canvas');
+    offCanvas.width = pixelW; offCanvas.height = pixelH;
+    const offCtx = offCanvas.getContext('2d');
+    const imgData = offCtx.createImageData(pixelW, pixelH);
+    const data = imgData.data;
+
+    const scaleX = w / pixelW;
+    const scaleY = h / pixelH;
+
+    for (let j=0; j<pixelH; j++){
       const yCss = (j + 0.5) * scaleY;
-      for(let i=0;i<pixelW;i++){
+      for (let i=0; i<pixelW; i++){
         const xCss = (i + 0.5) * scaleX;
         const dx = (xCss - cx)/R;
         const dy = (yCss - cy)/R;
-        let Ipix = Iof(dx,dy);
-        // ocluir por planeta
-        const dxp = (xCss - px)/R;
-        const dyp = (yCss - py)/R;
-        if (dxp*dxp + dyp*dyp <= k*k) Ipix = 0;
+        const r2 = dx*dx + dy*dy;
         const idx = (j*pixelW + i)*4;
-        if (Ipix<=0){
-          data[idx+0] = 10;
-          data[idx+1] = 18;
-          data[idx+2] = 30;
-          data[idx+3] = 255;
-          continue;
+
+        if (r2 > 1.0){
+          data[idx+3] = 0; continue;
         }
-        const bright = 0.2 + 0.8*Math.pow(Ipix,0.9);
-        data[idx+0] = Math.min(255, Math.round(baseColor[0]*bright));
-        data[idx+1] = Math.min(255, Math.round(baseColor[1]*bright));
-        data[idx+2] = Math.min(255, Math.round(baseColor[2]*bright));
-        data[idx+3] = 255;
+
+        const mu = Math.sqrt(1 - r2);
+        const oneMinus = 1 - mu;
+        let Ipix = Math.max(0, 1 - u1*oneMinus - u2*oneMinus*oneMinus);
+
+        // Oclusión por planeta (solo si está al frente Z > 0)
+        if (pos.zSky > 0){
+          const dxp = (xCss - px)/R;
+          const dyp = (yCss - py)/R;
+          if (dxp*dxp + dyp*dyp <= k*k) Ipix = 0;
+        }
+
+        if (Ipix <= 0){
+          data[idx+0] = 5; data[idx+1] = 8; data[idx+2] = 16; data[idx+3] = 255;
+        } else {
+          const bright = 0.25 + 0.75 * Math.pow(Ipix, 0.9);
+          data[idx+0] = Math.min(255, Math.round(rgb[0] * bright));
+          data[idx+1] = Math.min(255, Math.round(rgb[1] * bright));
+          data[idx+2] = Math.min(255, Math.round(rgb[2] * bright));
+          data[idx+3] = 255;
+        }
       }
     }
-    ctx.putImageData(img,0,0);
+    offCtx.putImageData(imgData, 0, 0);
+    ctx.drawImage(offCanvas, 0, 0, w, h);
 
-    // contornos
-    ctx.strokeStyle="#7aa2ff"; ctx.lineWidth=1.5;
+    // Contorno estelar
+    ctx.strokeStyle = `rgba(${rgb[0]},${rgb[1]},${rgb[2]},0.8)`; ctx.lineWidth = 1.8;
     ctx.beginPath(); ctx.arc(cx,cy,R,0,2*Math.PI); ctx.stroke();
-    ctx.strokeStyle="#9de0ff"; ctx.beginPath(); ctx.arc(px,py,k*R,0,2*Math.PI); ctx.stroke();
+
+    // Contorno y sombra del planeta
+    if (pos.zSky > 0){
+      ctx.strokeStyle = "#9de0ff"; ctx.lineWidth = 1.5;
+      ctx.beginPath(); ctx.arc(px,py,Math.max(2, k*R),0,2*Math.PI); ctx.stroke();
+    }
   }
 
-  // ------- Ciclo de actualización -------
+  // 3. Órbita 3D Interactiva
+  let camRotX = -0.4, camRotY = 0.5; // Ángulos de cámara
+  let isDragging = false, lastMouseX=0, lastMouseY=0;
+
+  function bindOrbit3DControls(c){
+    c.addEventListener('mousedown', (e)=>{
+      isDragging = true; lastMouseX = e.clientX; lastMouseY = e.clientY;
+    });
+    window.addEventListener('mousemove', (e)=>{
+      if (!isDragging) return;
+      const dx = e.clientX - lastMouseX;
+      const dy = e.clientY - lastMouseY;
+      camRotY += dx * 0.008;
+      camRotX += dy * 0.008;
+      camRotX = Math.min(Math.PI/2 - 0.1, Math.max(-Math.PI/2 + 0.1, camRotX));
+      lastMouseX = e.clientX; lastMouseY = e.clientY;
+      requestRender();
+    });
+    window.addEventListener('mouseup', ()=> isDragging = false);
+
+    // Touch para dispositivos móviles
+    c.addEventListener('touchstart', (e)=>{
+      if (e.touches.length === 1){
+        isDragging = true; lastMouseX = e.touches[0].clientX; lastMouseY = e.touches[0].clientY;
+      }
+    });
+    window.addEventListener('touchmove', (e)=>{
+      if (!isDragging || e.touches.length !== 1) return;
+      const dx = e.touches[0].clientX - lastMouseX;
+      const dy = e.touches[0].clientY - lastMouseY;
+      camRotY += dx * 0.008;
+      camRotX += dy * 0.008;
+      lastMouseX = e.touches[0].clientX; lastMouseY = e.touches[0].clientY;
+      requestRender();
+    });
+    window.addEventListener('touchend', ()=> isDragging = false);
+  }
+
+  function drawOrbit3D(c, res, timeAlpha){
+    const { ctx, w, h } = setupCanvas(c);
+    if (!res || !w || !h) return;
+
+    ctx.clearRect(0,0,w,h);
+    ctx.fillStyle = "#060812"; ctx.fillRect(0,0,w,h);
+
+    const cx = w/2, cy = h/2;
+    const scale = Math.min(w,h) * 0.35 / (res.aRs * 1.2);
+
+    // Función de proyección 3D -> 2D
+    function project3D(X, Y, Z){
+      // Rotación Y (Azimut)
+      const x1 = X * Math.cos(camRotY) + Z * Math.sin(camRotY);
+      const z1 = -X * Math.sin(camRotY) + Z * Math.cos(camRotY);
+      // Rotación X (Elevación)
+      const y2 = Y * Math.cos(camRotX) - z1 * Math.sin(camRotX);
+      const z2 = Y * Math.sin(camRotX) + z1 * Math.cos(camRotX);
+
+      return {
+        px: cx + x1 * scale,
+        py: cy - y2 * scale,
+        pz: z2
+      };
+    }
+
+    // 1. Plano del Cielo (Z = 0)
+    ctx.strokeStyle = "rgba(122,162,255,0.15)"; ctx.lineWidth = 1;
+    const planeSize = res.aRs * 1.3;
+    const p1 = project3D(-planeSize, -planeSize, 0);
+    const p2 = project3D(planeSize, -planeSize, 0);
+    const p3 = project3D(planeSize, planeSize, 0);
+    const p4 = project3D(-planeSize, planeSize, 0);
+
+    ctx.beginPath();
+    ctx.moveTo(p1.px, p1.py); ctx.lineTo(p2.px, p2.py);
+    ctx.lineTo(p3.px, p3.py); ctx.lineTo(p4.px, p4.py); ctx.closePath();
+    ctx.fillStyle = "rgba(122,162,255,0.03)"; ctx.fill(); ctx.stroke();
+
+    ctx.fillStyle = "rgba(122,162,255,0.4)"; ctx.font = "10px system-ui";
+    ctx.fillText("Plano del Cielo (Z=0)", p3.px + 4, p3.py);
+
+    // 2. Línea de Visión (Vector L.O.S. +Z hacia el observador)
+    const losStart = project3D(0,0,0);
+    const losEnd = project3D(0, 0, res.aRs * 0.9);
+    ctx.strokeStyle = "#f9b857"; ctx.lineWidth = 1.8; ctx.setLineDash([4,3]);
+    ctx.beginPath(); ctx.moveTo(losStart.px, losStart.py); ctx.lineTo(losEnd.px, losEnd.py); ctx.stroke();
+    ctx.setLineDash([]);
+    ctx.fillStyle = "#f9b857"; ctx.fillText("Línea de Visión (L.O.S.)", losEnd.px + 4, losEnd.py);
+
+    // 3. Estrella central 3D
+    const starP = project3D(0,0,0);
+    const rgb = getStellarRGB(res.safeStar);
+    const rPixel = Math.max(6, scale * 1.0);
+    const starGlow = ctx.createRadialGradient(starP.px, starP.py, 0, starP.px, starP.py, rPixel*2);
+    starGlow.addColorStop(0, `rgb(${rgb[0]},${rgb[1]},${rgb[2]})`);
+    starGlow.addColorStop(0.5, `rgba(${rgb[0]},${rgb[1]},${rgb[2]},0.6)`);
+    starGlow.addColorStop(1, "rgba(0,0,0,0)");
+    ctx.fillStyle = starGlow; ctx.beginPath(); ctx.arc(starP.px, starP.py, rPixel*2, 0, 2*Math.PI); ctx.fill();
+
+    // 4. Elipse Orbital 3D
+    const orbitPts = [];
+    const N_ORBIT = 180;
+    for (let i=0; i<=N_ORBIT; i++){
+      const ph = (i / N_ORBIT) - 0.5;
+      const pos = getPositionAtPhase(ph, res.aRs, state.ecc, state.omega, state.inc);
+      orbitPts.push({ ...pos, proj: project3D(pos.xSky, pos.ySky, pos.zSky) });
+    }
+
+    // Dibujar parte posterior (Z_sky < 0) tenue/punteada y frontal (Z_sky > 0) brillante
+    for (let i=0; i<orbitPts.length-1; i++){
+      const pt1 = orbitPts[i];
+      const pt2 = orbitPts[i+1];
+      const isFront = (pt1.zSky + pt2.zSky) > 0;
+
+      ctx.strokeStyle = isFront ? "#7aa2ff" : "rgba(122,162,255,0.3)";
+      ctx.lineWidth = isFront ? 2.0 : 1.0;
+      if (!isFront) ctx.setLineDash([3,3]); else ctx.setLineDash([]);
+
+      ctx.beginPath(); ctx.moveTo(pt1.proj.px, pt1.proj.py); ctx.lineTo(pt2.proj.px, pt2.proj.py); ctx.stroke();
+    }
+    ctx.setLineDash([]);
+
+    // 5. Planeta 3D en la posición del cursor de tiempo
+    const currentPhase = -res.phaseSpan + timeAlpha * (2 * res.phaseSpan);
+    const planetPos = getPositionAtPhase(currentPhase, res.aRs, state.ecc, state.omega, state.inc);
+    const planetP = project3D(planetPos.xSky, planetPos.ySky, planetPos.zSky);
+
+    const planetRPixel = Math.max(3, res.k * scale * 1.0);
+    ctx.fillStyle = "#9de0ff"; ctx.beginPath(); ctx.arc(planetP.px, planetP.py, planetRPixel + 1, 0, 2*Math.PI); ctx.fill();
+    ctx.strokeStyle = "#ffffff"; ctx.lineWidth = 1.2; ctx.stroke();
+  }
+
+  // ------- Ciclo de Renderizado y Sincronización -------
   const state = {
     rPlanet: parseFloat(els.rPlanet.value),
+    rStar: parseFloat(els.rStar.value),
     u1: parseFloat(els.u1.value),
     u2: parseFloat(els.u2.value),
-    rStar: parseFloat(els.rStar.value),
+    aRs: parseFloat(els.aRs.value),
+    period: parseFloat(els.period.value),
+    ecc: parseFloat(els.ecc.value),
+    omega: parseFloat(els.omega.value),
     inc: parseFloat(els.inc.value),
-    timeAlpha: Math.min(1, Math.max(0, parseFloat(els.timeCursor.value || "0.5"))),
+    timeAlpha: parseFloat(els.timeCursor.value),
   };
+
   let lastResult = null;
   let needsRecompute = true;
 
-  function syncOutputs(cursor){
-    const cursorTime = cursor && isFinite(cursor.time) ? cursor.time.toFixed(3) : "…";
+  function syncOutputs(){
     els.outRPlanet.textContent = state.rPlanet.toFixed(2);
-    els.outU1.textContent= state.u1.toFixed(2);
-    els.outU2.textContent= state.u2.toFixed(2);
     els.outRStar.textContent = state.rStar.toFixed(2);
-    els.outI.textContent = state.inc.toFixed(1);
-    els.outTime.textContent = cursorTime;
-    if (Math.abs(parseFloat(els.timeCursor.value) - state.timeAlpha) > 1e-4){
-      els.timeCursor.value = state.timeAlpha.toString();
-    }
+    els.outU1.textContent = state.u1.toFixed(2);
+    els.outU2.textContent = state.u2.toFixed(2);
+    els.outARs.textContent = state.aRs.toFixed(1);
+    els.outPeriod.textContent = state.period.toFixed(2);
+    els.outEcc.textContent = state.ecc.toFixed(2);
+    els.outOmega.textContent = Math.round(state.omega).toString();
+    els.outInc.textContent = state.inc.toFixed(1);
+    els.outTime.textContent = state.timeAlpha.toFixed(3);
   }
 
   let rafId = null;
@@ -665,57 +845,110 @@
 
   function renderAll(){
     if (needsRecompute || !lastResult){
-      lastResult = computeLightCurve(state.rPlanet, state.u1, state.u2, state.rStar, state.inc);
+      lastResult = computeLightCurve(
+        state.rPlanet, state.u1, state.u2, state.rStar, state.aRs, state.inc, state.ecc, state.omega
+      );
       needsRecompute = false;
     }
-    const res = lastResult;
-    if (!res){
-      return;
-    }
-    const cursor = evaluateCursor(res, state.timeAlpha);
-    syncOutputs(cursor);
-    drawCurve(els.plot, res.times, res.flux, cursor);
-    drawStarView(els.star, res, state.u1, state.u2, cursor);
+    syncOutputs();
+    drawCurve(els.plot, lastResult, state.timeAlpha);
+    drawStarView(els.star, lastResult, state.timeAlpha, state.u1, state.u2);
+    drawOrbit3D(els.orbit3D, lastResult, state.timeAlpha);
   }
 
-  // ------- Listeners -------
-  function bindParamSlider(el, key){
+  // ------- Event Listeners de los Sliders -------
+  function bindSlider(el, key, onChange){
     el.addEventListener('input', ()=>{
       const val = parseFloat(el.value);
       if (isFinite(val)){
         state[key] = val;
+        if (onChange) onChange(val);
       }
       needsRecompute = true;
       requestRender();
     });
   }
-  bindParamSlider(els.rPlanet,'rPlanet');
-  bindParamSlider(els.u1,'u1');
-  bindParamSlider(els.u2,'u2');
-  bindParamSlider(els.rStar,'rStar');
-  bindParamSlider(els.inc,'inc');
+
+  bindSlider(els.rPlanet, 'rPlanet');
+  bindSlider(els.rStar, 'rStar', ()=>{
+    // Actualizar P según Ley de Kepler manteniendo aRs
+    state.period = periodFromARs(state.aRs, state.rStar);
+    els.period.value = state.period.toString();
+  });
+  bindSlider(els.u1, 'u1');
+  bindSlider(els.u2, 'u2');
+
+  // Slider aRs -> actualiza Periodo
+  bindSlider(els.aRs, 'aRs', (newARs)=>{
+    state.period = periodFromARs(newARs, state.rStar);
+    els.period.value = state.period.toString();
+  });
+
+  // Slider Periodo -> actualiza aRs
+  bindSlider(els.period, 'period', (newP)=>{
+    state.aRs = aRsFromPeriod(newP, state.rStar);
+    els.aRs.value = state.aRs.toString();
+  });
+
+  bindSlider(els.ecc, 'ecc');
+  bindSlider(els.omega, 'omega');
+  bindSlider(els.inc, 'inc');
 
   els.timeCursor.addEventListener('input', ()=>{
-    const val = parseFloat(els.timeCursor.value);
-    state.timeAlpha = Math.min(1, Math.max(0, isFinite(val) ? val : 0.5));
+    state.timeAlpha = parseFloat(els.timeCursor.value);
     requestRender();
   });
 
   els.reset.addEventListener('click', ()=>{
-    els.rPlanet.value="11.0"; els.u1.value="0.30"; els.u2.value="0.20";
-    els.rStar.value="1.00"; els.inc.value="89.0";
-    els.timeCursor.value="0.5";
-    state.rPlanet=11.0; state.u1=0.30; state.u2=0.20; state.rStar=1.00; state.inc=89.0;
-    state.timeAlpha=0.5;
+    els.rPlanet.value = "11.0"; state.rPlanet = 11.0;
+    els.rStar.value = "1.00"; state.rStar = 1.00;
+    els.u1.value = "0.30"; state.u1 = 0.30;
+    els.u2.value = "0.20"; state.u2 = 0.20;
+    els.aRs.value = "10.0"; state.aRs = 10.0;
+    els.period.value = "3.65"; state.period = 3.65;
+    els.ecc.value = "0.00"; state.ecc = 0.00;
+    els.omega.value = "90"; state.omega = 90;
+    els.inc.value = "89.0"; state.inc = 89.0;
+    els.timeCursor.value = "0.5"; state.timeAlpha = 0.5;
+
     needsRecompute = true;
     requestRender();
   });
 
-  window.addEventListener('resize', ()=>requestRender(), {passive:true});
+  // Control de pestañas del panel derecho
+  function setTab(tabName){
+    els.tabStar.classList.remove('active');
+    els.tabOrbit.classList.remove('active');
+    els.tabBoth.classList.remove('active');
 
-  // ------- Go! -------
+    if (tabName === 'star'){
+      els.tabStar.classList.add('active');
+      els.starContainer.style.display = 'block';
+      els.orbitContainer.style.display = 'none';
+      els.rightPanelTitle.textContent = "Disco Estelar y Tránsito 2D";
+    } else if (tabName === 'orbit'){
+      els.tabOrbit.classList.add('active');
+      els.starContainer.style.display = 'none';
+      els.orbitContainer.style.display = 'block';
+      els.rightPanelTitle.textContent = "Geometría Orbital 3D";
+    } else {
+      els.tabBoth.classList.add('active');
+      els.starContainer.style.display = 'block';
+      els.orbitContainer.style.display = 'block';
+      els.rightPanelTitle.textContent = "Disco Estelar (2D) y Órbita (3D)";
+    }
+    requestRender();
+  }
+
+  els.tabStar.addEventListener('click', ()=> setTab('star'));
+  els.tabOrbit.addEventListener('click', ()=> setTab('orbit'));
+  els.tabBoth.addEventListener('click', ()=> setTab('both'));
+
+  bindOrbit3DControls(els.orbit3D);
+  window.addEventListener('resize', ()=> requestRender(), {passive:true});
+
+  // Inicialización
   initGrid();
-  updateIntensity(state.u1, state.u2);
   requestRender();
 })();
 </script>
