@@ -20,7 +20,7 @@ superuser: true
 highlight_name: true
 
 # Role/position/tagline
-role: Estudiante de Maestría en Astrofísica
+role: Estudiante de Doctorado en Astrofísica
 
 # Organizations/Affiliations to display in Biography blox
 organizations:
@@ -44,23 +44,29 @@ profiles:
 
 interests:
   - Exoplanetas en tránsito
-  - Fotometría multibanda
-  - Técnicas de reducción de datos
+  - Campañas de observación multibanda
+  - Formación planetaria
+
 
 education:
-  - area: Estudiante de Maestría en Astrofísica
+  - area: Maestría en Ciencias Astrofísica
     institution: Instituto de Astronomía, Universidad Nacional Autónoma de México
     url: https://astronomia.unam.mx/
     date_start: 2024-08-05
-    date_end: 
+    date_end: 2026-08-04
+    summary: |
+      - Tutora: Dra. Yilen Gómez Maqueo
+      - Tesis: ["_Método de reducción de datos para series de tiempo multibanda con OPTICAM de exoplanetas en tránsito_"](https://academic.oup.com/rasti/article/doi/10.1093/rasti/rzag021/8516487)
+      - Promedio general: 9.44/10.00
   - area: Licenciatura en Ciencias Naturales
     institution: Universidad de La Sabana
     url: https://www.unisabana.edu.co
     date_start: 2019-01-19
     date_end: 2024-03-05
     summary: |
-      - Promedio general: 4.13/5.0
+      - Asesor: David Tovar Rodríguez
       - Trabajo de grado: [_Hackatón de Exoplanetas: Una propuesta de aprendizaje basado en retos para el desarrollo de habilidades científicas._](https://intellectum.unisabana.edu.co/handle/10818/60905)
+      - Promedio general: 4.13/5.0
 
 work:
   - position: Pasante del Equipo de Bachillerato Internacional
@@ -194,4 +200,4 @@ observational:
 
 ## Sobre mí
 
-Hola! Soy un estudiante colombiano cursando Maestría en Astrofísica en el Instituto de Astronomía de la Universidad Nacional Autónoma de México (UNAM). Trabajo en el grupo de investigación de la Dra. Yilen Gómez Maqueo Chew en el análisis de curvas de luz multibanda de exoplanetas en tránsito.
+Hola! Soy estudiante de Doctorado en Astrofísica en el Instituto de Astronomía de la Universidad Nacional Autónoma de México (IA-UNAM). Hago parte del grupo de la Dra. Yilen Gómez Maqueo Chew trabajando sobre exoplanetas transitantes, formación de planetas alrededor de estrellas M y campañas de observación con diferentes tipos de telescopios.

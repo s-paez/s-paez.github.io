@@ -20,7 +20,7 @@ superuser: true
 highlight_name: true
 
 # Role/position/tagline
-role: Master's student in Astrophysics
+role: PhD student in Astrophysics
 
 # Organizations/Affiliations to display in Biography blox
 organizations:
@@ -43,24 +43,29 @@ profiles:
     url: https://www.instagram.com/santiago_paav
 
 interests:
-  - Transiting Exoplanets
-  - Multiband photometry
-  - Data reduction techniques
+  - Transiting exoplanets
+  - Multiband observational campaigns
+  - Planer formation
 
 education:
-  - area: M.Sc. Student in Astrophysics
+  - area: M.Sc. Astrophysics
     institution: Instituto de Astronomía, Universidad Nacional Autónoma de México
     url: https://astronomia.unam.mx/
     date_start: 2024-08-05
-    date_end: 
+    date_end: 2026-08-04
+    summary: |
+      - Advisor: Dr. Yilen Gómez Maqueo Chew
+      - Thesis: ["_Data reduction method for OPTICAM multiband time series of transiting exoplanets_"](https://academic.oup.com/rasti/article/doi/10.1093/rasti/rzag021/8516487)
+      - GPA: 9.44/10.00
   - area: BA Natural Sciences Education
     institution: Universidad de La Sabana
     url: https://www.unisabana.edu.co
     date_start: 2019-01-19
     date_end: 2024-03-05
     summary: |
-      - GPA: 4.13/5.0
+      - Advisor: David Tovar Rodríguez
       - Thesis: [_Exoplanet Hackathon: A challenge-based learning proposal for the development of scientific skills._](https://intellectum.unisabana.edu.co/handle/10818/60905)
+      - GPA: 4.13/5.00
 
 work:
   - position: Intern - International Baccalaureate Team
@@ -194,4 +199,4 @@ observational:
 
 ## About Me
 
-Hello! I am a Colombian student pursuing a Master's degree in Astrophysics at the Instituto de Astronomía of the Universidad Nacional Autónoma de México (UNAM). I work with Prof. Yilen Gómez Maqueo Chew's research group on analyzing multiband light curves of transiting exoplanets.
+Hello! I am PhD student in Astrophysics at the Instituto de Astronomía of the Universidad Nacional Autónoma de México (IA-UNAM). I work with Prof. Yilen Gómez Maqueo Chew's research group on transitng exoplanets, planet formation around M-dwarf stars, and observational campaigns with different types of telescopes.
