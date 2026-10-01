@@ -199,4 +199,4 @@ observational:
 
 ## About Me
 
-Hello! I am PhD student in Astrophysics at the Instituto de Astronomía of the Universidad Nacional Autónoma de México (IA-UNAM). I work with Prof. Yilen Gómez Maqueo Chew's research group on transitng exoplanets, planet formation around M-dwarf stars, and observational campaigns with different types of telescopes.
+Hello! I am a Ph.D. student in astrophysics at the Instituto de Astronomía of the Universidad Nacional Autónoma de México (IA-UNAM), where I work with Professor Yilen Gómez Maqueo Chew. My research focuses on the reduction and analysis of photometric time series of transiting exoplanets, as well as observational campaigns with different types of telescopes.

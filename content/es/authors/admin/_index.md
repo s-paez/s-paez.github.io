@@ -200,4 +200,4 @@ observational:
 
 ## Sobre mí
 
-Hola! Soy estudiante de Doctorado en Astrofísica en el Instituto de Astronomía de la Universidad Nacional Autónoma de México (IA-UNAM). Hago parte del grupo de la Dra. Yilen Gómez Maqueo Chew trabajando sobre exoplanetas transitantes, formación de planetas alrededor de estrellas M y campañas de observación con diferentes tipos de telescopios.
+¡Hola! Soy estudiante de doctorado en Astrofísica en el Instituto de Astronomía de la Universidad Nacional Autónoma de México (IA-UNAM), donde trabajo con la investigadora Yilen Gómez Maqueo Chew. Me especializo en reducción de datos, análisis de series temporales fotométricas de exoplanetas en tránsito y en campañas de observación con diferentes tipos de telescopios.
