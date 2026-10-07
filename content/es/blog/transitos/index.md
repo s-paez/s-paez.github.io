@@ -16,7 +16,7 @@ image:
 ---
 > En esta entrada cuento sobre el método del tránsito, por qué las curvas de luz son tan valiosas y dejo un recurso interactivo para experimentar con distintos escenarios planetarios.
 
-<iframe src="/simuladores/transito/transito0.html"
+<iframe loading="lazy" title="Simulador de tránsitos" src="/simuladores/transito/transito0.html"
         title="Animación de un planeta transitante"
         loading="lazy"
         style="width:100%;max-width:100%;height:1200px;border:0;border-radius:16px;margin:0 auto;display:block;">
@@ -60,7 +60,7 @@ Convenciones:
 * $R_\oplus$: Radios de la Tierra
 * $R_\odot$: Radios del Sol
 
-<iframe src="/simuladores/transito/transito.html"
+<iframe loading="lazy" title="Simulador de tránsitos" src="/simuladores/transito/transito.html"
         title="Simulador de tránsito planetario"
         loading="lazy"
         style="width:100%;max-width:100%;height:1100px;border:0;border-radius:16px;margin:0 auto;display:block;">

@@ -1,0 +1,4 @@
+exclude_selectors:
+  - .page-header
+  - .page-footer
+  - aside

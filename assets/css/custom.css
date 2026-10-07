@@ -1,58 +1,3 @@
-/* Quitar mayúsculas forzadas en títulos y textos de habilidades */
-.section.skills h1,
-.section.skills h2,
-.section.skills h3,
-.section.skills .heading,
-.section.skills .skill-item h3,
-.section.skills li span,
-.section.skills .uppercase {
-  text-transform: none !important;
-}
-
-/* Desactivar mayúsculas forzadas en el bloque de Skills */
-#section-resume-skills .skills-name {
-  text-transform: none !important;
-  letter-spacing: normal !important; /* por si el tema aplica tracking amplio */
-}
-
-/* Por si hubiera alguna clase utilitaria .uppercase en la sección */
-#section-resume-skills .uppercase {
-  text-transform: none !important;
-}
-
-/* Fallback agresivo: quita text-transform en toda la sección */
-#section-resume-skills, 
-#section-resume-skills * {
-  text-transform: none !important;
-}
-
-/* Pone icono y texto en la misma línea dentro de cada skill */
-#section-resume-skills .skills-content{
-  display: flex;           /* fila por defecto */
-  align-items: center;     /* centra verticalmente */
-  gap: .5rem;              /* espacio entre icono y texto */
-}
-
-/* Asegura que el icono no “salte” de línea ni flote */
-#section-resume-skills .skills-icon{
-  display: inline-flex;
-  align-items: center;
-  position: static !important;
-  float: none !important;
-}
-
-/* Tamaño consistente del SVG (ajústalo a gusto) */
-#section-resume-skills .skills-icon svg{
-  width: 1em;
-  height: 1em;
-}
-
-/* Por si alguna utilidad del tema forzaba bloque o uppercase */
-#section-resume-skills .skills-name{
-  display: inline-block;
-  text-transform: none !important;
-}
-
 /* =====================================================
    Hero / Biography section — contraste sobre fondo oscuro
    ===================================================== */
@@ -102,3 +47,9 @@
 .dark .resume-biography a[href*="uploads"]:hover {
   background-color: rgba(255, 255, 255, 0.22) !important;
 }
+
+/* Plain, readable skill groups with no decorative inline image payloads. */
+.skills-list h2 { font-size: 1.875rem; font-weight: 700; margin-bottom: 1.5rem; }
+.skills-list h3 { font-size: 1.125rem; font-weight: 600; margin-top: 1.25rem; }
+.skills-list ul { display: flex; flex-wrap: wrap; gap: .5rem 1.5rem; margin-top: .5rem; }
+.skills-list li { line-height: 1.8; }

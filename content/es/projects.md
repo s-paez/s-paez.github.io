@@ -5,13 +5,13 @@ type: landing
 
 design:
   # Section spacing
-  spacing: '5rem'
+  spacing: '3rem'
 
 # Page sections
 sections:
   - block: collection
     content:
-      title: Mis proyectos y desarrollos
+      title: Proyectos
       text: Desarrollo de herramientas de software científico, simuladores interactivos y recursos educativos enfocados en el estudio de exoplanetas en tránsito y la enseñanza de la astronomía.
       filters:
         folders:

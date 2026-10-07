@@ -1,2 +1,14 @@
+# Local files and private material (never put private files in content/static/assets).
 .DS_Store
-.vscode/settings.json
+.vscode/
+.private/
+.env
+.env.*
+
+# Generated site, dependencies and Hugo caches.
+/public/
+/resources/
+/node_modules/
+/.hugo_build.lock
+/hugo_stats.json
+__pycache__/

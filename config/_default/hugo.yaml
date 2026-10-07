@@ -36,18 +36,21 @@ removePathAccents: true
 build:
   writeStats: true
 enableGitInfo: false
+buildDrafts: false
+buildFuture: false
+buildExpired: false
 summaryLength: 30
 pagination:
   pagerSize: 10
 enableEmoji: true
 enableRobotsTXT: true
 footnotereturnlinkcontents: <sup>^</sup>
-ignoreFiles: [\.ipynb$, .ipynb_checkpoints$, \.Rmd$, \.Rmarkdown$, _cache$]
+ignoreFiles: ['(^|/)\.[^/]+(/|$)', '\.ipynb$', '\.Rmd$', '\.Rmarkdown$', '_cache$']
 permalinks:
   authors: '/author/:slug/'
 disableAliases: true
 outputs:
-  home: [HTML, RSS, headers, redirects, backlinks, "JSON"]
+  home: [HTML, RSS]
   section: [HTML, RSS]
 imaging:
   resampleFilter: lanczos

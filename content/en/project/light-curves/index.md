@@ -17,11 +17,8 @@ links:
     url: https://academic.oup.com/rasti/article/doi/10.1093/rasti/rzag021/8516487
 ---
 
-The **Interactive OPTICAM Light Curves** project is a web-based scientific data visualization portal. It is designed to allow researchers, collaborators, and the general public to explore in detail the high-cadence, triple-band time-series data processed using the *PROFE* reduction pipeline.
+This application lets you explore multiband light curves of exoplanets and candidates observed with OPTICAM and processed with PROFE.
 
-### Platform Highlights
+You can compare the $g'$, $r'$ and $i'$ filters, zoom into different parts of the transit, and inspect models fitted to the observations. It accompanies the paper on data reduction.
 
-* **Simultaneous Multiband Inspection**: Sychronously displays light curves acquired in the three distinct OPTICAM filters ($g'$, $r'$, $i'$), enabling immediate comparison of wavelength-dependent transit depths.
-* **Interactive Zoom and Panning**: Users can easily zoom in on transit ingress, egress, and flat-bottom phases to visually inspect photometric scatter and red noise.
-* **Overlaid Physical Models**: Displays the best-fit Bayesian theoretical transit models over the raw and corrected observational data, showcasing the high level of precision achieved.
-* **Open Science Resource**: Serves as a transparent repository that accompanies academic papers, allowing the astronomical community to directly inspect the reduction quality and verify the efficacy of our 3x3 median preprocessing method.
+The reduction software is described in the [PROFE](/project/profe/) project.

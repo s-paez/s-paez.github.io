@@ -1,29 +1,27 @@
-############################
-## HUGO MODULES
-## Install or uninstall themes and plugins here.
-## Docs: https://gohugo.io/hugo-modules/
-############################
-
 imports:
-  - path: github.com/HugoBlox/hugo-blox-builder/modules/blox-plugin-netlify
   - path: github.com/HugoBlox/hugo-blox-builder/modules/blox-tailwind
 
-# Install any Hugo Blox within the `hugo-blox/blox/` folder
 mounts:
-  - source: layouts/partials/blox
-    target: layouts/partials/blox/
-  - source: layouts/_partials/hbx/blocks
-    target: layouts/_partials/hbx/blocks/
   - source: layouts
     target: layouts
   - source: assets
     target: assets
-  - source: hugo-blox/blox/community
-    target: layouts/partials/blox/community/
-    includeFiles: '**.html'
-  - source: hugo-blox/blox/all-access
-    target: layouts/partials/blox/
-    includeFiles: '**.html'
-  - source: hugo-blox/blox
-    target: assets/dist/community/blox/
-    includeFiles: '**.css'
+  - source: content/en
+    target: content
+    lang: en
+  - source: content/es
+    target: content
+    lang: es
+  # Share one portrait while retaining the theme's author-resource API.
+  - source: assets/media/avatar.jpg
+    target: content/authors/admin/avatar.jpg
+    lang: en
+  - source: assets/media/avatar.jpg
+    target: content/authors/admin/avatar.jpg
+    lang: es
+  - source: assets/media/avatar.jpg
+    target: content/authors/spaez/avatar.jpg
+    lang: en
+  - source: assets/media/avatar.jpg
+    target: content/authors/spaez/avatar.jpg
+    lang: es

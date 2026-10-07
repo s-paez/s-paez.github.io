@@ -1,0 +1,13 @@
+{{ $page := .wcPage }}
+{{ $block := .wcBlock }}
+{{ $author := $block.content.username | default "admin" }}
+{{ $person := site.GetPage (printf "/authors/%s" $author) }}
+<div class="skills-list max-w-prose mx-auto px-6 sm:px-0">
+  {{ with $block.content.title }}<h2>{{ . }}</h2>{{ end }}
+  {{ range $person.Params.skills }}
+  <h3>{{ .name }}</h3>
+  <ul>
+    {{ range .items }}<li>{{ .name }}{{ with .description }} — {{ . | $page.RenderString }}{{ end }}</li>{{ end }}
+  </ul>
+  {{ end }}
+</div>

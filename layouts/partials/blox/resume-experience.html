@@ -1,4 +1,5 @@
-{{/* Hugo Blox: Experience (overridden to link education institutions) */}}
+{{/* Hugo Blox: Experience (override: link education institutions) */}}
+<!-- hb-override: resume-experience -->
 {{ $page := .wcPage }}
 {{ $block := .wcBlock }}
 {{ $text := $block.content.text | emojify | $page.RenderString }}
@@ -13,7 +14,6 @@
 {{ $is_education_first := $block.design.is_education_first | default false }}
 
 <div class="flex flex-col items-center mx-auto w-full max-w-prose justify-center">
-
 <div class="flex flex-col lg:gap-x-6 w-full px-6 sm:px-0 {{ if $is_education_first }}flex-col-reverse{{end}}">
 
 {{ if $person.work }}
@@ -60,12 +60,11 @@
       <li class="mb-10 ms-6">
         <span class="absolute flex items-center justify-center w-6 h-6 bg-primary-100 rounded-full -start-3 ring-8 ring-white dark:ring-gray-900 dark:bg-primary-900">
             <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 256 256" class="w-5 h-5 text-primary-800 dark:text-primary-300"><path d="M251.76,88.94l-120-64a8,8,0,0,0-7.52,0l-120,64a8,8,0,0,0,0,14.12L32,117.87v48.42a15.91,15.91,0,0,0,4.06,10.65C49.16,191.53,78.51,216,128,216a130,130,0,0,0,48-8.76V240a8,8,0,0,0,16,0V199.51a115.63,115.63,0,0,0,27.94-22.57A15.91,15.91,0,0,0,224,166.29V117.87l27.76-14.81a8,8,0,0,0,0-14.12ZM128,200c-43.27,0-68.72-21.14-80-33.71V126.4l76.24,40.66a8,8,0,0,0,7.52,0L176,143.47v46.34C163.4,195.69,147.52,200,128,200Zm80-33.75a97.83,97.83,0,0,1-16,14.25V134.93l16-8.53ZM188,118.94l-.22-.13-56-29.87a8,8,0,0,0-7.52,14.12L171,128l-43,22.93L25,96,128,41.07,231,96Z"></path></svg>
-            </svg>
         </span>
         <h3 class="flex items-center mb-1 text-lg font-semibold text-gray-900 dark:text-white">{{.area}}</h3>
         <span class="block mb-2 text-sm font-normal leading-none text-gray-500 dark:text-gray-300">
-          {{ if .institution_url }}
-            <a class="underline" href="{{ .institution_url }}" target="_blank" rel="noopener">{{ .institution }}</a>
+          {{ if .url }}
+            <a class="underline" href="{{ .url }}" target="_blank" rel="noopener">{{ .institution }}</a>
           {{ else }}
             {{ .institution }}
           {{ end }}
@@ -105,7 +104,6 @@
             <!-- Premium Telescope SVG Icon -->
             <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 256 256" class="w-5 h-5 text-primary-800 dark:text-primary-300">
               <path d="M228,104a8,8,0,0,0-11.31.09L184,138.83l-26.83-26.83,34.74-32.69a8,8,0,1,0-10.74-11.83L146.42,100,121.72,75.3a8,8,0,0,0-11.3,0L26.34,159.38a8,8,0,0,0,0,11.31l39,39a8,8,0,0,0,11.31,0L160.7,125.58l24.7,24.7a8,8,0,0,0,11.3,0l6.76-6.76L228.1,168a8,8,0,0,0,11.31-11.31L214.73,132l13.36-16.7A8,8,0,0,0,228,104ZM71,192.69,39.31,161l73.38-73.37L144.37,119Zm113,4.4a8,8,0,0,1-8,8H104a8,8,0,0,1,0-16h72A8,8,0,0,1,184,197.09Z"></path>
-            </svg>
         </span>
       <h3 class="flex items-center mb-1 text-lg font-semibold text-gray-900 dark:text-white">{{.position}}</h3>
       <span class="block mb-2 text-sm font-normal leading-none text-gray-500 dark:text-gray-300">{{.company_name}}</span>
@@ -134,6 +132,12 @@
 </div>
 {{ end }}
 
+{{ with $person.interests }}
+<div class="w-full mt-8">
+  <h3 class="mb-3 text-2xl font-bold text-gray-900 dark:text-white">{{ i18n "interests" }}</h3>
+  <ul class="list-disc pl-5 space-y-1">{{ range . }}<li>{{ . }}</li>{{ end }}</ul>
+</div>
+{{ end }}
 </div>
 
 </div>

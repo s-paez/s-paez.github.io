@@ -21,17 +21,8 @@ links:
     url: https://s-paez.github.io/opticam_lc/
 ---
 
-**PROFE** (**P**ipeline de **R**educción de **O**pticam para **F**otometría de **E**xoplanetas) is a Python package designed to streamline, automate, and standardize the reduction and analysis of high-cadence time-series data obtained with the triple-band **OPTICAM** instrument. OPTICAM is mounted on the 2.1m Telescope at the Observatorio Astronómico Nacional in the Sierra de San Pedro Mártir (OAN-SPM), Mexico.
+**PROFE** is a Python library for preparing and reducing images from OPTICAM, installed on the OAN-SPM 2.1 m telescope. I developed it during my master's degree to work with photometric time series of transiting exoplanets.
 
-### Key Features
+Its tools apply a 3×3 median filter, organize calibration and science files, and calculate timestamps and airmass. The workflow combines PROFE with AstroImageJ to obtain and analyze multiband light curves.
 
-* **3x3 Median Filtering**: Corrects unpredictable warm pixels generated during long exposures (≥10s) by the instrument's sCMOS detectors, significantly minimizing red noise and dispersion in the final light curves.
-* **Parallel Processing**: Speeds up reduction times by distributing the median filtering of massive images (4+ megapixels each) across multiple CPU cores via the Python `multiprocessing` library.
-* **Automatic Data Management**: Automatically structures and groups calibration frames (darks, flats) and scientific images by date, target star, and filters.
-* **Airmass and Time Corrections**: Standardizes time stamps to BJD (Barycentric Julian Date) and calculates airmass coordinates for every data point.
-* **Scientific Diagnostics & Products**: After executing aperture photometry in complementary software (e.g., AstroImageJ), PROFE processes raw measurements to generate multiband light curves, airmass trends, and target sky-tracking plots. These are ready for sharing with international consortia such as the **TESS Follow-up Observing Program**.
-
-### Associated Publication
-
-This pipeline is the core contribution of my Master's thesis research, published in the international scientific journal **RAS Techniques and Instruments (RASTI)** in March 2026:
-> *Páez et al. (2026). Data reduction method for OPTICAM multiband time series of transiting exoplanets. RAS Techniques and Instruments, Volume 5.*
+The links on this page lead to the code, the paper describing the method, and the interactive light curves. The preprocessing method is explained in the [blog](/blog/opticam_dr/).

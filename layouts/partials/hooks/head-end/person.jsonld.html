@@ -1,34 +1,14 @@
-{{/* Structured data for the site owner (Person) */}}
-{{ $author := site.GetPage "authors/admin" }}
-{{ if $author }}
-  {{ $name := or $author.Params.title (printf "%s %s" $author.Params.first_name $author.Params.last_name) }}
-  {{ $job := $author.Params.role }}
-  {{ $orgs := $author.Params.organizations }}
+{{ if .IsHome }}
+{{ with site.GetPage "authors/admin" }}
   {{ $sameAs := slice }}
-  {{ range $author.Params.profiles }}
-    {{- if .url -}}
-      {{- $sameAs = $sameAs | append .url -}}
-    {{- end -}}
+  {{ range .Params.profiles }}
+    {{ if hasPrefix .url "https://" }}{{ $sameAs = $sameAs | append .url }}{{ end }}
   {{ end }}
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Person",
-    "name": {{ $name | jsonify }},
-    {{- if $job }}"jobTitle": {{ $job | jsonify }},{{ end }}
-    "url": {{ .Site.BaseURL | jsonify }},
-    {{- if $orgs }}
-    "affiliation": [
-      {{- range $i, $org := $orgs -}}
-        {{- if $i }}, {{ end -}}
-        {"@type": "Organization", "name": {{ $org.name | jsonify }}, "url": {{ $org.url | jsonify }}}
-      {{- end -}}
-    ],
-    {{- end }}
-    {{- if gt (len $sameAs) 0 }}
-    "sameAs": {{ $sameAs | jsonify }}
-    {{- end }}
-  }
-  </script>
+  {{ $orgs := slice }}
+  {{ range .Params.organizations }}
+    {{ $orgs = $orgs | append (dict "@type" "Organization" "name" .name "url" .url) }}
+  {{ end }}
+  {{ $data := dict "@context" "https://schema.org" "@type" "Person" "name" .Title "jobTitle" .Params.role "url" site.Home.Permalink "affiliation" $orgs "sameAs" $sameAs }}
+  <script type="application/ld+json">{{ $data | jsonify | safeJS }}</script>
 {{ end }}
-
+{{ end }}

@@ -4,18 +4,18 @@
 
 # Default language
 en:
-  languageCode: en-us
+  languageCode: en
   # Uncomment for multi-lingual sites, and move English content into `en` sub-folder.
   contentDir: content/en
   params:
-    description: "Santiago Páez Avendaño — MSc student in Astrophysics at UNAM. Research on transiting exoplanets, multiband photometry and data reduction with OPTICAM."
+    description: "Santiago Páez Avendaño — PhD student in Astrophysics at UNAM. Research on transiting exoplanets, multiband photometry and data reduction with OPTICAM."
 
 # Uncomment the lines below to configure your website in a second language.
 es:
   languageCode: es
   contentDir: content/es
   params:
-    description: "Santiago Páez Avendaño — Estudiante de Maestría en Astrofísica en la UNAM. Investigación en exoplanetas en tránsito, fotometría multibanda y reducción de datos con OPTICAM."
+    description: "Santiago Páez Avendaño — Estudiante de Doctorado en Astrofísica en la UNAM. Investigación en exoplanetas en tránsito, fotometría multibanda y reducción de datos con OPTICAM."
   # title: Chinese website title...
   #  params:
   #    description: Site description in Chinese...

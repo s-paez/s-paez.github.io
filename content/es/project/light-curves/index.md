@@ -14,14 +14,11 @@ links:
     url: https://s-paez.github.io/opticam_lc/
   - icon: file-pdf
     name: Artículo en RASTI
-    url: https://arxiv.org/pdf/2603.09922
+    url: https://academic.oup.com/rasti/article/doi/10.1093/rasti/rzag021/8516487
 ---
 
-El proyecto **Curvas de Luz Interactivas de OPTICAM** es un portal web de visualización científica diseñado para permitir a investigadores, colaboradores y aficionados explorar detalladamente las series temporales multibanda reducidas con la metodología *PROFE*.
+Esta aplicación permite explorar las curvas de luz multibanda de exoplanetas y candidatos observados con OPTICAM y procesados con PROFE.
 
-### Características de la Plataforma
+Se pueden comparar los filtros $g'$, $r'$ e $i'$, ampliar distintas partes del tránsito y consultar los modelos ajustados a las observaciones. Es un recurso complementario del artículo sobre reducción de datos.
 
-* **Exploración Multibanda Simultánea**: Muestra de forma sincronizada y dinámica las curvas de luz obtenidas de forma simultánea en tres filtros de OPTICAM ($g'$, $r'$, $i'$).
-* **Herramientas de Zoom e Inspección**: Permite realizar acercamientos en las zonas de ingreso, egreso y fondo de tránsito para inspeccionar la dispersión fotométrica y el comportamiento de los datos frente al ruido atmosférico o instrumental.
-* **Modelos Físicos Ajustados**: Superpone a los datos observacionales reducidos los modelos teóricos de tránsitos planetarios ajustados mediante procesos bayesianos, mostrando el nivel de precisión alcanzado.
-* **Transparencia en Investigación**: Sirve como un recurso de ciencia abierta que acompaña las publicaciones académicas, permitiendo a otros investigadores validar la reducción estándar y la efectividad de nuestro preprocesamiento de filtros medianos de 3x3 píxeles.
+El código de reducción se describe en el proyecto [PROFE](/es/project/profe/).
