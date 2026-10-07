@@ -7,7 +7,7 @@ name_pronunciation: ''
 
 # Full name (for SEO)
 first_name: Santiago
-last_name: Paez Avendaño
+last_name: Páez Avendaño
 
 # Status emoji
 status:

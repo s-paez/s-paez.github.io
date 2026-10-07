@@ -145,6 +145,15 @@ awards:
     awarder: Secretaría de Educación de Bogotá.
 
 observational:
+  - position: "Observador con SAINT-EX"
+    company_name: SAINT-EX / OAN-SPM
+    date_start: '2026-08-15'
+    date_end: 'present'
+    summary: |
+      - **Tiempo asignado**: 7 noches por mes desde Agosto de 2026
+      - **Instrument**: SAINT-EX / Observatorio Astronómico Nacional en la Sierra de San Pedro Mártir (OAN-SPM).
+      - **Role**: Lanzamiento de observaciones remotas cada noche.
+
   - position: "Co-I. Insights into stellar activity cycles: Spot crossing during transit"
     company_name: OPTICAM / OAN-SPM (Telescopio 2.1m)
     date_start: '2025-03-01'
@@ -188,4 +197,4 @@ observational:
 
 ## Sobre mí
 
-¡Hola! Soy estudiante de doctorado en Astrofísica en el Instituto de Astronomía de la Universidad Nacional Autónoma de México (IA-UNAM), donde trabajo con la investigadora Yilen Gómez Maqueo Chew. Me especializo en reducción de datos, análisis de series temporales fotométricas de exoplanetas en tránsito y en campañas de observación con diferentes tipos de telescopios.
+¡Hola! Soy estudiante de doctorado en Astrofísica en el Instituto de Astronomía de la Universidad Nacional Autónoma de México (IA-UNAM), donde trabajo en el grupo de la Dra. Yilen Gómez Maqueo Chew. Mi trabajo se enfoca en la detección y caracterización de exoplanetas en tránsito. Me especializo en reducción de datos, análisis de series temporales fotométricas y en campañas de observación con diferentes tipos de telescopios.
