@@ -147,7 +147,7 @@ observational:
   - position: "Observer with SAINT-EX"
     company_name: SAINT-EX / OAN-SPM (1 m Telescope)
     date_start: '2026-08-15'
-    date_end: 'present'
+    date_end: ''
     summary: |
       - **Time allocated**: 7 nights per month since August 2026
       - **Instrument**: SAINT-EX / Observatorio Astronómico Nacional en la Sierra de San Pedro Mártir (OAN-SPM).

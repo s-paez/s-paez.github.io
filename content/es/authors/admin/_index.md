@@ -148,7 +148,7 @@ observational:
   - position: "Observador con SAINT-EX"
     company_name: SAINT-EX / OAN-SPM
     date_start: '2026-08-15'
-    date_end: 'present'
+    date_end: ''
     summary: |
       - **Tiempo asignado**: 7 noches por mes desde Agosto de 2026
       - **Instrument**: SAINT-EX / Observatorio Astronómico Nacional en la Sierra de San Pedro Mártir (OAN-SPM).
