@@ -44,8 +44,9 @@ profiles:
 
 interests:
   - Exoplanetas en tránsito
-  - Campañas de observación multibanda
-  - Formación planetaria
+  - Fotometría multibanda
+  - Planetas alrededor de enanas marrón
+  - Análisis de series de tiempo
 
 
 education:
@@ -151,8 +152,8 @@ observational:
     date_end: ''
     summary: |
       - **Tiempo asignado**: 7 noches por mes desde Agosto de 2026
-      - **Instrument**: SAINT-EX / Observatorio Astronómico Nacional en la Sierra de San Pedro Mártir (OAN-SPM).
-      - **Role**: Lanzamiento de observaciones remotas cada noche.
+      - **Instrumento**: SAINT-EX / Observatorio Astronómico Nacional en la Sierra de San Pedro Mártir (OAN-SPM).
+      - **Rol**: Lanzamiento de observaciones remotas cada noche.
 
   - position: "Co-I. Insights into stellar activity cycles: Spot crossing during transit"
     company_name: OPTICAM / OAN-SPM (Telescopio 2.1m)

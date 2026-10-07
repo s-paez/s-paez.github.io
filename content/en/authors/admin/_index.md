@@ -44,8 +44,9 @@ profiles:
 
 interests:
   - Transiting exoplanets
-  - Multiband observational campaigns
-  - Planet formation
+  - Multiband photometry
+  - Planets around brown dwarfs
+  - Time series analysis
 
 education:
   - area: M.Sc. Astrophysics
