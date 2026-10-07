@@ -23,6 +23,13 @@ class Links(HTMLParser):
     def __init__(self):
         super().__init__()
         self.urls = []
+        self.invalid_self_closing = []
+
+    def handle_startendtag(self, tag, attrs):
+        if tag in {"div", "section", "main", "article", "header", "footer",
+                   "nav", "aside", "span", "p", "ul", "ol", "li"}:
+            self.invalid_self_closing.append(tag)
+        self.handle_starttag(tag, attrs)
 
     def handle_starttag(self, tag, attrs):
         attrs = dict(attrs)
@@ -71,6 +78,9 @@ def check(destination):
             continue
         parser = Links()
         parser.feed(content)
+        if parser.invalid_self_closing:
+            errors.append(f"Invalid self-closing HTML container in {name}: "
+                          + ", ".join(sorted(set(parser.invalid_self_closing))))
         base = f"https://{SITE_HOST}/{name}"
         for url in parser.urls:
             parsed = urlparse(urljoin(base, url))

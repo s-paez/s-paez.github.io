@@ -39,6 +39,11 @@ enableGitInfo: false
 buildDrafts: false
 buildFuture: false
 buildExpired: false
+# Hugo 0.136.5 can turn empty divs into self-closing tags with --minify.
+# Browsers nest subsequent content inside those divs, breaking section heights.
+# Keep HTML intact while retaining CSS/JS and other asset minification.
+minify:
+  disableHTML: true
 summaryLength: 30
 pagination:
   pagerSize: 10

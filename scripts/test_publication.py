@@ -37,6 +37,16 @@ class PublicationChecks(unittest.TestCase):
         (self.site / "tracking.js").write_text("// G-9CF41VFPQC")
         self.assertTrue(any("analytics" in e for e in check(self.site)))
 
+    def test_self_closing_container_blocks_publication(self):
+        (self.site / "index.html").write_text(
+            '<section><div class="home-section-bg"/><div>Skills</div></section>')
+        self.assertTrue(any("Invalid self-closing HTML" in e for e in check(self.site)))
+
+    def test_valid_empty_container_passes(self):
+        (self.site / "index.html").write_text(
+            '<section><div class="home-section-bg"></div><div>Skills</div></section>')
+        self.assertEqual(check(self.site), [])
+
 
 if __name__ == "__main__":
     unittest.main()
