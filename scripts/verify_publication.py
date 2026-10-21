@@ -15,6 +15,10 @@ BLOCKED_ROUTE = re.compile(r"(?:^|/)(?:blog/first|blog/\.?pregrado|\.private)(?:
 # Distinctive markers from the removed personal posts; never print their content.
 PERSONAL_MARKERS = ("chontaduro", "calarma", "el rocío", "my journey", "mi trayectoria")
 SITE_HOST = "s-paez.github.io"
+GOOGLE_ANALYTICS_ID = "G-9CF41VFPQC"
+GOOGLE_ANALYTICS_CONFIG = re.compile(
+    r"\bgtag\(\s*['\"]config['\"]\s*,\s*['\"]"
+    + re.escape(GOOGLE_ANALYTICS_ID) + r"['\"]")
 # A separate GitHub Pages project maintained outside this repository.
 SIBLING_PROJECT = "/opticam_lc/"
 
@@ -24,6 +28,8 @@ class Links(HTMLParser):
         super().__init__()
         self.urls = []
         self.invalid_self_closing = []
+        self.is_hugo_page = False
+        self.analytics_loaders = []
 
     def handle_startendtag(self, tag, attrs):
         if tag in {"div", "section", "main", "article", "header", "footer",
@@ -33,6 +39,11 @@ class Links(HTMLParser):
 
     def handle_starttag(self, tag, attrs):
         attrs = dict(attrs)
+        if tag == "meta" and attrs.get("name") == "generator":
+            self.is_hugo_page = attrs.get("content", "").startswith("Hugo Blox Builder")
+        if tag == "script" and attrs.get("src", "").startswith(
+                "https://www.googletagmanager.com/gtag/js?"):
+            self.analytics_loaders.append(attrs["src"])
         key = "href" if tag in {"a", "link"} else "src"
         if tag in {"a", "link", "img", "script", "iframe"} and attrs.get(key):
             self.urls.append(attrs[key])
@@ -72,12 +83,20 @@ def check(destination):
                 errors.append(f"Personal archive text found in artifact: {name}")
             if "/blog/first/" in normalized or "/blog/pregrado/" in normalized:
                 errors.append(f"Personal archive reference found in artifact: {name}")
-            if "googletagmanager.com" in normalized or "g-9cf41vfpqc" in normalized:
-                errors.append(f"Removed analytics found in artifact: {name}")
         if path.suffix != ".html":
             continue
         parser = Links()
         parser.feed(content)
+        # Static simulators and Hugo's redirect stubs do not use the site head.
+        if parser.is_hugo_page:
+            expected_loader = (
+                "https://www.googletagmanager.com/gtag/js?id=" + GOOGLE_ANALYTICS_ID)
+            if parser.analytics_loaders != [expected_loader]:
+                errors.append(f"Expected one Google Analytics loader for "
+                              f"{GOOGLE_ANALYTICS_ID} in {name}")
+            if len(GOOGLE_ANALYTICS_CONFIG.findall(content)) != 1:
+                errors.append(f"Expected one Google Analytics config for "
+                              f"{GOOGLE_ANALYTICS_ID} in {name}")
         if parser.invalid_self_closing:
             errors.append(f"Invalid self-closing HTML container in {name}: "
                           + ", ".join(sorted(set(parser.invalid_self_closing))))
@@ -102,4 +121,4 @@ if __name__ == "__main__":
     if errors:
         print("Publication blocked:\n" + "\n".join(errors), file=sys.stderr)
         sys.exit(1)
-    print("Publication verified: no excluded archives or demos, no removed analytics, links valid.")
+    print("Publication verified: no excluded archives or demos, Analytics present, links valid.")

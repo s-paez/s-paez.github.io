@@ -33,8 +33,23 @@ npm run verify
 
 The verification checks public sources and the entire artifact, including feeds
 and search assets, for excluded personal posts and template material. It also
-checks internal page/resource links and the removal of Analytics. The deploy
+checks internal page/resource links and that each Hugo Blox page includes one
+Google Analytics loader and initialization for the expected measurement ID. The deploy
 workflow runs verification before uploading the Pages artifact.
+
+## Google Analytics
+
+GA4 uses the existing web stream `G-9CF41VFPQC`, configured in
+`config/_default/params.yaml` under `marketing.analytics.google_analytics`.
+The pinned Hugo Blox theme includes the tag only in production builds (`hugo`
+defaults to production); `hugo server` does not send preview visits to Analytics.
+If the measurement ID changes, also update `GOOGLE_ANALYTICS_ID` in
+`scripts/verify_publication.py`.
+
+After deploying, open the English and Spanish pages and confirm visits in the
+GA4 Realtime report for that stream. Browser developer tools should show a
+single `gtag/js?id=G-9CF41VFPQC` loader and successful `g/collect` requests.
+See [Google's verification guide](https://developers.google.com/analytics/devguides/collection/ga4/troubleshoot).
 
 To preview locally:
 

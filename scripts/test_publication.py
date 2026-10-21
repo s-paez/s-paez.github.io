@@ -4,7 +4,18 @@ import tempfile
 import unittest
 from pathlib import Path
 
-from verify_publication import check
+from verify_publication import GOOGLE_ANALYTICS_ID, check
+
+
+SITE_HEAD = '<meta name="generator" content="Hugo Blox Builder 0.3.1">'
+ANALYTICS_LOADER = (
+    '<script async src="https://www.googletagmanager.com/gtag/js?id='
+    + GOOGLE_ANALYTICS_ID + '"></script>')
+ANALYTICS_CONFIG = (
+    "<script>window.dataLayer = window.dataLayer || [];"
+    "function gtag(){dataLayer.push(arguments);}"
+    "gtag('js', new Date());"
+    "gtag('config', '" + GOOGLE_ANALYTICS_ID + "', {});</script>")
 
 
 class PublicationChecks(unittest.TestCase):
@@ -33,9 +44,41 @@ class PublicationChecks(unittest.TestCase):
         private.write_text("A generic title")
         self.assertTrue(any("Excluded route" in e for e in check(self.site)))
 
-    def test_analytics_cannot_be_reintroduced(self):
-        (self.site / "tracking.js").write_text("// G-9CF41VFPQC")
-        self.assertTrue(any("analytics" in e for e in check(self.site)))
+    def test_site_with_analytics_passes(self):
+        (self.site / "index.html").write_text(
+            SITE_HEAD + ANALYTICS_LOADER + ANALYTICS_CONFIG)
+        self.assertEqual(check(self.site), [])
+
+    def test_missing_analytics_blocks_publication(self):
+        (self.site / "index.html").write_text(SITE_HEAD)
+        self.assertTrue(any("Google Analytics" in e for e in check(self.site)))
+
+    def test_analytics_loader_without_initialization_blocks_publication(self):
+        (self.site / "index.html").write_text(SITE_HEAD + ANALYTICS_LOADER)
+        self.assertTrue(any("Google Analytics config" in e for e in check(self.site)))
+
+    def test_analytics_initialization_without_loader_blocks_publication(self):
+        (self.site / "index.html").write_text(SITE_HEAD + ANALYTICS_CONFIG)
+        self.assertTrue(any("Google Analytics loader" in e for e in check(self.site)))
+
+    def test_wrong_measurement_id_blocks_publication(self):
+        page = SITE_HEAD + ANALYTICS_LOADER + ANALYTICS_CONFIG
+        (self.site / "index.html").write_text(
+            page.replace(GOOGLE_ANALYTICS_ID, "G-WRONG12345"))
+        self.assertTrue(any("Google Analytics" in e for e in check(self.site)))
+
+    def test_duplicate_analytics_blocks_publication(self):
+        (self.site / "index.html").write_text(
+            SITE_HEAD + (ANALYTICS_LOADER + ANALYTICS_CONFIG) * 2)
+        self.assertTrue(any("Google Analytics" in e for e in check(self.site)))
+
+    def test_missing_analytics_in_spanish_blocks_publication(self):
+        (self.site / "index.html").write_text(
+            SITE_HEAD + ANALYTICS_LOADER + ANALYTICS_CONFIG)
+        (self.site / "es").mkdir()
+        (self.site / "es/index.html").write_text(SITE_HEAD)
+        self.assertTrue(any("Google Analytics" in e and "es/index.html" in e
+                            for e in check(self.site)))
 
     def test_self_closing_container_blocks_publication(self):
         (self.site / "index.html").write_text(
